@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Bot, DollarSign, Users, Zap, Star, Clock, CheckCircle, ArrowRight, Play, Target, TrendingUp, Shield, Gift, Plus, Minus } from 'lucide-react';
 
@@ -9,6 +8,7 @@ const Index = () => {
     seconds: 32
   });
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [openBonusFlows, setOpenBonusFlows] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -44,6 +44,8 @@ const Index = () => {
     });
   };
 
+  const checkoutUrl = "https://pay.hotmart.com/X95603477Q?off=yz1gz1p6&checkoutMode=10";
+
   return (
     <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light">
       {/* Google Fonts */}
@@ -53,9 +55,9 @@ const Index = () => {
       <div className="fixed top-0 left-0 right-0 bg-[#7E57C2] backdrop-blur-sm z-50 border-b border-[#7E57C2]/20">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
           <span className="font-montserrat font-semibold text-sm text-white">⚡ Solo quedan 100 accesos disponibles</span>
-          <button onClick={scrollToOffer} className="bg-[#D4821A] hover:bg-[#E8941F] text-white px-6 py-2 rounded-lg font-montserrat font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#D4821A]/25">
+          <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="bg-[#D4821A] hover:bg-[#E8941F] text-white px-6 py-2 rounded-lg font-montserrat font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#D4821A]/25">
             Desbloquear mina
-          </button>
+          </a>
         </div>
       </div>
 
@@ -89,10 +91,10 @@ const Index = () => {
             </div>
           </div>
           
-          <button onClick={scrollToOffer} className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white px-12 py-5 rounded-2xl font-montserrat font-bold text-xl hover:shadow-2xl hover:shadow-[#7E57C2]/30 transition-all duration-300 hover:scale-105 mb-6">
+          <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white px-12 py-5 rounded-2xl font-montserrat font-bold text-xl hover:shadow-2xl hover:shadow-[#7E57C2]/30 transition-all duration-300 hover:scale-105 mb-6 inline-block">
             Desbloquear mina ahora
             <ArrowRight className="inline-block ml-3 w-5 h-5" />
-          </button>
+          </a>
           
           <p className="font-roboto text-sm text-[#808080]">
             Por 15 dólares... menos que una hamburguesa, pero esto paga cada día
@@ -327,9 +329,9 @@ const Index = () => {
                 </div>
               </div>
               
-              <button className="w-full bg-gradient-to-r from-[#D4821A] to-[#E8941F] text-white py-5 px-8 rounded-2xl font-montserrat text-xl font-bold hover:shadow-2xl hover:shadow-[#D4821A]/25 transition-all duration-300 hover:scale-105 mb-6">
+              <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full bg-gradient-to-r from-[#D4821A] to-[#E8941F] text-white py-5 px-8 rounded-2xl font-montserrat text-xl font-bold hover:shadow-2xl hover:shadow-[#D4821A]/25 transition-all duration-300 hover:scale-105 mb-6 inline-block">
                 🚀 SÍ, DESBLOQUEO MI MINA
-              </button>
+              </a>
               
               <div className="text-sm text-[#B0B0B0] font-roboto">
                 ✅ Acceso inmediato | ✅ Garantía 7 días | ✅ Soporte incluido
@@ -355,22 +357,26 @@ const Index = () => {
               {
                 title: "+1.000 flujos premium",
                 value: "$197",
-                description: "Embudos probados en múltiples nichos y mercados"
+                description: "Embudos probados en múltiples nichos y mercados",
+                showFlows: true
               },
               {
                 title: "Templates para WhatsApp/Instagram/WordPress",
                 value: "$297", 
-                description: "Plantillas optimizadas para cada plataforma"
+                description: "Plantillas optimizadas para cada plataforma",
+                showFlows: false
               },
               {
                 title: "Copys validadas para anuncios y recuperación",
                 value: "$197",
-                description: "Textos que convierten probados en el mercado"
+                description: "Textos que convierten probados en el mercado",
+                showFlows: false
               },
               {
                 title: "Derecho de reventa completo",
                 value: "$156",
-                description: "Revende todo el sistema y quédate con el 100%"
+                description: "Revende todo el sistema y quédate con el 100%",
+                showFlows: false
               }
             ].map((bonus, index) => (
               <div key={index} className="bg-[#1E1E1E] border-2 border-[#D4821A]/30 p-8 rounded-3xl hover:border-[#D4821A] transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-[#D4821A]/10 group">
@@ -381,7 +387,49 @@ const Index = () => {
                   </span>
                 </div>
                 <h3 className="font-montserrat font-bold text-xl mb-4 text-white">{bonus.title}</h3>
-                <p className="font-roboto text-[#B0B0B0]">{bonus.description}</p>
+                <p className="font-roboto text-[#B0B0B0] mb-4">{bonus.description}</p>
+                
+                {bonus.showFlows && (
+                  <div>
+                    <button
+                      onClick={() => setOpenBonusFlows(!openBonusFlows)}
+                      className="flex items-center gap-2 text-[#D4821A] font-montserrat font-semibold hover:text-[#E8941F] transition-colors duration-300 mb-4"
+                    >
+                      Ver modelos incluidos
+                      <div className={`transition-transform duration-300 ${openBonusFlows ? 'rotate-45' : ''}`}>
+                        <Plus className="w-4 h-4" />
+                      </div>
+                    </button>
+                    
+                    {openBonusFlows && (
+                      <div className="bg-[#121212] rounded-xl p-4 animate-fade-in">
+                        <div className="grid gap-2 text-xs">
+                          {[
+                            "🎰 Vender lotería con resultados en tiempo real (y cobrar por cada boleto vendido)",
+                            "🍔 Tomar pedidos automáticos en deliverys y calcular total + envío al instante",
+                            "🏠 Captar clientes para inmobiliarias sin mostrar la cara",
+                            "🚗 Mostrar autos y agendar test-drives sin contacto humano",
+                            "🍰 Hacer que pastelerías vendan solas por WhatsApp",
+                            "💈 Barberías que agendan clientes mientras duermen",
+                            "🦷 Clínicas que usan bots con IA para responder y captar pacientes",
+                            "💆 Estéticas vendiendo servicios con seguimiento automático",
+                            "📦 Tiendas online que cierran ventas sin Instagram ni equipo",
+                            "⚖ Captar clientes para abogados sin levantar un dedo",
+                            "📺 Vender IPTV directo al WhatsApp sin bloqueos ni caídas",
+                            "📶 Vender internet en zonas rurales sin llamadas ni visitas",
+                            "🏋 Gimnasios que llenan clases sin recepcionistas",
+                            "📊 Bots que consultan CNPJ, CEP, correos y más como si fueran hackers",
+                            "🤖 ChatGPT vendiendo como si fuera tu mejor closser"
+                          ].map((flow, flowIndex) => (
+                            <div key={flowIndex} className="text-[#B0B0B0] font-roboto leading-relaxed border-l-2 border-[#D4821A]/30 pl-3 py-1">
+                              {flow}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -458,9 +506,9 @@ const Index = () => {
             <div className="text-white font-roboto">Solo quedan <span className="font-bold text-[#D4821A]">87 accesos</span> disponibles</div>
           </div>
           
-          <button onClick={scrollToOffer} className="bg-gradient-to-r from-[#D4821A] to-[#E8941F] text-white px-12 py-6 rounded-2xl font-montserrat text-2xl font-bold hover:shadow-2xl hover:shadow-[#D4821A]/25 transition-all duration-300 hover:scale-105 mb-6">
+          <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-[#D4821A] to-[#E8941F] text-white px-12 py-6 rounded-2xl font-montserrat text-2xl font-bold hover:shadow-2xl hover:shadow-[#D4821A]/25 transition-all duration-300 hover:scale-105 mb-6 inline-block">
             🚀 DESBLOQUEAR MI MINA DE ORO
-          </button>
+          </a>
           
           <p className="font-roboto text-[#808080]">
             Inversión: $15 USD | Garantía 7 días | Acceso inmediato
