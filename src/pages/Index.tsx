@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Bot, DollarSign, Users, Zap, Star, Clock, CheckCircle, ArrowRight, Play, Target, TrendingUp, Shield, Gift } from 'lucide-react';
+import { ChevronDown, Bot, DollarSign, Users, Zap, Star, Clock, CheckCircle, ArrowRight, Play, Target, TrendingUp, Shield, Gift, Plus, Minus } from 'lucide-react';
 
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -33,174 +33,179 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
+    <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light">
+      {/* Google Fonts */}
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+      
       {/* Sticky CTA */}
-      <div className="fixed top-0 left-0 right-0 bg-purple-600 text-white py-3 px-4 z-50 shadow-lg">
-        <div className="container mx-auto flex justify-between items-center">
-          <span className="font-bold text-sm md:text-base">🔥 Solo quedan {87} accesos disponibles</span>
+      <div className="fixed top-0 left-0 right-0 bg-[#7E57C2] backdrop-blur-sm z-50 border-b border-[#7E57C2]/20">
+        <div className="container mx-auto flex justify-between items-center py-4 px-6">
+          <span className="font-montserrat font-semibold text-sm text-white">⚡ Solo quedan 100 accesos disponibles</span>
           <button 
             onClick={scrollToOffer}
-            className="bg-white text-purple-600 px-4 py-2 rounded-full font-bold text-sm hover:bg-gray-100 transition-all transform hover:scale-105"
+            className="bg-[#D4821A] hover:bg-[#E8941F] text-white px-6 py-2 rounded-lg font-montserrat font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#D4821A]/25"
           >
-            Desbloquear Ahora
+            Desbloquear mina
           </button>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 animate-pulse"></div>
+      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 pb-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#7E57C2]/5 to-[#D4821A]/5"></div>
         
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <div className="mb-6 inline-block">
-            <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-bounce">
-              ⚠️ ALERTA URGENTE
+        <div className="relative z-10 max-w-5xl mx-auto animate-fade-in">
+          <div className="mb-8">
+            <span className="inline-block bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white px-6 py-3 rounded-full font-montserrat font-bold text-sm uppercase tracking-wide animate-pulse">
+              ⚠️ Minería Digital Avanzada
             </span>
           </div>
           
-          <h1 className="text-4xl md:text-7xl font-black mb-6 leading-tight">
-            Estás a punto de
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 animate-pulse">
-              desbloquear una
+          <h1 className="font-montserrat font-black text-4xl md:text-7xl lg:text-8xl mb-8 leading-tight">
+            Automatiza ventas y gana en
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#7E57C2] to-[#D4821A] mt-2">
+              piloto automático
             </span>
-            <span className="block text-yellow-400">MINA DE ORO</span>
-            digital
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            🤖 Automatiza tus ventas sin programar. Aprende a crear un <strong className="text-purple-400">BOT que vende solo</strong>... 
-            y gana dinero revendiendo ese mismo sistema a afiliados.
+          <p className="font-roboto text-xl md:text-2xl mb-8 text-[#B0B0B0] max-w-4xl mx-auto leading-relaxed">
+            ¿Estás harto de rascarte los huevos viendo que otros facturan mientras tú paras?<br/>
+            <strong className="text-[#E0E0E0]">Crea y clona tu BOT Typebot que vende solo sin saber programar</strong>
           </p>
           
-          <div className="mb-8">
-            <div className="inline-flex items-center bg-green-500/20 border border-green-500 rounded-full px-6 py-3 mb-4">
-              <DollarSign className="w-5 h-5 mr-2 text-green-400" />
-              <span className="text-green-400 font-bold">Gana $500-$2000 USD mensuales</span>
+          <div className="mb-12">
+            <div className="inline-flex items-center bg-[#1E1E1E] border border-[#7E57C2]/30 rounded-2xl px-8 py-4 mb-6">
+              <DollarSign className="w-6 h-6 mr-3 text-[#D4821A]" />
+              <span className="text-[#D4821A] font-montserrat font-bold text-lg">Factura $500-$2000 USD mensuales</span>
             </div>
           </div>
           
           <button 
             onClick={scrollToOffer}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-purple-500/25 transition-all transform hover:scale-105 animate-pulse"
+            className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white px-12 py-5 rounded-2xl font-montserrat font-bold text-xl hover:shadow-2xl hover:shadow-[#7E57C2]/30 transition-all duration-300 hover:scale-105 mb-6"
           >
-            Desbloquear Mina de Oro Ahora
-            <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            Desbloquear mina ahora
+            <ArrowRight className="inline-block ml-3 w-5 h-5" />
           </button>
           
-          <p className="text-sm text-gray-400 mt-4">
-            ⏰ Oferta limitada: Solo 100 accesos | Precio normal: $297 USD
+          <p className="font-roboto text-sm text-[#808080]">
+            Por 15 dólares... menos que una hamburguesa, pero esto paga cada día
           </p>
         </div>
         
         <div className="absolute bottom-8 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-purple-400" />
+          <ChevronDown className="w-8 h-8 text-[#7E57C2]" />
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 bg-gray-800/50">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-4">
-            ¿Qué obtienes con esta
-            <span className="text-purple-400"> ARMA DIGITAL</span>?
-          </h2>
-          <p className="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
-            No es solo un curso... es tu <strong>arsenal completo</strong> para dominar el juego digital sin mostrar la cara
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8">
+      {/* Divisor */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#7E57C2]/30 to-transparent"></div>
+
+      {/* Beneficios Principales */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid md:grid-cols-3 gap-12">
             {[
               {
-                icon: <Bot className="w-12 h-12 text-purple-400" />,
-                title: "Bot Automatizado Completo",
-                description: "Sistema 100% automatizado que vende por ti 24/7, sin que tengas que estar presente"
+                icon: <Bot className="w-8 h-8 text-[#7E57C2]" />,
+                title: "🚀 BOT que convierte 24/7",
+                description: "Sin videos, sin cara, sin equipo. Tu bot trabaja mientras duermes."
               },
               {
-                icon: <DollarSign className="w-12 h-12 text-green-400" />,
-                title: "Licencia de Reventa",
-                description: "Revende este mismo sistema a otros y quédate con el 100% de las ganancias"
+                icon: <TrendingUp className="w-8 h-8 text-[#D4821A]" />,
+                title: "💰 Duplica tu ingreso",
+                description: "Vende como afiliado + revende el embudo completo."
               },
               {
-                icon: <Users className="w-12 h-12 text-blue-400" />,
-                title: "Comunidad Exclusiva",
-                description: "Acceso VIP a grupo privado con estrategias avanzadas y networking"
-              },
-              {
-                icon: <Zap className="w-12 h-12 text-yellow-400" />,
-                title: "Configuración Express",
-                description: "Monta tu sistema en menos de 2 horas, sin conocimientos técnicos"
-              },
-              {
-                icon: <Target className="w-12 h-12 text-red-400" />,
-                title: "Funnels Probados",
-                description: "Templates de embudos que han generado más de $100K en ventas"
-              },
-              {
-                icon: <TrendingUp className="w-12 h-12 text-purple-400" />,
-                title: "Escalabilidad Infinita",
-                description: "Multiplica tus ingresos sin aumentar tu tiempo de trabajo"
+                icon: <Clock className="w-8 h-8 text-[#7E57C2]" />,
+                title: "⚡ Instalación en 3h",
+                description: "Setup ultra-rápido, sin complicaciones técnicas."
               }
             ].map((benefit, index) => (
-              <div key={index} className="bg-gray-900/50 p-8 rounded-2xl border border-gray-700 hover:border-purple-500 transition-all hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
-                <div className="mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-white">{benefit.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
+              <div key={index} className="group bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-[#7E57C2]/10">
+                <div className="mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:animate-pulse">
+                  {benefit.icon}
+                </div>
+                <h3 className="font-montserrat font-bold text-xl mb-4 text-white">{benefit.title}</h3>
+                <p className="font-roboto text-[#B0B0B0] leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-4">
-            Cómo funciona este
-            <span className="text-purple-400"> SISTEMA</span>
+      {/* Divisor */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#7E57C2]/30 to-transparent"></div>
+
+      {/* Qué Incluye */}
+      <section className="py-20 px-6 bg-[#1A1A1A]">
+        <div className="container mx-auto max-w-5xl text-center">
+          <h2 className="font-montserrat font-black text-4xl md:text-5xl mb-4 text-white">
+            Todo lo que
+            <span className="text-[#7E57C2]"> obtienes</span>
           </h2>
-          <p className="text-xl text-gray-300 text-center mb-16">
-            4 pasos simples para convertirte en el <strong>amo del funnel digital</strong>
+          <p className="font-roboto text-xl text-[#B0B0B0] mb-16 max-w-3xl mx-auto">
+            Este no es otro curso fail... es una puta herramienta de guerra digital que funciona AHORA
           </p>
           
-          <div className="space-y-12">
+          <div className="grid md:grid-cols-2 gap-8 text-left">
+            {[
+              "✅ +15 módulos completos (básico-avanzado)",
+              "✅ +20 embudos editables/clonables",
+              "✅ Integración con IA, WhatsApp, Instagram, web",
+              "✅ Copys que persuaden sin pensamiento",
+              "✅ Estructura de automatización real que imprime dinero",
+              "✅ Licencia de reventa incluida",
+              "✅ Comunidad privada + soporte",
+              "✅ Templates premium validados"
+            ].map((item, index) => (
+              <div key={index} className="flex items-center bg-[#1E1E1E] p-6 rounded-2xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300">
+                <span className="font-roboto text-lg text-[#E0E0E0]">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cómo Funciona */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="font-montserrat font-black text-4xl md:text-5xl text-center mb-16 text-white">
+            Cómo <span className="text-[#7E57C2]">funciona</span>
+          </h2>
+          
+          <div className="space-y-8">
             {[
               {
-                step: "01",
-                title: "Configura tu Bot",
-                description: "Siguiendo nuestras plantillas exactas, montas tu bot de ventas en menos de 2 horas",
-                icon: <Bot className="w-8 h-8" />
+                number: "01",
+                title: "Activa tu BOT",
+                description: "Configuras en minutos usando nuestras plantillas exactas"
               },
               {
-                step: "02",
-                title: "Activa el Piloto Automático",
-                description: "Tu sistema empieza a trabajar 24/7, capturando leads y cerrando ventas mientras duermes",
-                icon: <Play className="w-8 h-8" />
+                number: "02", 
+                title: "Bot conversa y califica leads",
+                description: "Tu bot trabaja 24/7 identificando clientes potenciales"
               },
               {
-                step: "03",
-                title: "Cobra las Ganancias",
-                description: "Recibe pagos automáticos en tu cuenta cada vez que el bot hace una venta",
-                icon: <DollarSign className="w-8 h-8" />
+                number: "03",
+                title: "Bot muestra productos",
+                description: "Presenta automáticamente las soluciones perfectas para cada lead"
               },
               {
-                step: "04",
-                title: "Escala y Revende",
-                description: "Usa la licencia de reventa para multiplicar tus ingresos vendiendo el sistema a otros",
-                icon: <TrendingUp className="w-8 h-8" />
+                number: "04",
+                title: "BOT cierra ventas y tú recargas tu billetera",
+                description: "Recibe pagos automáticos mientras haces otras cosas"
               }
             ].map((step, index) => (
-              <div key={index} className="flex items-center gap-8 bg-gray-800/30 p-8 rounded-2xl border border-gray-700 hover:border-purple-500 transition-all">
+              <div key={index} className="flex items-center gap-8 bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-500 group">
                 <div className="flex-shrink-0">
-                  <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-2xl font-black">
-                    {step.step}
+                  <div className="w-20 h-20 bg-gradient-to-r from-[#7E57C2] to-[#D4821A] rounded-full flex items-center justify-center font-montserrat text-2xl font-black text-white group-hover:scale-110 transition-transform duration-300">
+                    {step.number}
                   </div>
                 </div>
                 <div className="flex-grow">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="text-purple-400">{step.icon}</div>
-                    <h3 className="text-2xl font-bold">{step.title}</h3>
-                  </div>
-                  <p className="text-gray-300 text-lg leading-relaxed">{step.description}</p>
+                  <h3 className="font-montserrat font-bold text-2xl mb-3 text-white">{step.title}</h3>
+                  <p className="font-roboto text-[#B0B0B0] text-lg leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -208,127 +213,139 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Unique Selling Proposition */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-black mb-8">
-            ¿Por qué este curso es
-            <span className="text-yellow-400"> ÚNICO</span>?
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-gray-900/50 p-8 rounded-2xl border border-yellow-500">
-              <Shield className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Licencia de Reventa Incluida</h3>
-              <p className="text-gray-300">Eres el ÚNICO que puede revender este sistema. No hay competencia, no hay saturación.</p>
-            </div>
-            <div className="bg-gray-900/50 p-8 rounded-2xl border border-purple-500">
-              <Users className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Comunidad Exclusiva</h3>
-              <p className="text-gray-300">Acceso VIP a estrategias que NO se comparten en ningún otro lugar del internet.</p>
-            </div>
-          </div>
-          
-          <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 p-8 rounded-2xl border border-green-500">
-            <h3 className="text-3xl font-bold mb-4 text-green-400">
-              🎯 GARANTÍA BRUTAL: Si no recuperas tu inversión en 30 días, te devolvemos TODO
-            </h3>
-            <p className="text-xl text-gray-300">
-              Estamos tan seguros de que esto funciona, que asumimos todo el riesgo por ti.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="offer" className="py-20 px-4 bg-gray-900">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="bg-red-500 text-white py-2 px-6 rounded-full inline-block mb-6 animate-pulse">
-            🔥 OFERTA LIMITADA - Solo 100 accesos
-          </div>
-          
-          <h2 className="text-4xl md:text-6xl font-black mb-8">
-            Precio de
-            <span className="text-green-400"> LANZAMIENTO</span>
-          </h2>
-          
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-1 rounded-3xl mb-8 max-w-md mx-auto">
-            <div className="bg-gray-900 p-8 rounded-3xl">
-              <div className="text-gray-400 line-through text-xl mb-2">Precio normal: $297 USD</div>
-              <div className="text-6xl font-black text-green-400 mb-4">$15</div>
-              <div className="text-xl text-gray-300 mb-6">USD - Pago único</div>
-              
-              <div className="bg-red-500/20 border border-red-500 rounded-xl p-4 mb-6">
-                <div className="text-red-400 font-bold mb-2">⏰ Esta oferta expira en:</div>
-                <div className="flex justify-center gap-4 text-2xl font-bold">
-                  <div className="text-center">
-                    <div className="bg-red-500 px-3 py-2 rounded">{timeLeft.hours.toString().padStart(2, '0')}</div>
-                    <div className="text-xs text-gray-400 mt-1">HORAS</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-red-500 px-3 py-2 rounded">{timeLeft.minutes.toString().padStart(2, '0')}</div>
-                    <div className="text-xs text-gray-400 mt-1">MIN</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-red-500 px-3 py-2 rounded">{timeLeft.seconds.toString().padStart(2, '0')}</div>
-                    <div className="text-xs text-gray-400 mt-1">SEG</div>
-                  </div>
-                </div>
-              </div>
-              
-              <button className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-4 px-8 rounded-xl text-xl font-bold hover:shadow-2xl hover:shadow-green-500/25 transition-all transform hover:scale-105 mb-4">
-                🚀 DESBLOQUEAR ACCESO AHORA
-              </button>
-              
-              <div className="text-sm text-gray-400">
-                ✅ Acceso inmediato | ✅ Garantía 30 días | ✅ Soporte incluido
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Bonuses */}
-      <section className="py-20 px-4">
+      {/* Mini Testimonios */}
+      <section className="py-20 px-6 bg-[#1A1A1A]">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-4">
-            BONOS
-            <span className="text-yellow-400"> EXCLUSIVOS</span>
+          <h2 className="font-montserrat font-black text-4xl text-center mb-16 text-white">
+            Resultados <span className="text-[#7E57C2]">reales</span>
           </h2>
-          <p className="text-xl text-gray-300 text-center mb-16">
-            Valor total de los bonos: <span className="text-green-400 font-bold">$847 USD</span> - GRATIS para los primeros 100
-          </p>
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Templates de Email Marketing",
+                name: "Carlos M.",
+                niche: "Marketing Digital",
+                quote: "En 2 semanas ya recuperé la inversión. El bot cierra solo."
+              },
+              {
+                name: "Ana L.", 
+                niche: "E-commerce",
+                quote: "Facturé $1,200 el primer mes sin tocar nada manualmente."
+              },
+              {
+                name: "Diego R.",
+                niche: "Consultoría",
+                quote: "La licencia de reventa me generó $3,000 adicionales."
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300 hover:transform hover:scale-105">
+                <p className="font-roboto text-[#E0E0E0] mb-6 italic">"{testimonial.quote}"</p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#7E57C2] to-[#D4821A] rounded-full flex items-center justify-center font-montserrat font-bold text-white mr-4">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <div>
+                    <div className="font-montserrat font-semibold text-white">{testimonial.name}</div>
+                    <div className="font-roboto text-sm text-[#B0B0B0]">{testimonial.niche}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Oferta Principal */}
+      <section id="offer" className="py-20 px-6">
+        <div className="container mx-auto max-w-4xl text-center">
+          <div className="bg-[#D4821A] text-[#121212] py-3 px-8 rounded-full inline-block mb-8 font-montserrat font-bold animate-pulse">
+            🔥 PRECIO DE LANZAMIENTO - Este precio nunca vuelve
+          </div>
+          
+          <h2 className="font-montserrat font-black text-5xl md:text-6xl mb-12 text-white">
+            Acceso
+            <span className="text-[#D4821A]"> premium</span>
+          </h2>
+          
+          <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] p-1 rounded-3xl mb-12 max-w-lg mx-auto">
+            <div className="bg-[#1E1E1E] p-10 rounded-3xl">
+              <div className="text-[#808080] line-through text-xl mb-4 font-roboto">Precio normal: $297 USD</div>
+              <div className="text-7xl font-black text-[#D4821A] mb-6 font-montserrat">$15</div>
+              <div className="text-xl text-[#E0E0E0] mb-8 font-roboto">USD - Pago único</div>
+              
+              <div className="bg-[#7E57C2]/20 border-2 border-[#7E57C2] rounded-2xl p-6 mb-8">
+                <div className="text-[#7E57C2] font-montserrat font-bold mb-4">⏰ En minutos sube el precio:</div>
+                <div className="flex justify-center gap-4 text-2xl font-bold font-montserrat">
+                  <div className="text-center">
+                    <div className="bg-[#7E57C2] px-4 py-3 rounded-xl text-white">{timeLeft.hours.toString().padStart(2, '0')}</div>
+                    <div className="text-xs text-[#808080] mt-2 font-roboto">HORAS</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-[#7E57C2] px-4 py-3 rounded-xl text-white">{timeLeft.minutes.toString().padStart(2, '0')}</div>
+                    <div className="text-xs text-[#808080] mt-2 font-roboto">MIN</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-[#7E57C2] px-4 py-3 rounded-xl text-white">{timeLeft.seconds.toString().padStart(2, '0')}</div>
+                    <div className="text-xs text-[#808080] mt-2 font-roboto">SEG</div>
+                  </div>
+                </div>
+              </div>
+              
+              <button className="w-full bg-gradient-to-r from-[#D4821A] to-[#E8941F] text-white py-5 px-8 rounded-2xl font-montserrat text-xl font-bold hover:shadow-2xl hover:shadow-[#D4821A]/25 transition-all duration-300 hover:scale-105 mb-6">
+                🚀 SÍ, DESBLOQUEO MI MINA
+              </button>
+              
+              <div className="text-sm text-[#B0B0B0] font-roboto">
+                ✅ Acceso inmediato | ✅ Garantía 7 días | ✅ Soporte incluido
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bonos */}
+      <section className="py-20 px-6 bg-[#1A1A1A]">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="font-montserrat font-black text-4xl md:text-5xl text-center mb-4 text-white">
+            Bonos
+            <span className="text-[#D4821A]"> exclusivos</span>
+          </h2>
+          <p className="font-roboto text-xl text-[#B0B0B0] text-center mb-16">
+            Valor total: <span className="text-[#D4821A] font-bold">$847 USD</span> - GRATIS para los primeros 100
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "+1.000 flujos premium",
                 value: "$197",
-                description: "50+ plantillas de emails que convierten al 15%+",
-                icon: <Gift className="w-8 h-8 text-yellow-400" />
+                description: "Embudos probados en múltiples nichos y mercados"
               },
               {
-                title: "Script de Llamadas de Cierre",
-                value: "$297",
-                description: "El guión exacto para cerrar ventas por teléfono",
-                icon: <Gift className="w-8 h-8 text-yellow-400" />
+                title: "Templates para WhatsApp/Instagram/WordPress",
+                value: "$297",  
+                description: "Plantillas optimizadas para cada plataforma"
               },
               {
-                title: "Masterclass: Tráfico Gratuito",
-                value: "$397",
-                description: "Cómo generar leads sin gastar en publicidad",
-                icon: <Gift className="w-8 h-8 text-yellow-400" />
+                title: "Copys validadas para anuncios y recuperación",
+                value: "$197",
+                description: "Textos que convierten probados en el mercado"
+              },
+              {
+                title: "Derecho de reventa completo",
+                value: "$156",
+                description: "Revende todo el sistema y quédate con el 100%"
               }
             ].map((bonus, index) => (
-              <div key={index} className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/30 p-6 rounded-2xl hover:border-yellow-500 transition-all hover:transform hover:scale-105">
+              <div key={index} className="bg-[#1E1E1E] border-2 border-[#D4821A]/30 p-8 rounded-3xl hover:border-[#D4821A] transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-[#D4821A]/10 group">
                 <div className="flex items-center gap-3 mb-4">
-                  {bonus.icon}
-                  <span className="bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-bold">
+                  <Gift className="w-6 h-6 text-[#D4821A] group-hover:animate-pulse" />
+                  <span className="bg-[#D4821A] text-[#121212] px-4 py-2 rounded-full font-montserrat text-sm font-bold">
                     VALOR: {bonus.value}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold mb-3">{bonus.title}</h3>
-                <p className="text-gray-300">{bonus.description}</p>
+                <h3 className="font-montserrat font-bold text-xl mb-4 text-white">{bonus.title}</h3>
+                <p className="font-roboto text-[#B0B0B0]">{bonus.description}</p>
               </div>
             ))}
           </div>
@@ -336,47 +353,49 @@ const Index = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 px-4 bg-gray-800/50">
+      <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16">
+          <h2 className="font-montserrat font-black text-4xl md:text-5xl text-center mb-16 text-white">
             Preguntas
-            <span className="text-purple-400"> FRECUENTES</span>
+            <span className="text-[#7E57C2]"> frecuentes</span>
           </h2>
           
           <div className="space-y-4">
             {[
               {
-                question: "¿Necesito conocimientos técnicos?",
-                answer: "Para nada. Todo está diseñado para que cualquier persona, sin importar su nivel técnico, pueda implementarlo en menos de 2 horas."
+                question: "¿Necesito saber programar?",
+                answer: "Para nada. Todo está diseñado para que cualquier persona monte su bot en menos de 3 horas, sin conocimientos técnicos."
               },
               {
-                question: "¿Realmente puedo ganar $500-$2000 USD mensuales?",
-                answer: "Sí, pero depende de tu dedicación. Nuestros estudiantes promedio generan entre $500-$2000 USD mensuales después del primer mes de implementación."
+                question: "¿Realmente puedo ganar $500-$2000 mensuales?",
+                answer: "Sí, nuestros estudiantes promedio alcanzan estos números después del primer mes. Depende de tu dedicación e implementación."
               },
               {
                 question: "¿La licencia de reventa es real?",
-                answer: "Totalmente real. Puedes revender este sistema completo y quedarte con el 100% de las ganancias. Es parte del curso."
+                answer: "Totalmente real. Puedes revender el sistema completo y quedarte con el 100% de las ganancias. Es parte integral del curso."
               },
               {
-                question: "¿Qué pasa si no funciona para mí?",
-                answer: "Garantía total de 30 días. Si no recuperas tu inversión, te devolvemos cada centavo sin preguntas."
+                question: "¿Qué pasa si no me funciona?",
+                answer: "Garantía total de 7 días. Si no estás satisfecho, te devolvemos cada centavo sin preguntas."
               },
               {
                 question: "¿Cuánto tiempo tengo acceso?",
                 answer: "Acceso de por vida al curso, actualizaciones gratuitas y acceso permanente a la comunidad exclusiva."
               }
             ].map((faq, index) => (
-              <div key={index} className="bg-gray-900/50 border border-gray-700 rounded-xl overflow-hidden">
+              <div key={index} className="bg-[#1E1E1E] border border-[#333] rounded-2xl overflow-hidden hover:border-[#7E57C2]/50 transition-all duration-300">
                 <button
-                  className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-800/50 transition-all"
+                  className="w-full p-8 text-left flex justify-between items-center hover:bg-[#222] transition-all duration-300 group"
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                 >
-                  <h3 className="text-xl font-bold">{faq.question}</h3>
-                  <ChevronDown className={`w-6 h-6 text-purple-400 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                  <h3 className="font-montserrat font-semibold text-xl text-white group-hover:text-[#7E57C2] transition-colors duration-300">{faq.question}</h3>
+                  <div className={`transition-transform duration-300 ${openFaq === index ? 'rotate-45' : ''}`}>
+                    <Plus className="w-6 h-6 text-[#7E57C2]" />
+                  </div>
                 </button>
                 {openFaq === index && (
-                  <div className="px-6 pb-6">
-                    <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                  <div className="px-8 pb-8 animate-fade-in">
+                    <p className="font-roboto text-[#B0B0B0] leading-relaxed text-lg">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -385,44 +404,77 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-900 to-pink-900">
+      {/* CTA Final */}
+      <section className="py-20 px-6 bg-gradient-to-r from-[#7E57C2]/20 to-[#D4821A]/20">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-6xl font-black mb-8">
+          <h2 className="font-montserrat font-black text-5xl md:text-6xl mb-8 text-white">
             El momento es
-            <span className="text-yellow-400"> AHORA</span>
+            <span className="text-[#D4821A]"> AHORA</span>
           </h2>
           
-          <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
-            Mientras lees esto, otros ya están implementando este sistema y generando sus primeros ingresos.
+          <p className="font-roboto text-xl md:text-2xl mb-8 text-[#B0B0B0] max-w-3xl mx-auto leading-relaxed">
+            Mientras lees esto, otros ya están implementando y generando sus primeros ingresos.
             <strong className="text-white"> ¿Vas a quedarte atrás?</strong>
           </p>
           
-          <div className="bg-red-500/20 border border-red-500 rounded-xl p-6 mb-8 max-w-md mx-auto">
-            <div className="text-red-400 font-bold mb-2">⚠️ ÚLTIMO AVISO</div>
-            <div className="text-white">Solo quedan <span className="font-bold text-yellow-400">87 accesos</span> disponibles</div>
+          <div className="bg-[#7E57C2]/20 border-2 border-[#7E57C2] rounded-2xl p-6 mb-8 max-w-md mx-auto">
+            <div className="text-[#7E57C2] font-montserrat font-bold mb-2">⚠️ ÚLTIMO AVISO</div>
+            <div className="text-white font-roboto">Solo quedan <span className="font-bold text-[#D4821A]">87 accesos</span> disponibles</div>
           </div>
           
           <button 
             onClick={scrollToOffer}
-            className="bg-gradient-to-r from-green-500 to-green-600 text-white px-12 py-6 rounded-full text-2xl font-bold hover:shadow-2xl hover:shadow-green-500/25 transition-all transform hover:scale-105 mb-6"
+            className="bg-gradient-to-r from-[#D4821A] to-[#E8941F] text-white px-12 py-6 rounded-2xl font-montserrat text-2xl font-bold hover:shadow-2xl hover:shadow-[#D4821A]/25 transition-all duration-300 hover:scale-105 mb-6"
           >
             🚀 DESBLOQUEAR MI MINA DE ORO
           </button>
           
-          <p className="text-gray-400">
-            Precio de lanzamiento: $15 USD | Garantía 30 días | Acceso inmediato
+          <p className="font-roboto text-[#808080]">
+            Inversión: $15 USD | Garantía 7 días | Acceso inmediato
           </p>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 bg-gray-900 border-t border-gray-800">
-        <div className="container mx-auto text-center text-gray-400">
-          <p>&copy; 2024 Mina de Oro Digital. Todos los derechos reservados.</p>
-          <p className="mt-2 text-sm">Términos de uso | Política de privacidad | Soporte</p>
+      <footer className="py-12 px-6 bg-[#0A0A0A] border-t border-[#333]">
+        <div className="container mx-auto text-center">
+          <div className="mb-6">
+            <p className="font-roboto text-[#D4821A] font-semibold mb-2">Garantía de satisfacción 7 días o te devolvemos</p>
+          </div>
+          <div className="flex justify-center space-x-8 mb-6">
+            <a href="#" className="font-roboto text-[#808080] hover:text-[#7E57C2] transition-colors duration-300">FAQ</a>
+            <a href="#" className="font-roboto text-[#808080] hover:text-[#7E57C2] transition-colors duration-300">Soporte</a>
+            <a href="#" className="font-roboto text-[#808080] hover:text-[#7E57C2] transition-colors duration-300">Términos</a>
+          </div>
+          <p className="font-roboto text-[#666] text-sm">© 2024 Minería Digital. Todos los derechos reservados.</p>
         </div>
       </footer>
+
+      {/* CSS personalizado para animaciones */}
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .animate-fade-in {
+          animation: fade-in 0.8s ease-out;
+        }
+        
+        .font-montserrat {
+          font-family: 'Montserrat', sans-serif;
+        }
+        
+        .font-roboto {
+          font-family: 'Roboto', sans-serif;
+        }
+      `}</style>
     </div>
   );
 };
