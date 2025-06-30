@@ -1,39 +1,44 @@
-
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Bot, DollarSign, Users, Zap, Star, Clock, CheckCircle, ArrowRight, Play, Target, TrendingUp, Shield, Gift, Plus, Minus } from 'lucide-react';
-
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 23,
     minutes: 47,
     seconds: 32
   });
-
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
         if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
+          return {
+            ...prev,
+            seconds: prev.seconds - 1
+          };
         } else if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
+          return {
+            ...prev,
+            minutes: prev.minutes - 1,
+            seconds: 59
+          };
         } else if (prev.hours > 0) {
-          return { hours: prev.hours - 1, minutes: 59, seconds: 59 };
+          return {
+            hours: prev.hours - 1,
+            minutes: 59,
+            seconds: 59
+          };
         }
         return prev;
       });
     }, 1000);
-
     return () => clearInterval(timer);
   }, []);
-
   const scrollToOffer = () => {
-    document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('offer')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light">
+  return <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light">
       {/* Google Fonts */}
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
       
@@ -41,10 +46,7 @@ const Index = () => {
       <div className="fixed top-0 left-0 right-0 bg-[#7E57C2] backdrop-blur-sm z-50 border-b border-[#7E57C2]/20">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
           <span className="font-montserrat font-semibold text-sm text-white">⚡ Solo quedan 100 accesos disponibles</span>
-          <button 
-            onClick={scrollToOffer}
-            className="bg-[#D4821A] hover:bg-[#E8941F] text-white px-6 py-2 rounded-lg font-montserrat font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#D4821A]/25"
-          >
+          <button onClick={scrollToOffer} className="bg-[#D4821A] hover:bg-[#E8941F] text-white px-6 py-2 rounded-lg font-montserrat font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#D4821A]/25">
             Desbloquear mina
           </button>
         </div>
@@ -69,7 +71,7 @@ const Index = () => {
           </h1>
           
           <p className="font-roboto text-xl md:text-2xl mb-8 text-[#B0B0B0] max-w-4xl mx-auto leading-relaxed">
-            ¿Estás harto de rascarte los huevos viendo que otros facturan mientras tú paras?<br/>
+            ¿Estás harto de rascarte los huevos viendo que otros facturan mientras tú paras?<br />
             <strong className="text-[#E0E0E0]">Crea y clona tu BOT Typebot que vende solo sin saber programar</strong>
           </p>
           
@@ -80,10 +82,7 @@ const Index = () => {
             </div>
           </div>
           
-          <button 
-            onClick={scrollToOffer}
-            className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white px-12 py-5 rounded-2xl font-montserrat font-bold text-xl hover:shadow-2xl hover:shadow-[#7E57C2]/30 transition-all duration-300 hover:scale-105 mb-6"
-          >
+          <button onClick={scrollToOffer} className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white px-12 py-5 rounded-2xl font-montserrat font-bold text-xl hover:shadow-2xl hover:shadow-[#7E57C2]/30 transition-all duration-300 hover:scale-105 mb-6">
             Desbloquear mina ahora
             <ArrowRight className="inline-block ml-3 w-5 h-5" />
           </button>
@@ -105,31 +104,25 @@ const Index = () => {
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-7xl">
           <div className="grid md:grid-cols-3 gap-12">
-            {[
-              {
-                icon: <Bot className="w-8 h-8 text-[#7E57C2]" />,
-                title: "🚀 BOT que convierte 24/7",
-                description: "Sin videos, sin cara, sin equipo. Tu bot trabaja mientras duermes."
-              },
-              {
-                icon: <TrendingUp className="w-8 h-8 text-[#D4821A]" />,
-                title: "💰 Duplica tu ingreso",
-                description: "Vende como afiliado + revende el embudo completo."
-              },
-              {
-                icon: <Clock className="w-8 h-8 text-[#7E57C2]" />,
-                title: "⚡ Instalación en 3h",
-                description: "Setup ultra-rápido, sin complicaciones técnicas."
-              }
-            ].map((benefit, index) => (
-              <div key={index} className="group bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-[#7E57C2]/10">
+            {[{
+            icon: <Bot className="w-8 h-8 text-[#7E57C2]" />,
+            title: "🚀 BOT que convierte 24/7",
+            description: "Sin videos, sin cara, sin equipo. Tu bot trabaja mientras duermes."
+          }, {
+            icon: <TrendingUp className="w-8 h-8 text-[#D4821A]" />,
+            title: "💰 Duplica tu ingreso",
+            description: "Vende como afiliado + revende el embudo completo."
+          }, {
+            icon: <Clock className="w-8 h-8 text-[#7E57C2]" />,
+            title: "⚡ Instalación en 3h",
+            description: "Setup ultra-rápido, sin complicaciones técnicas."
+          }].map((benefit, index) => <div key={index} className="group bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-[#7E57C2]/10">
                 <div className="mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:animate-pulse">
                   {benefit.icon}
                 </div>
                 <h3 className="font-montserrat font-bold text-xl mb-4 text-white">{benefit.title}</h3>
                 <p className="font-roboto text-[#B0B0B0] leading-relaxed">{benefit.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -149,20 +142,9 @@ const Index = () => {
           </p>
           
           <div className="grid md:grid-cols-2 gap-8 text-left">
-            {[
-              "✅ +15 módulos completos (básico-avanzado)",
-              "✅ +20 embudos editables/clonables",
-              "✅ Integración con IA, WhatsApp, Instagram, web",
-              "✅ Copys que persuaden sin pensamiento",
-              "✅ Estructura de automatización real que imprime dinero",
-              "✅ Licencia de reventa incluida",
-              "✅ Comunidad privada + soporte",
-              "✅ Templates premium validados"
-            ].map((item, index) => (
-              <div key={index} className="flex items-center bg-[#1E1E1E] p-6 rounded-2xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300">
+            {["✅ +15 módulos completos (básico-avanzado)", "✅ +20 embudos editables/clonables", "✅ Integración con IA, WhatsApp, Instagram, web", "✅ Copys que persuaden sin pensamiento", "✅ Estructura de automatización real que imprime dinero", "✅ Licencia de reventa incluida", "✅ Comunidad privada + soporte", "✅ Templates premium validados"].map((item, index) => <div key={index} className="flex items-center bg-[#1E1E1E] p-6 rounded-2xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300">
                 <span className="font-roboto text-lg text-[#E0E0E0]">{item}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -175,29 +157,23 @@ const Index = () => {
           </h2>
           
           <div className="space-y-8">
-            {[
-              {
-                number: "01",
-                title: "Activa tu BOT",
-                description: "Configuras en minutos usando nuestras plantillas exactas"
-              },
-              {
-                number: "02", 
-                title: "Bot conversa y califica leads",
-                description: "Tu bot trabaja 24/7 identificando clientes potenciales"
-              },
-              {
-                number: "03",
-                title: "Bot muestra productos",
-                description: "Presenta automáticamente las soluciones perfectas para cada lead"
-              },
-              {
-                number: "04",
-                title: "BOT cierra ventas y tú recargas tu billetera",
-                description: "Recibe pagos automáticos mientras haces otras cosas"
-              }
-            ].map((step, index) => (
-              <div key={index} className="flex items-center gap-8 bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-500 group">
+            {[{
+            number: "01",
+            title: "Activa tu BOT",
+            description: "Configuras en minutos usando nuestras plantillas exactas"
+          }, {
+            number: "02",
+            title: "Bot conversa y califica leads",
+            description: "Tu bot trabaja 24/7 identificando clientes potenciales"
+          }, {
+            number: "03",
+            title: "Bot muestra productos",
+            description: "Presenta automáticamente las soluciones perfectas para cada lead"
+          }, {
+            number: "04",
+            title: "BOT cierra ventas y tú recargas tu billetera",
+            description: "Recibe pagos automáticos mientras haces otras cosas"
+          }].map((step, index) => <div key={index} className="flex items-center gap-8 bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-500 group">
                 <div className="flex-shrink-0">
                   <div className="w-20 h-20 bg-gradient-to-r from-[#7E57C2] to-[#D4821A] rounded-full flex items-center justify-center font-montserrat text-2xl font-black text-white group-hover:scale-110 transition-transform duration-300">
                     {step.number}
@@ -207,8 +183,7 @@ const Index = () => {
                   <h3 className="font-montserrat font-bold text-2xl mb-3 text-white">{step.title}</h3>
                   <p className="font-roboto text-[#B0B0B0] text-lg leading-relaxed">{step.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -221,24 +196,19 @@ const Index = () => {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Carlos M.",
-                niche: "Marketing Digital",
-                quote: "En 2 semanas ya recuperé la inversión. El bot cierra solo."
-              },
-              {
-                name: "Ana L.", 
-                niche: "E-commerce",
-                quote: "Facturé $1,200 el primer mes sin tocar nada manualmente."
-              },
-              {
-                name: "Diego R.",
-                niche: "Consultoría",
-                quote: "La licencia de reventa me generó $3,000 adicionales."
-              }
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300 hover:transform hover:scale-105">
+            {[{
+            name: "Carlos M.",
+            niche: "Marketing Digital",
+            quote: "En 2 semanas ya recuperé la inversión. El bot cierra solo."
+          }, {
+            name: "Ana L.",
+            niche: "E-commerce",
+            quote: "Facturé $1,200 el primer mes sin tocar nada manualmente."
+          }, {
+            name: "Diego R.",
+            niche: "Consultoría",
+            quote: "La licencia de reventa me generó $3,000 adicionales."
+          }].map((testimonial, index) => <div key={index} className="bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300 hover:transform hover:scale-105">
                 <p className="font-roboto text-[#E0E0E0] mb-6 italic">"{testimonial.quote}"</p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-[#7E57C2] to-[#D4821A] rounded-full flex items-center justify-center font-montserrat font-bold text-white mr-4">
@@ -249,8 +219,7 @@ const Index = () => {
                     <div className="font-roboto text-sm text-[#B0B0B0]">{testimonial.niche}</div>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -269,7 +238,7 @@ const Index = () => {
           
           <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] p-1 rounded-3xl mb-12 max-w-lg mx-auto">
             <div className="bg-[#1E1E1E] p-10 rounded-3xl">
-              <div className="text-[#808080] line-through text-xl mb-4 font-roboto">Precio normal: $297 USD</div>
+              <div className="text-[#808080] line-through text-xl mb-4 font-roboto">Precio normal: $97 USD</div>
               <div className="text-7xl font-black text-[#D4821A] mb-6 font-montserrat">$15</div>
               <div className="text-xl text-[#E0E0E0] mb-8 font-roboto">USD - Pago único</div>
               
@@ -315,29 +284,23 @@ const Index = () => {
           </p>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "+1.000 flujos premium",
-                value: "$197",
-                description: "Embudos probados en múltiples nichos y mercados"
-              },
-              {
-                title: "Templates para WhatsApp/Instagram/WordPress",
-                value: "$297",  
-                description: "Plantillas optimizadas para cada plataforma"
-              },
-              {
-                title: "Copys validadas para anuncios y recuperación",
-                value: "$197",
-                description: "Textos que convierten probados en el mercado"
-              },
-              {
-                title: "Derecho de reventa completo",
-                value: "$156",
-                description: "Revende todo el sistema y quédate con el 100%"
-              }
-            ].map((bonus, index) => (
-              <div key={index} className="bg-[#1E1E1E] border-2 border-[#D4821A]/30 p-8 rounded-3xl hover:border-[#D4821A] transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-[#D4821A]/10 group">
+            {[{
+            title: "+1.000 flujos premium",
+            value: "$197",
+            description: "Embudos probados en múltiples nichos y mercados"
+          }, {
+            title: "Templates para WhatsApp/Instagram/WordPress",
+            value: "$297",
+            description: "Plantillas optimizadas para cada plataforma"
+          }, {
+            title: "Copys validadas para anuncios y recuperación",
+            value: "$197",
+            description: "Textos que convierten probados en el mercado"
+          }, {
+            title: "Derecho de reventa completo",
+            value: "$156",
+            description: "Revende todo el sistema y quédate con el 100%"
+          }].map((bonus, index) => <div key={index} className="bg-[#1E1E1E] border-2 border-[#D4821A]/30 p-8 rounded-3xl hover:border-[#D4821A] transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-[#D4821A]/10 group">
                 <div className="flex items-center gap-3 mb-4">
                   <Gift className="w-6 h-6 text-[#D4821A] group-hover:animate-pulse" />
                   <span className="bg-[#D4821A] text-[#121212] px-4 py-2 rounded-full font-montserrat text-sm font-bold">
@@ -346,8 +309,7 @@ const Index = () => {
                 </div>
                 <h3 className="font-montserrat font-bold text-xl mb-4 text-white">{bonus.title}</h3>
                 <p className="font-roboto text-[#B0B0B0]">{bonus.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -361,45 +323,32 @@ const Index = () => {
           </h2>
           
           <div className="space-y-4">
-            {[
-              {
-                question: "¿Necesito saber programar?",
-                answer: "Para nada. Todo está diseñado para que cualquier persona monte su bot en menos de 3 horas, sin conocimientos técnicos."
-              },
-              {
-                question: "¿Realmente puedo ganar $500-$2000 mensuales?",
-                answer: "Sí, nuestros estudiantes promedio alcanzan estos números después del primer mes. Depende de tu dedicación e implementación."
-              },
-              {
-                question: "¿La licencia de reventa es real?",
-                answer: "Totalmente real. Puedes revender el sistema completo y quedarte con el 100% de las ganancias. Es parte integral del curso."
-              },
-              {
-                question: "¿Qué pasa si no me funciona?",
-                answer: "Garantía total de 7 días. Si no estás satisfecho, te devolvemos cada centavo sin preguntas."
-              },
-              {
-                question: "¿Cuánto tiempo tengo acceso?",
-                answer: "Acceso de por vida al curso, actualizaciones gratuitas y acceso permanente a la comunidad exclusiva."
-              }
-            ].map((faq, index) => (
-              <div key={index} className="bg-[#1E1E1E] border border-[#333] rounded-2xl overflow-hidden hover:border-[#7E57C2]/50 transition-all duration-300">
-                <button
-                  className="w-full p-8 text-left flex justify-between items-center hover:bg-[#222] transition-all duration-300 group"
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                >
+            {[{
+            question: "¿Necesito saber programar?",
+            answer: "Para nada. Todo está diseñado para que cualquier persona monte su bot en menos de 3 horas, sin conocimientos técnicos."
+          }, {
+            question: "¿Realmente puedo ganar $500-$2000 mensuales?",
+            answer: "Sí, nuestros estudiantes promedio alcanzan estos números después del primer mes. Depende de tu dedicación e implementación."
+          }, {
+            question: "¿La licencia de reventa es real?",
+            answer: "Totalmente real. Puedes revender el sistema completo y quedarte con el 100% de las ganancias. Es parte integral del curso."
+          }, {
+            question: "¿Qué pasa si no me funciona?",
+            answer: "Garantía total de 7 días. Si no estás satisfecho, te devolvemos cada centavo sin preguntas."
+          }, {
+            question: "¿Cuánto tiempo tengo acceso?",
+            answer: "Acceso de por vida al curso, actualizaciones gratuitas y acceso permanente a la comunidad exclusiva."
+          }].map((faq, index) => <div key={index} className="bg-[#1E1E1E] border border-[#333] rounded-2xl overflow-hidden hover:border-[#7E57C2]/50 transition-all duration-300">
+                <button className="w-full p-8 text-left flex justify-between items-center hover:bg-[#222] transition-all duration-300 group" onClick={() => setOpenFaq(openFaq === index ? null : index)}>
                   <h3 className="font-montserrat font-semibold text-xl text-white group-hover:text-[#7E57C2] transition-colors duration-300">{faq.question}</h3>
                   <div className={`transition-transform duration-300 ${openFaq === index ? 'rotate-45' : ''}`}>
                     <Plus className="w-6 h-6 text-[#7E57C2]" />
                   </div>
                 </button>
-                {openFaq === index && (
-                  <div className="px-8 pb-8 animate-fade-in">
+                {openFaq === index && <div className="px-8 pb-8 animate-fade-in">
                     <p className="font-roboto text-[#B0B0B0] leading-relaxed text-lg">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
+                  </div>}
+              </div>)}
           </div>
         </div>
       </section>
@@ -422,10 +371,7 @@ const Index = () => {
             <div className="text-white font-roboto">Solo quedan <span className="font-bold text-[#D4821A]">87 accesos</span> disponibles</div>
           </div>
           
-          <button 
-            onClick={scrollToOffer}
-            className="bg-gradient-to-r from-[#D4821A] to-[#E8941F] text-white px-12 py-6 rounded-2xl font-montserrat text-2xl font-bold hover:shadow-2xl hover:shadow-[#D4821A]/25 transition-all duration-300 hover:scale-105 mb-6"
-          >
+          <button onClick={scrollToOffer} className="bg-gradient-to-r from-[#D4821A] to-[#E8941F] text-white px-12 py-6 rounded-2xl font-montserrat text-2xl font-bold hover:shadow-2xl hover:shadow-[#D4821A]/25 transition-all duration-300 hover:scale-105 mb-6">
             🚀 DESBLOQUEAR MI MINA DE ORO
           </button>
           
@@ -475,8 +421,6 @@ const Index = () => {
           font-family: 'Roboto', sans-serif;
         }
       `}</style>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
