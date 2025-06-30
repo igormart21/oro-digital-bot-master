@@ -73,7 +73,7 @@ const Index = () => {
           </div>
           
           <h1 className="font-montserrat font-black text-4xl md:text-7xl lg:text-8xl mb-8 leading-tight">
-            Automatiza ventas y gana en
+            Curso Typebot Pro: Automatiza ventas y gana en
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#7E57C2] to-[#D4821A] mt-2">
               piloto automático
             </span>
@@ -81,7 +81,7 @@ const Index = () => {
           
           <p className="font-roboto text-xl md:text-2xl mb-8 text-[#B0B0B0] max-w-4xl mx-auto leading-relaxed">
             ¿Estás harto de rascarte los huevos viendo que otros facturan mientras tú paras?<br />
-            <strong className="text-[#E0E0E0]">Crea y clona tu BOT Typebot que vende solo sin saber programar</strong>
+            <strong className="text-[#E0E0E0]">Domina Typebot desde básico hasta avanzado y crea BOTs que venden solos</strong>
           </p>
           
           <div className="mb-12">
@@ -116,8 +116,8 @@ const Index = () => {
             {[
               {
                 icon: <Bot className="w-8 h-8 text-[#7E57C2]" />,
-                title: "🚀 BOT que convierte 24/7",
-                description: "Sin videos, sin cara, sin equipo. Tu bot trabaja mientras duermes."
+                title: "🚀 Typebot que convierte 24/7",
+                description: "Sin videos, sin cara, sin equipo. Tu bot Typebot trabaja mientras duermes."
               },
               {
                 icon: <TrendingUp className="w-8 h-8 text-[#D4821A]" />,
@@ -153,13 +153,14 @@ const Index = () => {
             <span className="text-[#7E57C2]"> obtienes</span>
           </h2>
           <p className="font-roboto text-xl text-[#B0B0B0] mb-16 max-w-3xl mx-auto">
-            Este no es otro curso fail... es una puta herramienta de guerra digital que funciona AHORA
+            Typebot Pro: curso completo del básico al avanzado - no es otro curso fail, es una herramienta de guerra digital
           </p>
           
           <div className="grid md:grid-cols-2 gap-8 text-left mb-16">
             {[
-              "✅ +15 módulos completos (básico-avanzado)",
-              "✅ +20 embudos editables/clonables", 
+              "✅ Curso Typebot Pro completo (básico-avanzado)",
+              "✅ +15 módulos de Typebot estructurados", 
+              "✅ +20 embudos Typebot editables/clonables",
               "✅ Integración con IA, WhatsApp, Instagram, web",
               "✅ Copys que persuaden sin pensamiento",
               "✅ Estructura de automatización real que imprime dinero",
@@ -497,7 +498,7 @@ const Index = () => {
           </h2>
           
           <p className="font-roboto text-xl md:text-2xl mb-8 text-[#B0B0B0] max-w-3xl mx-auto leading-relaxed">
-            Mientras lees esto, otros ya están implementando y generando sus primeros ingresos.
+            Mientras lees esto, otros ya están dominando Typebot y generando sus primeros ingresos.
             <strong className="text-white"> ¿Vas a quedarte atrás?</strong>
           </p>
           
@@ -527,7 +528,7 @@ const Index = () => {
             <a href="#" className="font-roboto text-[#808080] hover:text-[#7E57C2] transition-colors duration-300">Soporte</a>
             <a href="#" className="font-roboto text-[#808080] hover:text-[#7E57C2] transition-colors duration-300">Términos</a>
           </div>
-          <p className="font-roboto text-[#666] text-sm">© 2024 Minería Digital. Todos los derechos reservados.</p>
+          <p className="font-roboto text-[#666] text-sm">© 2024 Typebot Pro - Minería Digital. Todos los derechos reservados.</p>
         </div>
       </footer>
 
