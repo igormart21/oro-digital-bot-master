@@ -109,7 +109,7 @@ const Index = () => {
       {/* Divisor */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-[#7E57C2]/30 to-transparent"></div>
 
-      {/* Beneficios Principales */}
+      {/* Beneficios Principais */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-7xl">
           <div className="grid md:grid-cols-3 gap-12">
@@ -358,7 +358,7 @@ const Index = () => {
               {
                 title: "+1.000 flujos premium",
                 value: "$197",
-                description: "Embudos probados en múltiples nichos y mercados",
+                description: "Más de 1000 embudos probados en múltiples nichos y mercados",
                 showFlows: true
               },
               {
