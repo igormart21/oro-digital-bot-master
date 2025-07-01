@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,6 +42,25 @@
     
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Typebot Chat Bubble -->
+    <script>
+    const typebotInitScript = document.createElement("script");
+    typebotInitScript.type = "module";
+    typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.34/dist/web.js'
+
+    Typebot.initBubble({
+      typebot: "tema-whatsapp-espanhol-novo-hotmart-copy-brutal-5i14rfs",
+      apiHost: "https://chat.chatcode.site",
+      previewMessage: {
+        message: "Prueba en la práctica",
+        avatarUrl:
+          "https://storage.chatcode.site/typebot/public/workspaces/cm5khk9o90001rvtacrvv9ojm/typebots/cm5qs01rf001lkn7o334n633w/hostAvatar?v=1736515128341",
+      },
+      theme: { button: { backgroundColor: "#128c7e" } },
+    });
+    `;
+    document.body.append(typebotInitScript);
+    </script>
   </body>
 </html>
-
