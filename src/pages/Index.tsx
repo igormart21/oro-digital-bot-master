@@ -1,7 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Bot, DollarSign, Users, Zap, Star, Clock, CheckCircle, ArrowRight, Play, Target, TrendingUp, Shield, Gift, Plus, Minus } from 'lucide-react';
-
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 23,
@@ -10,7 +8,6 @@ const Index = () => {
   });
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [openBonusFlows, setOpenBonusFlows] = useState(false);
-
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
@@ -35,27 +32,22 @@ const Index = () => {
         return prev;
       });
     }, 1000);
-
     return () => clearInterval(timer);
   }, []);
-
   const scrollToOffer = () => {
     document.getElementById('offer')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
-
   const checkoutUrl = "https://pay.hotmart.com/X95603477Q?off=yz1gz1p6&checkoutMode=10";
-
-  return (
-    <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light">
+  return <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light">
       {/* Google Fonts */}
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
       
       {/* Sticky CTA */}
       <div className="fixed top-0 left-0 right-0 bg-[#7E57C2] backdrop-blur-sm z-50 border-b border-[#7E57C2]/20">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
-          <span className="font-montserrat font-semibold text-sm text-white">⚡ Solo quedan 100 accesos disponibles</span>
+          <span className="font-montserrat font-semibold text-sm text-white">⚡ Solo quedan 87 accesos disponibles</span>
           <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="bg-[#D4821A] hover:bg-[#E8941F] text-white px-6 py-2 rounded-lg font-montserrat font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#D4821A]/25">
             Desbloquear mina
           </a>
@@ -113,31 +105,25 @@ const Index = () => {
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-7xl">
           <div className="grid md:grid-cols-3 gap-12">
-            {[
-              {
-                icon: <Bot className="w-8 h-8 text-[#7E57C2]" />,
-                title: "🚀 Typebot que convierte 24/7",
-                description: "Sin videos, sin cara, sin equipo. Tu bot Typebot trabaja mientras duermes."
-              },
-              {
-                icon: <TrendingUp className="w-8 h-8 text-[#D4821A]" />,
-                title: "💰 Duplica tu ingreso",
-                description: "Vende como afiliado + revende el embudo completo."
-              },
-              {
-                icon: <Clock className="w-8 h-8 text-[#7E57C2]" />,
-                title: "⚡ Instalación en 3h",
-                description: "Setup ultra-rápido, sin complicaciones técnicas."
-              }
-            ].map((benefit, index) => (
-              <div key={index} className="group bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-[#7E57C2]/10">
+            {[{
+            icon: <Bot className="w-8 h-8 text-[#7E57C2]" />,
+            title: "🚀 Typebot que convierte 24/7",
+            description: "Sin videos, sin cara, sin equipo. Tu bot Typebot trabaja mientras duermes."
+          }, {
+            icon: <TrendingUp className="w-8 h-8 text-[#D4821A]" />,
+            title: "💰 Duplica tu ingreso",
+            description: "Vende como afiliado + revende el embudo completo."
+          }, {
+            icon: <Clock className="w-8 h-8 text-[#7E57C2]" />,
+            title: "⚡ Instalación en 3h",
+            description: "Setup ultra-rápido, sin complicaciones técnicas."
+          }].map((benefit, index) => <div key={index} className="group bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-[#7E57C2]/10">
                 <div className="mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:animate-pulse">
                   {benefit.icon}
                 </div>
                 <h3 className="font-montserrat font-bold text-xl mb-4 text-white">{benefit.title}</h3>
                 <p className="font-roboto text-[#B0B0B0] leading-relaxed">{benefit.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -157,21 +143,9 @@ const Index = () => {
           </p>
           
           <div className="grid md:grid-cols-2 gap-8 text-left mb-16">
-            {[
-              "✅ Curso Typebot Pro completo (básico-avanzado)",
-              "✅ +15 módulos de Typebot estructurados", 
-              "✅ +20 embudos Typebot editables/clonables",
-              "✅ Integración con IA, WhatsApp, Instagram, web",
-              "✅ Copys que persuaden sin pensamiento",
-              "✅ Estructura de automatización real que imprime dinero",
-              "✅ Licencia de reventa incluida",
-              "✅ Comunidad privada + soporte",
-              "✅ Templates premium validados"
-            ].map((item, index) => (
-              <div key={index} className="flex items-center bg-[#1E1E1E] p-6 rounded-2xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300">
+            {["✅ Curso Typebot Pro completo (básico-avanzado)", "✅ +15 módulos de Typebot estructurados", "✅ +20 embudos Typebot editables/clonables", "✅ Integración con IA, WhatsApp, Instagram, web", "✅ Copys que persuaden sin pensamiento", "✅ Estructura de automatización real que imprime dinero", "✅ Licencia de reventa incluida", "✅ Comunidad privada + soporte", "✅ Templates premium validados"].map((item, index) => <div key={index} className="flex items-center bg-[#1E1E1E] p-6 rounded-2xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300">
                 <span className="font-roboto text-lg text-[#E0E0E0]">{item}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           {/* Modelos de Flujos */}
@@ -180,27 +154,9 @@ const Index = () => {
               🎯 Modelos de <span className="text-[#D4821A]">flujos listos</span>
             </h3>
             <div className="grid md:grid-cols-3 gap-4 text-left">
-              {[
-                "🎰 Vender lotería con resultados en tiempo real (y cobrar por cada boleto vendido)",
-                "🍔 Tomar pedidos automáticos en deliverys y calcular total + envío al instante",
-                "🏠 Captar clientes para inmobiliarias sin mostrar la cara",
-                "🚗 Mostrar autos y agendar test-drives sin contacto humano",
-                "🍰 Hacer que pastelerías vendan solas por WhatsApp",
-                "💈 Barberías que agendan clientes mientras duermen",
-                "🦷 Clínicas que usan bots con IA para responder y captar pacientes",
-                "💆 Estéticas vendiendo servicios con seguimiento automático",
-                "📦 Tiendas online que cierran ventas sin Instagram ni equipo",
-                "⚖ Captar clientes para abogados sin levantar un dedo",
-                "📺 Vender IPTV directo al WhatsApp sin bloqueos ni caídas",
-                "📶 Vender internet en zonas rurales sin llamadas ni visitas",
-                "🏋 Gimnasios que llenan clases sin recepcionistas",
-                "📊 Bots que consultan CNPJ, CEP, correos y más como si fueran hackers",
-                "🤖 ChatGPT vendiendo como si fuera tu mejor closser"
-              ].map((flow, index) => (
-                <div key={index} className="bg-[#1E1E1E] p-4 rounded-xl border border-[#333] hover:border-[#D4821A]/30 transition-all duration-300 hover:transform hover:scale-105">
+              {["🎰 Vender lotería con resultados en tiempo real (y cobrar por cada boleto vendido)", "🍔 Tomar pedidos automáticos en deliverys y calcular total + envío al instante", "🏠 Captar clientes para inmobiliarias sin mostrar la cara", "🚗 Mostrar autos y agendar test-drives sin contacto humano", "🍰 Hacer que pastelerías vendan solas por WhatsApp", "💈 Barberías que agendan clientes mientras duermen", "🦷 Clínicas que usan bots con IA para responder y captar pacientes", "💆 Estéticas vendiendo servicios con seguimiento automático", "📦 Tiendas online que cierran ventas sin Instagram ni equipo", "⚖ Captar clientes para abogados sin levantar un dedo", "📺 Vender IPTV directo al WhatsApp sin bloqueos ni caídas", "📶 Vender internet en zonas rurales sin llamadas ni visitas", "🏋 Gimnasios que llenan clases sin recepcionistas", "📊 Bots que consultan CNPJ, CEP, correos y más como si fueran hackers", "🤖 ChatGPT vendiendo como si fuera tu mejor closser"].map((flow, index) => <div key={index} className="bg-[#1E1E1E] p-4 rounded-xl border border-[#333] hover:border-[#D4821A]/30 transition-all duration-300 hover:transform hover:scale-105">
                   <span className="font-roboto text-sm text-[#E0E0E0] leading-relaxed">{flow}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -214,29 +170,23 @@ const Index = () => {
           </h2>
           
           <div className="space-y-8">
-            {[
-              {
-                number: "01",
-                title: "Activa tu BOT",
-                description: "Configuras en minutos usando nuestras plantillas exactas"
-              },
-              {
-                number: "02", 
-                title: "Bot conversa y califica leads",
-                description: "Tu bot trabaja 24/7 identificando clientes potenciales"
-              },
-              {
-                number: "03",
-                title: "Bot muestra productos",
-                description: "Presenta automáticamente las soluciones perfectas para cada lead"
-              },
-              {
-                number: "04",
-                title: "BOT cierra ventas y tú recargas tu billetera",
-                description: "Recibe pagos automáticos mientras haces otras cosas"
-              }
-            ].map((step, index) => (
-              <div key={index} className="flex items-center gap-8 bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-500 group">
+            {[{
+            number: "01",
+            title: "Activa tu BOT",
+            description: "Configuras en minutos usando nuestras plantillas exactas"
+          }, {
+            number: "02",
+            title: "Bot conversa y califica leads",
+            description: "Tu bot trabaja 24/7 identificando clientes potenciales"
+          }, {
+            number: "03",
+            title: "Bot muestra productos",
+            description: "Presenta automáticamente las soluciones perfectas para cada lead"
+          }, {
+            number: "04",
+            title: "BOT cierra ventas y tú recargas tu billetera",
+            description: "Recibe pagos automáticos mientras haces otras cosas"
+          }].map((step, index) => <div key={index} className="flex items-center gap-8 bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-500 group">
                 <div className="flex-shrink-0">
                   <div className="w-20 h-20 bg-gradient-to-r from-[#7E57C2] to-[#D4821A] rounded-full flex items-center justify-center font-montserrat text-2xl font-black text-white group-hover:scale-110 transition-transform duration-300">
                     {step.number}
@@ -246,8 +196,7 @@ const Index = () => {
                   <h3 className="font-montserrat font-bold text-2xl mb-3 text-white">{step.title}</h3>
                   <p className="font-roboto text-[#B0B0B0] text-lg leading-relaxed">{step.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -260,24 +209,19 @@ const Index = () => {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Carlos M.",
-                niche: "Marketing Digital",
-                quote: "En 2 semanas ya recuperé la inversión. El bot cierra solo."
-              },
-              {
-                name: "Ana L.",
-                niche: "E-commerce", 
-                quote: "Facturé $1,200 el primer mes sin tocar nada manualmente."
-              },
-              {
-                name: "Diego R.",
-                niche: "Consultoría",
-                quote: "La licencia de reventa me generó $3,000 adicionales."
-              }
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300 hover:transform hover:scale-105">
+            {[{
+            name: "Carlos M.",
+            niche: "Marketing Digital",
+            quote: "En 2 semanas ya recuperé la inversión. El bot cierra solo."
+          }, {
+            name: "Ana L.",
+            niche: "E-commerce",
+            quote: "Facturé $1,200 el primer mes sin tocar nada manualmente."
+          }, {
+            name: "Diego R.",
+            niche: "Consultoría",
+            quote: "La licencia de reventa me generó $3,000 adicionales."
+          }].map((testimonial, index) => <div key={index} className="bg-[#1E1E1E] p-8 rounded-3xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300 hover:transform hover:scale-105">
                 <p className="font-roboto text-[#E0E0E0] mb-6 italic">"{testimonial.quote}"</p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-[#7E57C2] to-[#D4821A] rounded-full flex items-center justify-center font-montserrat font-bold text-white mr-4">
@@ -288,8 +232,7 @@ const Index = () => {
                     <div className="font-roboto text-sm text-[#B0B0B0]">{testimonial.niche}</div>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -354,33 +297,27 @@ const Index = () => {
           </p>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "+1.000 flujos premium",
-                value: "$197",
-                description: "Más de 1000 embudos probados en múltiples nichos y mercados",
-                showFlows: true
-              },
-              {
-                title: "Templates para WhatsApp/Instagram/WordPress",
-                value: "$297", 
-                description: "Plantillas optimizadas para cada plataforma",
-                showFlows: false
-              },
-              {
-                title: "Copys validadas para anuncios y recuperación",
-                value: "$197",
-                description: "Textos que convierten probados en el mercado",
-                showFlows: false
-              },
-              {
-                title: "Derecho de reventa completo",
-                value: "$156",
-                description: "Revende todo el sistema y quédate con el 100%",
-                showFlows: false
-              }
-            ].map((bonus, index) => (
-              <div key={index} className="bg-[#1E1E1E] border-2 border-[#D4821A]/30 p-8 rounded-3xl hover:border-[#D4821A] transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-[#D4821A]/10 group">
+            {[{
+            title: "+1.000 flujos premium",
+            value: "$197",
+            description: "Más de 1000 embudos probados en múltiples nichos y mercados",
+            showFlows: true
+          }, {
+            title: "Templates para WhatsApp/Instagram/WordPress",
+            value: "$297",
+            description: "Plantillas optimizadas para cada plataforma",
+            showFlows: false
+          }, {
+            title: "Copys validadas para anuncios y recuperación",
+            value: "$197",
+            description: "Textos que convierten probados en el mercado",
+            showFlows: false
+          }, {
+            title: "Derecho de reventa completo",
+            value: "$156",
+            description: "Revende todo el sistema y quédate con el 100%",
+            showFlows: false
+          }].map((bonus, index) => <div key={index} className="bg-[#1E1E1E] border-2 border-[#D4821A]/30 p-8 rounded-3xl hover:border-[#D4821A] transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-[#D4821A]/10 group">
                 <div className="flex items-center gap-3 mb-4">
                   <Gift className="w-6 h-6 text-[#D4821A] group-hover:animate-pulse" />
                   <span className="bg-[#D4821A] text-[#121212] px-4 py-2 rounded-full font-montserrat text-sm font-bold">
@@ -390,49 +327,23 @@ const Index = () => {
                 <h3 className="font-montserrat font-bold text-xl mb-4 text-white">{bonus.title}</h3>
                 <p className="font-roboto text-[#B0B0B0] mb-4">{bonus.description}</p>
                 
-                {bonus.showFlows && (
-                  <div>
-                    <button
-                      onClick={() => setOpenBonusFlows(!openBonusFlows)}
-                      className="flex items-center gap-2 text-[#D4821A] font-montserrat font-semibold hover:text-[#E8941F] transition-colors duration-300 mb-4"
-                    >
+                {bonus.showFlows && <div>
+                    <button onClick={() => setOpenBonusFlows(!openBonusFlows)} className="flex items-center gap-2 text-[#D4821A] font-montserrat font-semibold hover:text-[#E8941F] transition-colors duration-300 mb-4">
                       Ver modelos incluidos
                       <div className={`transition-transform duration-300 ${openBonusFlows ? 'rotate-45' : ''}`}>
                         <Plus className="w-4 h-4" />
                       </div>
                     </button>
                     
-                    {openBonusFlows && (
-                      <div className="bg-[#121212] rounded-xl p-4 animate-fade-in">
+                    {openBonusFlows && <div className="bg-[#121212] rounded-xl p-4 animate-fade-in">
                         <div className="grid gap-2 text-xs">
-                          {[
-                            "🎰 Vender lotería con resultados en tiempo real (y cobrar por cada boleto vendido)",
-                            "🍔 Tomar pedidos automáticos en deliverys y calcular total + envío al instante",
-                            "🏠 Captar clientes para inmobiliarias sin mostrar la cara",
-                            "🚗 Mostrar autos y agendar test-drives sin contacto humano",
-                            "🍰 Hacer que pastelerías vendan solas por WhatsApp",
-                            "💈 Barberías que agendan clientes mientras duermen",
-                            "🦷 Clínicas que usan bots con IA para responder y captar pacientes",
-                            "💆 Estéticas vendiendo servicios con seguimiento automático",
-                            "📦 Tiendas online que cierran ventas sin Instagram ni equipo",
-                            "⚖ Captar clientes para abogados sin levantar un dedo",
-                            "📺 Vender IPTV directo al WhatsApp sin bloqueos ni caídas",
-                            "📶 Vender internet en zonas rurales sin llamadas ni visitas",
-                            "🏋 Gimnasios que llenan clases sin recepcionistas",
-                            "📊 Bots que consultan CNPJ, CEP, correos y más como si fueran hackers",
-                            "🤖 ChatGPT vendiendo como si fuera tu mejor closser"
-                          ].map((flow, flowIndex) => (
-                            <div key={flowIndex} className="text-[#B0B0B0] font-roboto leading-relaxed border-l-2 border-[#D4821A]/30 pl-3 py-1">
+                          {["🎰 Vender lotería con resultados en tiempo real (y cobrar por cada boleto vendido)", "🍔 Tomar pedidos automáticos en deliverys y calcular total + envío al instante", "🏠 Captar clientes para inmobiliarias sin mostrar la cara", "🚗 Mostrar autos y agendar test-drives sin contacto humano", "🍰 Hacer que pastelerías vendan solas por WhatsApp", "💈 Barberías que agendan clientes mientras duermen", "🦷 Clínicas que usan bots con IA para responder y captar pacientes", "💆 Estéticas vendiendo servicios con seguimiento automático", "📦 Tiendas online que cierran ventas sin Instagram ni equipo", "⚖ Captar clientes para abogados sin levantar un dedo", "📺 Vender IPTV directo al WhatsApp sin bloqueos ni caídas", "📶 Vender internet en zonas rurales sin llamadas ni visitas", "🏋 Gimnasios que llenan clases sin recepcionistas", "📊 Bots que consultan CNPJ, CEP, correos y más como si fueran hackers", "🤖 ChatGPT vendiendo como si fuera tu mejor closser"].map((flow, flowIndex) => <div key={flowIndex} className="text-[#B0B0B0] font-roboto leading-relaxed border-l-2 border-[#D4821A]/30 pl-3 py-1">
                               {flow}
-                            </div>
-                          ))}
+                            </div>)}
                         </div>
-                      </div>
-                    )}
-                  </div>
-                )}
-              </div>
-            ))}
+                      </div>}
+                  </div>}
+              </div>)}
           </div>
         </div>
       </section>
@@ -446,45 +357,32 @@ const Index = () => {
           </h2>
           
           <div className="space-y-4">
-            {[
-              {
-                question: "¿Necesito saber programar?",
-                answer: "Para nada. Todo está diseñado para que cualquier persona monte su bot en menos de 3 horas, sin conocimientos técnicos."
-              },
-              {
-                question: "¿Realmente puedo ganar $500-$2000 mensuales?",
-                answer: "Sí, nuestros estudiantes promedio alcanzan estos números después del primer mes. Depende de tu dedicación e implementación."
-              },
-              {
-                question: "¿La licencia de reventa es real?",
-                answer: "Totalmente real. Puedes revender el sistema completo y quedarte con el 100% de las ganancias. Es parte integral del curso."
-              },
-              {
-                question: "¿Qué pasa si no me funciona?",
-                answer: "Garantía total de 7 días. Si no estás satisfecho, te devolvemos cada centavo sin preguntas."
-              },
-              {
-                question: "¿Cuánto tiempo tengo acceso?",
-                answer: "Acceso de por vida al curso, actualizaciones gratuitas y acceso permanente a la comunidad exclusiva."
-              }
-            ].map((faq, index) => (
-              <div key={index} className="bg-[#1E1E1E] border border-[#333] rounded-2xl overflow-hidden hover:border-[#7E57C2]/50 transition-all duration-300">
-                <button 
-                  className="w-full p-8 text-left flex justify-between items-center hover:bg-[#222] transition-all duration-300 group"
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                >
+            {[{
+            question: "¿Necesito saber programar?",
+            answer: "Para nada. Todo está diseñado para que cualquier persona monte su bot en menos de 3 horas, sin conocimientos técnicos."
+          }, {
+            question: "¿Realmente puedo ganar $500-$2000 mensuales?",
+            answer: "Sí, nuestros estudiantes promedio alcanzan estos números después del primer mes. Depende de tu dedicación e implementación."
+          }, {
+            question: "¿La licencia de reventa es real?",
+            answer: "Totalmente real. Puedes revender el sistema completo y quedarte con el 100% de las ganancias. Es parte integral del curso."
+          }, {
+            question: "¿Qué pasa si no me funciona?",
+            answer: "Garantía total de 7 días. Si no estás satisfecho, te devolvemos cada centavo sin preguntas."
+          }, {
+            question: "¿Cuánto tiempo tengo acceso?",
+            answer: "Acceso de por vida al curso, actualizaciones gratuitas y acceso permanente a la comunidad exclusiva."
+          }].map((faq, index) => <div key={index} className="bg-[#1E1E1E] border border-[#333] rounded-2xl overflow-hidden hover:border-[#7E57C2]/50 transition-all duration-300">
+                <button className="w-full p-8 text-left flex justify-between items-center hover:bg-[#222] transition-all duration-300 group" onClick={() => setOpenFaq(openFaq === index ? null : index)}>
                   <h3 className="font-montserrat font-semibold text-xl text-white group-hover:text-[#7E57C2] transition-colors duration-300">{faq.question}</h3>
                   <div className={`transition-transform duration-300 ${openFaq === index ? 'rotate-45' : ''}`}>
                     <Plus className="w-6 h-6 text-[#7E57C2]" />
                   </div>
                 </button>
-                {openFaq === index && (
-                  <div className="px-8 pb-8 animate-fade-in">
+                {openFaq === index && <div className="px-8 pb-8 animate-fade-in">
                     <p className="font-roboto text-[#B0B0B0] leading-relaxed text-lg">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
+                  </div>}
+              </div>)}
           </div>
         </div>
       </section>
@@ -559,8 +457,6 @@ const Index = () => {
           }
         `}
       </style>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
