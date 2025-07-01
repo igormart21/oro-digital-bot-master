@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Bot, DollarSign, Users, Zap, Star, Clock, CheckCircle, ArrowRight, Play, Target, TrendingUp, Shield, Gift, Plus, Minus } from 'lucide-react';
 
@@ -80,7 +81,6 @@ const Index = () => {
           </h1>
           
           <p className="font-roboto text-xl md:text-2xl mb-8 text-[#B0B0B0] max-w-4xl mx-auto leading-relaxed">
-            ¿Estás harto de rascarte los huevos viendo que otros facturan mientras tú paras?<br />
             <strong className="text-[#E0E0E0]">Domina Typebot desde básico hasta avanzado y crea BOTs que venden solos</strong>
           </p>
           
