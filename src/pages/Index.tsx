@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Bot, DollarSign, Users, Zap, Star, Clock, CheckCircle, ArrowRight, Play, Target, TrendingUp, Shield, Gift, Plus, Minus } from 'lucide-react';
+
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 23,
@@ -71,6 +72,19 @@ const Index = () => {
               piloto automático
             </span>
           </h1>
+
+          {/* Vimeo Video */}
+          <div className="mb-8 max-w-4xl mx-auto">
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
+              <iframe 
+                src="https://player.vimeo.com/video/1084816234?h=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                className="w-full h-full"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                title="Typebot Pro Video"
+              ></iframe>
+            </div>
+          </div>
           
           <p className="font-roboto text-xl md:text-2xl mb-8 text-[#B0B0B0] max-w-4xl mx-auto leading-relaxed">
             <strong className="text-[#E0E0E0]">Domina Typebot desde básico hasta avanzado y crea BOTs que venden solos</strong>
