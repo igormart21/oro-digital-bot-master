@@ -414,9 +414,7 @@ const Index = () => {
             🚀 DESBLOQUEAR MI MINA DE ORO
           </a>
           
-          <p className="font-roboto text-[#808080]">
-            Inversión: $15 USD | Garantía 7 días | Acceso inmediato
-          </p>
+          <p className="font-roboto text-[#808080]">Inversión: $10 USD | Garantía 7 días | Acceso inmediato</p>
         </div>
       </section>
 
