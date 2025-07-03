@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Bot, DollarSign, Users, Zap, Star, Clock, CheckCircle, ArrowRight, Play, Target, TrendingUp, Shield, Gift, Plus, Minus } from 'lucide-react';
-
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 23,
@@ -76,13 +75,7 @@ const Index = () => {
           {/* Vimeo Video */}
           <div className="mb-8 max-w-4xl mx-auto">
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
-              <iframe 
-                src="https://player.vimeo.com/video/1084816234?h=0&badge=0&autopause=0&player_id=0&app_id=58479"
-                className="w-full h-full"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                title="Typebot Pro Video"
-              ></iframe>
+              <iframe src="https://player.vimeo.com/video/1084816234?h=0&badge=0&autopause=0&player_id=0&app_id=58479" className="w-full h-full" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Typebot Pro Video"></iframe>
             </div>
           </div>
           
@@ -102,9 +95,7 @@ const Index = () => {
             <ArrowRight className="inline-block ml-3 w-5 h-5" />
           </a>
           
-          <p className="font-roboto text-sm text-[#808080]">
-            Por 15 dólares... menos que una hamburguesa, pero esto paga cada día
-          </p>
+          <p className="font-roboto text-sm text-[#808080]">Por 10 dólares... menos que una hamburguesa, pero esto paga cada día</p>
         </div>
         
         <div className="absolute bottom-8 animate-bounce">
@@ -266,7 +257,7 @@ const Index = () => {
           <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] p-1 rounded-3xl mb-12 max-w-lg mx-auto">
             <div className="bg-[#1E1E1E] p-10 rounded-3xl">
               <div className="text-[#808080] line-through text-xl mb-4 font-roboto">Precio normal: $97 USD</div>
-              <div className="text-7xl font-black text-[#D4821A] mb-6 font-montserrat">$15</div>
+              <div className="text-7xl font-black text-[#D4821A] mb-6 font-montserrat">$10</div>
               <div className="text-xl text-[#E0E0E0] mb-8 font-roboto">USD - Pago único</div>
               
               <div className="bg-[#7E57C2]/20 border-2 border-[#7E57C2] rounded-2xl p-6 mb-8">
