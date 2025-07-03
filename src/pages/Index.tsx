@@ -95,7 +95,7 @@ const Index = () => {
             <ArrowRight className="inline-block ml-3 w-5 h-5" />
           </a>
           
-          <p className="font-roboto text-sm text-[#808080]">Por 10 dólares... menos que una hamburguesa, pero esto paga cada día</p>
+          <p className="font-roboto text-sm text-[#808080]">Por 19 dólares... menos que una hamburguesa, pero esto paga cada día</p>
         </div>
         
         <div className="absolute bottom-8 animate-bounce">
@@ -414,7 +414,7 @@ const Index = () => {
             🚀 DESBLOQUEAR MI MINA DE ORO
           </a>
           
-          <p className="font-roboto text-[#808080]">Inversión: $10 USD | Garantía 7 días | Acceso inmediato</p>
+          <p className="font-roboto text-[#808080]">Inversión: $19 USD | Garantía 7 días | Acceso inmediato</p>
         </div>
       </section>
 
