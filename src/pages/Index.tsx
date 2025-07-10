@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Bot, DollarSign, Users, Zap, Star, Clock, CheckCircle, ArrowRight, Play, Target, TrendingUp, Shield, Gift, Plus, Minus } from 'lucide-react';
+
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 23,
@@ -8,6 +9,7 @@ const Index = () => {
   });
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [openBonusFlows, setOpenBonusFlows] = useState(false);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
@@ -34,12 +36,15 @@ const Index = () => {
     }, 1000);
     return () => clearInterval(timer);
   }, []);
+
   const scrollToOffer = () => {
     document.getElementById('offer')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
+
   const checkoutUrl = "https://pay.hotmart.com/X95603477Q?off=yz1gz1p6&checkoutMode=10";
+
   return <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light overflow-x-hidden">
       {/* Google Fonts */}
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -75,7 +80,7 @@ const Index = () => {
           {/* Vimeo Video */}
           <div className="mb-6 sm:mb-8 max-w-4xl mx-auto px-2">
             <div className="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl">
-              <iframe src="https://player.vimeo.com/video/1059454468?h=0&badge=0&autopause=0&player_id=0&app_id=58479" className="w-full h-full" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Typebot Pro Video"></iframe>
+              <iframe src="https://player.vimeo.com/video/1100433439?h=0&badge=0&autopause=0&player_id=0&app_id=58479" className="w-full h-full" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Typebot Pro Video"></iframe>
             </div>
           </div>
           
@@ -461,4 +466,5 @@ const Index = () => {
       </style>
     </div>;
 };
+
 export default Index;
