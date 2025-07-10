@@ -55,9 +55,9 @@ const Index = () => {
       {/* Sticky CTA */}
       <div className="fixed top-0 left-0 right-0 bg-[#7E57C2] backdrop-blur-sm z-50 border-b border-[#7E57C2]/20">
         <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center py-2 sm:py-4 px-4 sm:px-6 gap-2 sm:gap-0">
-          <span className="font-montserrat font-semibold text-xs sm:text-sm text-white text-center">⚡ Only 87 accesses left available</span>
+          <span className="font-montserrat font-semibold text-xs sm:text-sm text-white text-center">⚡ Solo quedan 87 accesos disponibles</span>
           <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="bg-[#D4821A] hover:bg-[#E8941F] text-white px-4 sm:px-6 py-2 rounded-lg font-montserrat font-semibold text-xs sm:text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#D4821A]/25 whitespace-nowrap">
-            Unlock mine
+            Desbloquear el mío
           </a>
         </div>
       </div>
@@ -69,14 +69,14 @@ const Index = () => {
         <div className="relative z-10 max-w-5xl mx-auto animate-fade-in w-full">
           <div className="mb-6 sm:mb-8">
             <span className="inline-block bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-montserrat font-bold text-xs sm:text-sm uppercase tracking-wide animate-pulse">
-              ⚠️ Advanced Digital Mining
+              ⚠️ Minería Digital Avanzada
             </span>
           </div>
           
           <h1 className="font-montserrat font-black text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 sm:mb-8 leading-tight px-2">
-            Typebot Pro Course: Automate sales and earn on
+            Curso Typebot Pro: Automatiza ventas y gana en
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#7E57C2] to-[#D4821A] mt-1 sm:mt-2">
-              autopilot
+              piloto automático
             </span>
           </h1>
 
@@ -94,22 +94,22 @@ const Index = () => {
           </div>
           
           <p className="font-roboto text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-[#B0B0B0] max-w-4xl mx-auto leading-relaxed px-2">
-            <strong className="text-[#E0E0E0]">Master Typebot from basic to advanced and create BOTs that sell by themselves</strong>
+            <strong className="text-[#E0E0E0]">Domina Typebot de básico a avanzado y crea BOTs que venden solos</strong>
           </p>
           
           <div className="mb-8 sm:mb-12">
             <div className="inline-flex items-center bg-[#1E1E1E] border border-[#7E57C2]/30 rounded-xl sm:rounded-2xl px-4 sm:px-8 py-3 sm:py-4 mb-4 sm:mb-6 mx-2">
               <DollarSign className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-[#D4821A]" />
-              <span className="text-[#D4821A] font-montserrat font-bold text-sm sm:text-lg">Invoice $500-$2000 USD monthly</span>
+              <span className="text-[#D4821A] font-montserrat font-bold text-sm sm:text-lg">Factura $500-$2000 USD mensuales</span>
             </div>
           </div>
           
           <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-montserrat font-bold text-lg sm:text-xl hover:shadow-2xl hover:shadow-[#7E57C2]/30 transition-all duration-300 hover:scale-105 mb-4 sm:mb-6 inline-block mx-2">
-            Unlock mine now
+            Desbloquear el mío ahora
             <ArrowRight className="inline-block ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5" />
           </a>
           
-          <p className="font-roboto text-xs sm:text-sm text-[#808080] px-2">For 19 dollars... less than a burger, but this pays every day</p>
+          <p className="font-roboto text-xs sm:text-sm text-[#808080] px-2">Por 19 dólares... menos que una hamburguesa, pero esto paga todos los días</p>
         </div>
         
         <div className="absolute bottom-4 sm:bottom-8 animate-bounce">
@@ -127,18 +127,18 @@ const Index = () => {
             {[
               {
                 icon: <Bot className="w-6 h-6 sm:w-8 sm:h-8 text-[#7E57C2]" />,
-                title: "🚀 Typebot that converts 24/7",
-                description: "No videos, no face, no team. Your Typebot bot works while you sleep."
+                title: "🚀 Typebot que convierte 24/7",
+                description: "Sin videos, sin cara, sin equipo. Tu bot Typebot trabaja mientras duermes."
               },
               {
                 icon: <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-[#D4821A]" />,
-                title: "💰 Double your income",
-                description: "Sell as an affiliate + resell the complete funnel."
+                title: "💰 Duplica tus ingresos",
+                description: "Vende como afiliado + revende el embudo completo."
               },
               {
                 icon: <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-[#7E57C2]" />,
-                title: "⚡ Installation in 3h",
-                description: "Ultra-fast setup, no technical complications."
+                title: "⚡ Instalación en 3h",
+                description: "Configuración ultra rápida, sin complicaciones técnicas."
               }
             ].map((benefit, index) => (
               <div key={index} className="group bg-[#1E1E1E] p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-[#7E57C2]/10">
@@ -160,24 +160,24 @@ const Index = () => {
       <section className="py-12 sm:py-20 px-4 sm:px-6 bg-[#1A1A1A]">
         <div className="container mx-auto max-w-5xl text-center">
           <h2 className="font-montserrat font-black text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4 text-white">
-            Everything you
-            <span className="text-[#7E57C2]"> get</span>
+            Todo lo que
+            <span className="text-[#7E57C2]"> obtienes</span>
           </h2>
           <p className="font-roboto text-lg sm:text-xl text-[#B0B0B0] mb-12 sm:mb-16 max-w-3xl mx-auto px-2">
-            Typebot Pro: complete course from basic to advanced - it's not another fail course, it's a digital warfare tool
+            Typebot Pro: curso completo de básico a avanzado - no es otro curso que falla, es una herramienta de guerra digital
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 text-left mb-12 sm:mb-16">
             {[
-              "✅ Complete Typebot Pro course (basic-advanced)",
-              "✅ +15 structured Typebot modules",
-              "✅ +20 editable/clonable Typebot funnels",
-              "✅ Integration with AI, WhatsApp, Instagram, web",
-              "✅ Copies that persuade without thinking",
-              "✅ Real automation structure that prints money",
-              "✅ Resale license included",
-              "✅ Private community + support",
-              "✅ Validated premium templates"
+              "✅ Curso completo Typebot Pro (básico-avanzado)",
+              "✅ +15 módulos Typebot estructurados",
+              "✅ +20 embudos Typebot editables/clonables",
+              "✅ Integración con IA, WhatsApp, Instagram, web",
+              "✅ Copys que persuaden sin pensar",
+              "✅ Estructura real de automatización que imprime dinero",
+              "✅ Licencia de reventa incluida",
+              "✅ Comunidad privada + soporte",
+              "✅ Plantillas premium validadas"
             ].map((item, index) => (
               <div key={index} className="flex items-center bg-[#1E1E1E] p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300">
                 <span className="font-roboto text-sm sm:text-lg text-[#E0E0E0]">{item}</span>
@@ -188,25 +188,25 @@ const Index = () => {
           {/* Flow Models */}
           <div className="mb-6 sm:mb-8">
             <h3 className="font-montserrat font-bold text-xl sm:text-2xl mb-6 sm:mb-8 text-white">
-              🎯 Ready <span className="text-[#D4821A]">flow models</span>
+              🎯 Modelos de <span className="text-[#D4821A]">flujo listos</span>
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 text-left">
               {[
-                "🎰 Sell lottery with real-time results (and charge for each ticket sold)",
-                "🍔 Take automatic delivery orders and calculate total + shipping instantly",
-                "🏠 Capture clients for real estate without showing face",
-                "🚗 Show cars and schedule test-drives without human contact",
-                "🍰 Make bakeries sell alone via WhatsApp",
-                "💈 Barbershops that schedule clients while sleeping",
-                "🦷 Clinics using AI bots to respond and capture patients",
-                "💆 Aesthetics selling services with automatic follow-up",
-                "📦 Online stores that close sales without Instagram or team",
-                "⚖ Capture clients for lawyers without lifting a finger",
-                "📺 Sell IPTV direct to WhatsApp without blocks or crashes",
-                "📶 Sell internet in rural areas without calls or visits",
-                "🏋 Gyms that fill classes without receptionists",
-                "📊 Bots that query CNPJ, CEP, emails and more like hackers",
-                "🤖 ChatGPT selling like your best closer"
+                "🎰 Vender lotería con resultados en tiempo real (y cobrar por cada ticket vendido)",
+                "🍔 Tomar pedidos de delivery automático y calcular total + envío al instante",
+                "🏠 Captar clientes para inmobiliaria sin mostrar la cara",
+                "🚗 Mostrar autos y agendar test-drives sin contacto humano",
+                "🍰 Hacer que panaderías vendan solas vía WhatsApp",
+                "💈 Barberías que agendan clientes mientras duermen",
+                "🦷 Clínicas usando bots IA para responder y captar pacientes",
+                "💆 Estéticas vendiendo servicios con follow-up automático",
+                "📦 Tiendas online que cierran ventas sin Instagram ni equipo",
+                "⚖ Captar clientes para abogados sin mover un dedo",
+                "📺 Vender IPTV directo al WhatsApp sin bloqueos ni caídas",
+                "📶 Vender internet en zonas rurales sin llamadas ni visitas",
+                "🏋 Gimnasios que llenan clases sin recepcionistas",
+                "📊 Bots que consultan CNPJ, CEP, emails y más como hackers",
+                "🤖 ChatGPT vendiendo como tu mejor closer"
               ].map((flow, index) => (
                 <div key={index} className="bg-[#1E1E1E] p-3 sm:p-4 rounded-lg sm:rounded-xl border border-[#333] hover:border-[#D4821A]/30 transition-all duration-300 hover:transform hover:scale-105">
                   <span className="font-roboto text-xs sm:text-sm text-[#E0E0E0] leading-relaxed">{flow}</span>
@@ -221,30 +221,30 @@ const Index = () => {
       <section className="py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
           <h2 className="font-montserrat font-black text-3xl sm:text-4xl md:text-5xl text-center mb-12 sm:mb-16 text-white">
-            How it <span className="text-[#7E57C2]">works</span>
+            Cómo <span className="text-[#7E57C2]">funciona</span>
           </h2>
           
           <div className="space-y-6 sm:space-y-8">
             {[
               {
                 number: "01",
-                title: "Activate your BOT",
-                description: "Configure in minutes using our exact templates"
+                title: "Activa tu BOT",
+                description: "Configura en minutos usando nuestras plantillas exactas"
               },
               {
                 number: "02",
-                title: "Bot converses and qualifies leads",
-                description: "Your bot works 24/7 identifying potential customers"
+                title: "Bot conversa y califica leads",
+                description: "Tu bot trabaja 24/7 identificando clientes potenciales"
               },
               {
                 number: "03",
-                title: "Bot shows products",
-                description: "Automatically presents perfect solutions for each lead"
+                title: "Bot muestra productos",
+                description: "Presenta automáticamente soluciones perfectas para cada lead"
               },
               {
                 number: "04",
-                title: "BOT closes sales and you refill your wallet",
-                description: "Receive automatic payments while doing other things"
+                title: "BOT cierra ventas y tú recargas la billetera",
+                description: "Recibe pagos automáticos mientras haces otras cosas"
               }
             ].map((step, index) => (
               <div key={index} className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 bg-[#1E1E1E] p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-500 group">
@@ -267,25 +267,25 @@ const Index = () => {
       <section className="py-12 sm:py-20 px-4 sm:px-6 bg-[#1A1A1A]">
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-montserrat font-black text-3xl sm:text-4xl text-center mb-12 sm:mb-16 text-white">
-            Real <span className="text-[#7E57C2]">results</span>
+            Resultados <span className="text-[#7E57C2]">reales</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 name: "Carlos M.",
-                niche: "Digital Marketing",
-                quote: "In 2 weeks I already recovered the investment. The bot closes by itself."
+                niche: "Marketing Digital",
+                quote: "En 2 semanas ya recuperé la inversión. El bot cierra solo."
               },
               {
                 name: "Ana L.",
                 niche: "E-commerce",
-                quote: "I invoiced $1,200 the first month without touching anything manually."
+                quote: "Facturé $1,200 el primer mes sin tocar nada manualmente."
               },
               {
                 name: "Diego R.",
-                niche: "Consulting",
-                quote: "The resale license generated an additional $3,000 for me."
+                niche: "Consultoría",
+                quote: "La licencia de reventa me generó $3,000 adicionales."
               }
             ].map((testimonial, index) => (
               <div key={index} className="bg-[#1E1E1E] p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300 hover:transform hover:scale-105">
@@ -309,25 +309,25 @@ const Index = () => {
       <section id="offer" className="py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="bg-[#D4821A] text-[#121212] py-2 sm:py-3 px-4 sm:px-8 rounded-full inline-block mb-6 sm:mb-8 font-montserrat font-bold animate-pulse text-sm sm:text-base">
-            🔥 LAUNCH PRICE - This price never returns
+            🔥 PRECIO DE LANZAMIENTO - Este precio nunca vuelve
           </div>
           
           <h2 className="font-montserrat font-black text-4xl sm:text-5xl md:text-6xl mb-8 sm:mb-12 text-white">
-            Premium
-            <span className="text-[#D4821A]"> access</span>
+            Acceso
+            <span className="text-[#D4821A]"> premium</span>
           </h2>
           
           <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] p-1 rounded-2xl sm:rounded-3xl mb-8 sm:mb-12 max-w-lg mx-auto">
             <div className="bg-[#1E1E1E] p-6 sm:p-10 rounded-2xl sm:rounded-3xl">
-              <div className="text-[#808080] line-through text-lg sm:text-xl mb-3 sm:mb-4 font-roboto">Normal price: $97 USD</div>
+              <div className="text-[#808080] line-through text-lg sm:text-xl mb-3 sm:mb-4 font-roboto">Precio normal: $97 USD</div>
               <div className="text-5xl sm:text-7xl font-black text-[#D4821A] mb-4 sm:mb-6 font-montserrat">$19</div>
               
               <div className="bg-[#7E57C2]/20 border-2 border-[#7E57C2] rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8">
-                <div className="text-[#7E57C2] font-montserrat font-bold mb-3 sm:mb-4 text-sm sm:text-base">⏰ Price goes up in minutes:</div>
+                <div className="text-[#7E57C2] font-montserrat font-bold mb-3 sm:mb-4 text-sm sm:text-base">⏰ El precio sube en minutos:</div>
                 <div className="flex justify-center gap-2 sm:gap-4 text-lg sm:text-2xl font-bold font-montserrat">
                   <div className="text-center">
                     <div className="bg-[#7E57C2] px-2 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl text-white text-sm sm:text-base">{timeLeft.hours.toString().padStart(2, '0')}</div>
-                    <div className="text-xs text-[#808080] mt-1 sm:mt-2 font-roboto">HOURS</div>
+                    <div className="text-xs text-[#808080] mt-1 sm:mt-2 font-roboto">HORAS</div>
                   </div>
                   <div className="text-center">
                     <div className="bg-[#7E57C2] px-2 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl text-white text-sm sm:text-base">{timeLeft.minutes.toString().padStart(2, '0')}</div>
@@ -335,17 +335,17 @@ const Index = () => {
                   </div>
                   <div className="text-center">
                     <div className="bg-[#7E57C2] px-2 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl text-white text-sm sm:text-base">{timeLeft.seconds.toString().padStart(2, '0')}</div>
-                    <div className="text-xs text-[#808080] mt-1 sm:mt-2 font-roboto">SEC</div>
+                    <div className="text-xs text-[#808080] mt-1 sm:mt-2 font-roboto">SEG</div>
                   </div>
                 </div>
               </div>
               
               <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full bg-gradient-to-r from-[#D4821A] to-[#E8941F] text-white py-4 sm:py-5 px-6 sm:px-8 rounded-xl sm:rounded-2xl font-montserrat text-lg sm:text-xl font-bold hover:shadow-2xl hover:shadow-[#D4821A]/25 transition-all duration-300 hover:scale-105 mb-4 sm:mb-6 inline-block">
-                🚀 YES, I UNLOCK MY MINE
+                🚀 SÍ, DESBLOQUEO MI MINA
               </a>
               
               <div className="text-xs sm:text-sm text-[#B0B0B0] font-roboto">
-                ✅ Instant access | ✅ 7-day guarantee | ✅ Support included
+                ✅ Acceso instantáneo | ✅ Garantía 7 días | ✅ Soporte incluido
               </div>
             </div>
           </div>
@@ -356,37 +356,37 @@ const Index = () => {
       <section className="py-12 sm:py-20 px-4 sm:px-6 bg-[#1A1A1A]">
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-montserrat font-black text-3xl sm:text-4xl md:text-5xl text-center mb-3 sm:mb-4 text-white">
-            Exclusive
-            <span className="text-[#D4821A]"> bonuses</span>
+            Bonos
+            <span className="text-[#D4821A]"> exclusivos</span>
           </h2>
           <p className="font-roboto text-lg sm:text-xl text-[#B0B0B0] text-center mb-12 sm:mb-16">
-            Total value: <span className="text-[#D4821A] font-bold">$847 USD</span> - FREE for the first 100
+            Valor total: <span className="text-[#D4821A] font-bold">$847 USD</span> - GRATIS para los primeros 100
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {[
               {
-                title: "+1,000 premium flows",
+                title: "+1,000 flujos premium",
                 value: "$197",
-                description: "More than 1000 funnels tested in multiple niches and markets",
+                description: "Más de 1000 embudos probados en múltiples nichos y mercados",
                 showFlows: true
               },
               {
-                title: "Templates for WhatsApp/Instagram/WordPress",
+                title: "Plantillas para WhatsApp/Instagram/WordPress",
                 value: "$297",
-                description: "Optimized templates for each platform",
+                description: "Plantillas optimizadas para cada plataforma",
                 showFlows: false
               },
               {
-                title: "Validated copies for ads and recovery",
+                title: "Copys validados para anuncios y recuperación",
                 value: "$197",
-                description: "Converting texts tested in the market",
+                description: "Textos que convierten probados en el mercado",
                 showFlows: false
               },
               {
-                title: "Complete resale rights",
+                title: "Derechos de reventa completos",
                 value: "$156",
-                description: "Resell the entire system and keep 100%",
+                description: "Revende todo el sistema y quédate con el 100%",
                 showFlows: false
               }
             ].map((bonus, index) => (
@@ -394,7 +394,7 @@ const Index = () => {
                 <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                   <Gift className="w-5 h-5 sm:w-6 sm:h-6 text-[#D4821A] group-hover:animate-pulse" />
                   <span className="bg-[#D4821A] text-[#121212] px-3 sm:px-4 py-1 sm:py-2 rounded-full font-montserrat text-xs sm:text-sm font-bold">
-                    VALUE: {bonus.value}
+                    VALOR: {bonus.value}
                   </span>
                 </div>
                 <h3 className="font-montserrat font-bold text-lg sm:text-xl mb-3 sm:mb-4 text-white">{bonus.title}</h3>
@@ -406,7 +406,7 @@ const Index = () => {
                       onClick={() => setOpenBonusFlows(!openBonusFlows)} 
                       className="flex items-center gap-2 text-[#D4821A] font-montserrat font-semibold hover:text-[#E8941F] transition-colors duration-300 mb-3 sm:mb-4 text-sm sm:text-base"
                     >
-                      View included models
+                      Ver modelos incluidos
                       <div className={`transition-transform duration-300 ${openBonusFlows ? 'rotate-45' : ''}`}>
                         <Plus className="w-3 h-3 sm:w-4 sm:h-4" />
                       </div>
@@ -416,21 +416,21 @@ const Index = () => {
                       <div className="bg-[#121212] rounded-lg sm:rounded-xl p-3 sm:p-4 animate-fade-in">
                         <div className="grid gap-1 sm:gap-2 text-xs">
                           {[
-                            "🎰 Sell lottery with real-time results (and charge for each ticket sold)",
-                            "🍔 Take automatic delivery orders and calculate total + shipping instantly",
-                            "🏠 Capture clients for real estate without showing face",
-                            "🚗 Show cars and schedule test-drives without human contact",
-                            "🍰 Make bakeries sell alone via WhatsApp",
-                            "💈 Barbershops that schedule clients while sleeping",
-                            "🦷 Clinics using AI bots to respond and capture patients",
-                            "💆 Aesthetics selling services with automatic follow-up",
-                            "📦 Online stores that close sales without Instagram or team",
-                            "⚖ Capture clients for lawyers without lifting a finger",
-                            "📺 Sell IPTV direct to WhatsApp without blocks or crashes",
-                            "📶 Sell internet in rural areas without calls or visits",
-                            "🏋 Gyms that fill classes without receptionists",
-                            "📊 Bots that query CNPJ, CEP, emails and more like hackers",
-                            "🤖 ChatGPT selling like your best closer"
+                            "🎰 Vender lotería con resultados en tiempo real (y cobrar por cada ticket vendido)",
+                            "🍔 Tomar pedidos de delivery automático y calcular total + envío al instante",
+                            "🏠 Captar clientes para inmobiliaria sin mostrar la cara",
+                            "🚗 Mostrar autos y agendar test-drives sin contacto humano",
+                            "🍰 Hacer que panaderías vendan solas vía WhatsApp",
+                            "💈 Barberías que agendan clientes mientras duermen",
+                            "🦷 Clínicas usando bots IA para responder y captar pacientes",
+                            "💆 Estéticas vendiendo servicios con follow-up automático",
+                            "📦 Tiendas online que cierran ventas sin Instagram ni equipo",
+                            "⚖ Captar clientes para abogados sin mover un dedo",
+                            "📺 Vender IPTV directo al WhatsApp sin bloqueos ni caídas",
+                            "📶 Vender internet en zonas rurales sin llamadas ni visitas",
+                            "🏋 Gimnasios que llenan clases sin recepcionistas",
+                            "📊 Bots que consultan CNPJ, CEP, emails y más como hackers",
+                            "🤖 ChatGPT vendiendo como tu mejor closer"
                           ].map((flow, flowIndex) => (
                             <div key={flowIndex} className="text-[#B0B0B0] font-roboto leading-relaxed border-l-2 border-[#D4821A]/30 pl-2 sm:pl-3 py-1 text-xs sm:text-sm">
                               {flow}
@@ -451,31 +451,31 @@ const Index = () => {
       <section className="py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
           <h2 className="font-montserrat font-black text-3xl sm:text-4xl md:text-5xl text-center mb-12 sm:mb-16 text-white">
-            Frequently asked
-            <span className="text-[#7E57C2]"> questions</span>
+            Preguntas
+            <span className="text-[#7E57C2]"> frecuentes</span>
           </h2>
           
           <div className="space-y-3 sm:space-y-4">
             {[
               {
-                question: "Do I need to know how to program?",
-                answer: "Not at all. Everything is designed so anyone can set up their bot in less than 3 hours, without technical knowledge."
+                question: "¿Necesito saber programar?",
+                answer: "Para nada. Todo está diseñado para que cualquiera pueda configurar su bot en menos de 3 horas, sin conocimientos técnicos."
               },
               {
-                question: "Can I really earn $500-$2000 monthly?",
-                answer: "Yes, our average students reach these numbers after the first month. It depends on your dedication and implementation."
+                question: "¿Realmente puedo ganar $500-$2000 mensuales?",
+                answer: "Sí, nuestros estudiantes promedio alcanzan estas cifras después del primer mes. Depende de tu dedicación e implementación."
               },
               {
-                question: "Is the resale license real?",
-                answer: "Totally real. You can resell the complete system and keep 100% of the profits. It's an integral part of the course."
+                question: "¿La licencia de reventa es real?",
+                answer: "Totalmente real. Puedes revender el sistema completo y quedarte con el 100% de las ganancias. Es parte integral del curso."
               },
               {
-                question: "What if it doesn't work for me?",
-                answer: "Total 7-day guarantee. If you're not satisfied, we'll refund every cent without questions."
+                question: "¿Qué pasa si no me funciona?",
+                answer: "Garantía total de 7 días. Si no estás satisfecho, devolvemos hasta el último centavo sin preguntas."
               },
               {
-                question: "How long do I have access?",
-                answer: "Lifetime access to the course, free updates and permanent access to the exclusive community."
+                question: "¿Por cuánto tiempo tengo acceso?",
+                answer: "Acceso de por vida al curso, actualizaciones gratuitas y acceso permanente a la comunidad exclusiva."
               }
             ].map((faq, index) => (
               <div key={index} className="bg-[#1E1E1E] border border-[#333] rounded-xl sm:rounded-2xl overflow-hidden hover:border-[#7E57C2]/50 transition-all duration-300">
@@ -503,25 +503,25 @@ const Index = () => {
       <section className="py-12 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-[#7E57C2]/20 to-[#D4821A]/20">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="font-montserrat font-black text-4xl sm:text-5xl md:text-6xl mb-6 sm:mb-8 text-white">
-            The moment is
-            <span className="text-[#D4821A]"> NOW</span>
+            El momento es
+            <span className="text-[#D4821A]"> AHORA</span>
           </h2>
           
           <p className="font-roboto text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-[#B0B0B0] max-w-3xl mx-auto leading-relaxed px-2">
-            While you read this, others are already mastering Typebot and generating their first income.
-            <strong className="text-white"> Are you going to stay behind?</strong>
+            Mientras lees esto, otros ya están dominando Typebot y generando sus primeros ingresos.
+            <strong className="text-white"> ¿Te vas a quedar atrás?</strong>
           </p>
           
           <div className="bg-[#7E57C2]/20 border-2 border-[#7E57C2] rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 max-w-md mx-auto">
-            <div className="text-[#7E57C2] font-montserrat font-bold mb-2 text-sm sm:text-base">⚠️ LAST WARNING</div>
-            <div className="text-white font-roboto text-sm sm:text-base">Only <span className="font-bold text-[#D4821A]">87 accesses</span> left available</div>
+            <div className="text-[#7E57C2] font-montserrat font-bold mb-2 text-sm sm:text-base">⚠️ ÚLTIMA ADVERTENCIA</div>
+            <div className="text-white font-roboto text-sm sm:text-base">Solo quedan <span className="font-bold text-[#D4821A]">87 accesos</span> disponibles</div>
           </div>
           
           <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-[#D4821A] to-[#E8941F] text-white px-8 sm:px-12 py-5 sm:py-6 rounded-xl sm:rounded-2xl font-montserrat text-xl sm:text-2xl font-bold hover:shadow-2xl hover:shadow-[#D4821A]/25 transition-all duration-300 hover:scale-105 mb-4 sm:mb-6 inline-block">
-            🚀 UNLOCK MY GOLD MINE
+            🚀 DESBLOQUEO MI MINA DE ORO
           </a>
           
-          <p className="font-roboto text-[#808080] text-sm sm:text-base">Investment: $19 USD | 7-day guarantee | Instant access</p>
+          <p className="font-roboto text-[#808080] text-sm sm:text-base">Inversión: $19 USD | Garantía 7 días | Acceso instantáneo</p>
         </div>
       </section>
 
@@ -529,14 +529,14 @@ const Index = () => {
       <footer className="py-8 sm:py-12 px-4 sm:px-6 bg-[#0A0A0A] border-t border-[#333]">
         <div className="container mx-auto text-center">
           <div className="mb-4 sm:mb-6">
-            <p className="font-roboto text-[#D4821A] font-semibold mb-2 text-sm sm:text-base">7-day satisfaction guarantee or we refund</p>
+            <p className="font-roboto text-[#D4821A] font-semibold mb-2 text-sm sm:text-base">Garantía de satisfacción de 7 días o devolvemos el dinero</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-4 sm:mb-6">
             <a href="#" className="font-roboto text-[#808080] hover:text-[#7E57C2] transition-colors duration-300 text-sm sm:text-base">FAQ</a>
-            <a href="#" className="font-roboto text-[#808080] hover:text-[#7E57C2] transition-colors duration-300 text-sm sm:text-base">Support</a>
-            <a href="#" className="font-roboto text-[#808080] hover:text-[#7E57C2] transition-colors duration-300 text-sm sm:text-base">Terms</a>
+            <a href="#" className="font-roboto text-[#808080] hover:text-[#7E57C2] transition-colors duration-300 text-sm sm:text-base">Soporte</a>
+            <a href="#" className="font-roboto text-[#808080] hover:text-[#7E57C2] transition-colors duration-300 text-sm sm:text-base">Términos</a>
           </div>
-          <p className="font-roboto text-[#666] text-xs sm:text-sm">© 2024 Typebot Pro - Digital Mining. All rights reserved.</p>
+          <p className="font-roboto text-[#666] text-xs sm:text-sm">© 2024 Typebot Pro - Minería Digital. Todos los derechos reservados.</p>
         </div>
       </footer>
 
