@@ -1,8 +1,18 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Clock, Star, Zap } from "lucide-react";
 import { useEffect } from "react";
+
+// Extend Window interface to include checkoutElements
+declare global {
+  interface Window {
+    checkoutElements?: {
+      init: (type: string) => {
+        mount: (selector: string) => void;
+      };
+    };
+  }
+}
 
 const Downsell = () => {
   useEffect(() => {
