@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Bot, DollarSign, Users, Zap, Star, Clock, CheckCircle, ArrowRight, Play, Target, TrendingUp, Shield, Gift, Plus, Minus } from 'lucide-react';
-
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 23,
@@ -9,7 +8,6 @@ const Index = () => {
   });
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [openBonusFlows, setOpenBonusFlows] = useState(false);
-
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
@@ -36,15 +34,12 @@ const Index = () => {
     }, 1000);
     return () => clearInterval(timer);
   }, []);
-
   const scrollToOffer = () => {
     document.getElementById('offer')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
-
   const checkoutUrl = "https://pay.hotmart.com/X95603477Q?off=yz1gz1p6&checkoutMode=10";
-
   return <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light overflow-x-hidden">
       {/* Google Fonts */}
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -53,9 +48,7 @@ const Index = () => {
       <div className="fixed top-0 left-0 right-0 bg-[#7E57C2] backdrop-blur-sm z-50 border-b border-[#7E57C2]/20">
         <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center py-2 sm:py-4 px-4 sm:px-6 gap-2 sm:gap-0">
           <span className="font-montserrat font-semibold text-xs sm:text-sm text-white text-center">⚡ Solo quedan 87 accesos disponibles</span>
-          <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="bg-[#D4821A] hover:bg-[#E8941F] text-white px-4 sm:px-6 py-2 rounded-lg font-montserrat font-semibold text-xs sm:text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#D4821A]/25 whitespace-nowrap">
-            Desbloquear el mío
-          </a>
+          
         </div>
       </div>
 
@@ -95,12 +88,9 @@ const Index = () => {
             </div>
           </div>
           
-          <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-montserrat font-bold text-lg sm:text-xl hover:shadow-2xl hover:shadow-[#7E57C2]/30 transition-all duration-300 hover:scale-105 mb-4 sm:mb-6 inline-block mx-2">
-            Desbloquear el mío ahora
-            <ArrowRight className="inline-block ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5" />
-          </a>
           
-          <p className="font-roboto text-xs sm:text-sm text-[#808080] px-2">Por 10 dólares... menos que una hamburguesa, pero esto paga todos los días</p>
+          
+          <p className="font-roboto text-xs sm:text-sm text-[#808080] px-2">Por 15 dólares... menos que una hamburguesa, pero esto paga todos los días</p>
         </div>
         
         <div className="absolute bottom-4 sm:bottom-8 animate-bounce">
@@ -262,7 +252,7 @@ const Index = () => {
           <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] p-1 rounded-2xl sm:rounded-3xl mb-8 sm:mb-12 max-w-lg mx-auto">
             <div className="bg-[#1E1E1E] p-6 sm:p-10 rounded-2xl sm:rounded-3xl">
               <div className="text-[#808080] line-through text-lg sm:text-xl mb-3 sm:mb-4 font-roboto">Precio normal: $97 USD</div>
-              <div className="text-5xl sm:text-7xl font-black text-[#D4821A] mb-4 sm:mb-6 font-montserrat">$10</div>
+              <div className="text-5xl sm:text-7xl font-black text-[#D4821A] mb-4 sm:mb-6 font-montserrat">$15</div>
               
               <div className="bg-[#7E57C2]/20 border-2 border-[#7E57C2] rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8">
                 <div className="text-[#7E57C2] font-montserrat font-bold mb-3 sm:mb-4 text-sm sm:text-base">⏰ El precio sube en minutos:</div>
@@ -282,9 +272,7 @@ const Index = () => {
                 </div>
               </div>
               
-              <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="w-full bg-gradient-to-r from-[#D4821A] to-[#E8941F] text-white py-4 sm:py-5 px-6 sm:px-8 rounded-xl sm:rounded-2xl font-montserrat text-lg sm:text-xl font-bold hover:shadow-2xl hover:shadow-[#D4821A]/25 transition-all duration-300 hover:scale-105 mb-4 sm:mb-6 inline-block">
-                🚀 SÍ, DESBLOQUEO MI MINA
-              </a>
+              
               
               <div className="text-xs sm:text-sm text-[#B0B0B0] font-roboto">
                 ✅ Acceso instantáneo | ✅ Garantía 7 días | ✅ Soporte incluido
@@ -414,11 +402,9 @@ const Index = () => {
             <div className="text-white font-roboto text-sm sm:text-base">Solo quedan <span className="font-bold text-[#D4821A]">87 accesos</span> disponibles</div>
           </div>
           
-          <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-[#D4821A] to-[#E8941F] text-white px-8 sm:px-12 py-5 sm:py-6 rounded-xl sm:rounded-2xl font-montserrat text-xl sm:text-2xl font-bold hover:shadow-2xl hover:shadow-[#D4821A]/25 transition-all duration-300 hover:scale-105 mb-4 sm:mb-6 inline-block">
-            🚀 DESBLOQUEO MI MINA DE ORO
-          </a>
           
-          <p className="font-roboto text-[#808080] text-sm sm:text-base">Inversión: $10 USD | Garantía 7 días | Acceso instantáneo</p>
+          
+          <p className="font-roboto text-[#808080] text-sm sm:text-base">Inversión: $15 USD | Garantía 7 días | Acceso instantáneo</p>
         </div>
       </section>
 
@@ -466,5 +452,4 @@ const Index = () => {
       </style>
     </div>;
 };
-
 export default Index;
