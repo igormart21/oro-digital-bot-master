@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Clock, Star, Zap } from "lucide-react";
@@ -29,7 +30,10 @@ const Downsell = () => {
 
     return () => {
       // Cleanup script on unmount
-      document.head.removeChild(script);
+      const existingScript = document.querySelector('script[src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"]');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
     };
   }, []);
 

@@ -1,5 +1,17 @@
+
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Bot, DollarSign, Users, Zap, Star, Clock, CheckCircle, ArrowRight, Play, Target, TrendingUp, Shield, Gift, Plus, Minus } from 'lucide-react';
+
+// Extend Window interface to include checkoutElements
+declare global {
+  interface Window {
+    checkoutElements?: {
+      init: (type: string) => {
+        mount: (selector: string) => void;
+      };
+    };
+  }
+}
 
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -38,6 +50,27 @@ const Index = () => {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    // Load Hotmart checkout elements script
+    const script = document.createElement('script');
+    script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
+    script.onload = () => {
+      // Initialize the sales funnel widget after script loads
+      if (window.checkoutElements) {
+        window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+      }
+    };
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector('script[src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"]');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
+
   const scrollToOffer = () => {
     document.getElementById('offer')?.scrollIntoView({
       behavior: 'smooth'
@@ -50,9 +83,6 @@ const Index = () => {
     <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light overflow-x-hidden">
       {/* Google Fonts */}
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
-      
-      {/* HOTMART - Sales Funnel Widget */}
-      <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
       
       {/* Sticky CTA */}
       <div className="fixed top-0 left-0 right-0 bg-[#7E57C2] backdrop-blur-sm z-50 border-b border-[#7E57C2]/20">
@@ -282,7 +312,7 @@ const Index = () => {
                 </div>
               </div>
               
-              {/* HOTMART - Sales Funnel Widget */}
+              {/* Hotmart Sales Funnel Widget */}
               <div id="hotmart-sales-funnel" className="mb-6"></div>
               
               <div className="text-xs sm:text-sm text-[#B0B0B0] font-roboto">
@@ -461,15 +491,6 @@ const Index = () => {
           }
         `}
       </style>
-
-      {/* Initialize Hotmart Sales Funnel */}
-      <script>
-        {`
-          if (typeof checkoutElements !== 'undefined') {
-            checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
-          }
-        `}
-      </script>
     </div>
   );
 };
