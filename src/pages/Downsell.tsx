@@ -2,8 +2,27 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Clock, Star, Zap } from "lucide-react";
+import { useEffect } from "react";
 
 const Downsell = () => {
+  useEffect(() => {
+    // Load Hotmart checkout elements script
+    const script = document.createElement('script');
+    script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
+    script.onload = () => {
+      // Initialize the sales funnel widget after script loads
+      if (window.checkoutElements) {
+        window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-downsell');
+      }
+    };
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50">
       {/* Header */}
@@ -128,16 +147,8 @@ const Downsell = () => {
                 </ul>
               </div>
 
-              <!-- HOTMART - Sales Funnel Widget -->
-              <!--- sales funnel container --->
+              {/* Hotmart Sales Funnel Widget */}
               <div id="hotmart-sales-funnel-downsell" className="mb-8"></div>
-              
-              <!--- script load and setup --->
-              <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
-              <script>
-                checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-downsell')
-              </script>
-              <!-- HOTMART - Sales Funnel Widget -->
 
               <div className="text-center">
                 <Button 
