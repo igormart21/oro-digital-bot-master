@@ -314,7 +314,7 @@ const Index = () => {
               </div>
               
               {/* Hotmart Sales Funnel Widget */}
-              <div id="hotmart-sales-funnel" className="mb-6"></div>
+              <div id="hotmart-sales-funnel" className="mb-6 w-full max-w-full overflow-hidden"></div>
               
               <div className="text-xs sm:text-sm text-[#B0B0B0] font-roboto">
                 ✅ Acceso instantáneo | ✅ Garantía 7 días | ✅ Soporte incluido
@@ -342,7 +342,7 @@ const Index = () => {
             description: "Más de 1000 embudos probados en múltiples nichos y mercados",
             showFlows: true
           }, {
-            title: "Plantillas para WhatsApp/Instagram/WordPress",
+            title: "Plantillas para WhatsApp / Instagram / WordPress",
             value: "$297",
             description: "Plantillas optimizadas para cada plataforma",
             showFlows: false
@@ -444,7 +444,7 @@ const Index = () => {
             <div className="text-white font-roboto text-sm sm:text-base">Solo quedan <span className="font-bold text-[#D4821A]">87 accesos</span> disponibles</div>
             
             {/* Hotmart Sales Funnel Widget - Final CTA */}
-            <div id="hotmart-sales-funnel-final" className="mt-4"></div>
+            <div id="hotmart-sales-funnel-final" className="mt-4 w-full max-w-full overflow-hidden"></div>
           </div>
           
           
@@ -492,6 +492,20 @@ const Index = () => {
           
           .font-roboto {
             font-family: 'Roboto', sans-serif;
+          }
+          
+          /* Hotmart Widget Responsiveness */
+          #hotmart-sales-funnel,
+          #hotmart-sales-funnel-final {
+            min-height: 50px;
+          }
+          
+          @media (max-width: 640px) {
+            #hotmart-sales-funnel,
+            #hotmart-sales-funnel-final {
+              transform: scale(0.95);
+              transform-origin: center;
+            }
           }
         `}
       </style>
