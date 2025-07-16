@@ -55,9 +55,10 @@ const Index = () => {
     const script = document.createElement('script');
     script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
     script.onload = () => {
-      // Initialize the sales funnel widget after script loads
+      // Initialize the sales funnel widgets after script loads
       if (window.checkoutElements) {
         window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+        window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-final');
       }
     };
     document.head.appendChild(script);
@@ -441,6 +442,9 @@ const Index = () => {
           <div className="bg-[#7E57C2]/20 border-2 border-[#7E57C2] rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 max-w-md mx-auto">
             <div className="text-[#7E57C2] font-montserrat font-bold mb-2 text-sm sm:text-base">⚠️ ÚLTIMA ADVERTENCIA</div>
             <div className="text-white font-roboto text-sm sm:text-base">Solo quedan <span className="font-bold text-[#D4821A]">87 accesos</span> disponibles</div>
+            
+            {/* Hotmart Sales Funnel Widget - Final CTA */}
+            <div id="hotmart-sales-funnel-final" className="mt-4"></div>
           </div>
           
           
