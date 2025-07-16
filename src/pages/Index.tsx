@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Bot, DollarSign, Users, Zap, Star, Clock, CheckCircle, ArrowRight, Play, Target, TrendingUp, Shield, Gift, Plus, Minus } from 'lucide-react';
 
@@ -12,7 +11,6 @@ declare global {
     };
   }
 }
-
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 23,
@@ -21,7 +19,6 @@ const Index = () => {
   });
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [openBonusFlows, setOpenBonusFlows] = useState(false);
-
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
@@ -46,10 +43,8 @@ const Index = () => {
         return prev;
       });
     }, 1000);
-
     return () => clearInterval(timer);
   }, []);
-
   useEffect(() => {
     // Load Hotmart checkout elements script
     const script = document.createElement('script');
@@ -62,7 +57,6 @@ const Index = () => {
       }
     };
     document.head.appendChild(script);
-
     return () => {
       // Cleanup script on unmount
       const existingScript = document.querySelector('script[src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"]');
@@ -71,17 +65,13 @@ const Index = () => {
       }
     };
   }, []);
-
   const scrollToOffer = () => {
     document.getElementById('offer')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
-
   const checkoutUrl = "https://pay.hotmart.com/X95603477Q?off=yz1gz1p6&checkoutMode=10";
-
-  return (
-    <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light overflow-x-hidden">
+  return <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light overflow-x-hidden">
       {/* Google Fonts */}
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
       
@@ -449,7 +439,7 @@ const Index = () => {
           
           
           
-          <p className="font-roboto text-[#808080] text-sm sm:text-base">Inversión: $15 USD | Garantía 7 días | Acceso instantáneo</p>
+          <p className="font-roboto text-[#808080] text-sm sm:text-base">Inversión: $37 USD | Garantía 7 días | Acceso instantáneo</p>
         </div>
       </section>
 
@@ -509,8 +499,6 @@ const Index = () => {
           }
         `}
       </style>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
