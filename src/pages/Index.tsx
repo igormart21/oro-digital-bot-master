@@ -1,16 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Bot, DollarSign, Users, Zap, Star, Clock, CheckCircle, ArrowRight, Play, Target, TrendingUp, Shield, Gift, Plus, Minus } from 'lucide-react';
-
-// Extend Window interface to include checkoutElements
-declare global {
-  interface Window {
-    checkoutElements?: {
-      init: (type: string) => {
-        mount: (selector: string) => void;
-      };
-    };
-  }
-}
+import '../types/hotmart.d.ts';
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 0,

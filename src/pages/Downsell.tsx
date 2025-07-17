@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Clock, CheckCircle, X, Gift, Zap, Star, ArrowRight, AlertTriangle } from 'lucide-react';
+import '../types/hotmart.d.ts';
 
 const Downsell = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -35,6 +36,28 @@ const Downsell = () => {
     }, 1000);
 
     return () => clearInterval(timer);
+  }, []);
+
+  // Hotmart widget initialization
+  useEffect(() => {
+    const loadHotmartScript = () => {
+      if (document.getElementById('hotmart-checkout-script')) {
+        return; // Script already loaded
+      }
+
+      const script = document.createElement('script');
+      script.id = 'hotmart-checkout-script';
+      script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
+      script.onload = () => {
+        if (window.checkoutElements) {
+          window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+          window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-footer');
+        }
+      };
+      document.head.appendChild(script);
+    };
+
+    loadHotmartScript();
   }, []);
 
   return (
@@ -276,17 +299,6 @@ const Downsell = () => {
           <p className="font-roboto text-[#666] text-sm">© 2024 Typebot Pro - Oferta Especial. Todos los derechos reservados.</p>
         </div>
       </footer>
-
-      {/* HOTMART Scripts */}
-      <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
-      <script>
-        {`
-          if (typeof checkoutElements !== 'undefined') {
-            checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
-            checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-footer');
-          }
-        `}
-      </script>
 
       {/* Custom CSS for animations */}
       <style>
