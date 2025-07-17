@@ -63,16 +63,16 @@ const Downsell = () => {
             </span>
           </div>
           
-          <h1 className="font-montserrat font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
+            <h1 className="font-montserrat font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
             Última oportunidad para tener
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#7E57C2] to-[#D4821A] mt-2">
               Typebot Pro por solo
             </span>
-            <span className="block text-[#D4821A] mt-2">$10 USD</span>
+            <span className="block text-[#D4821A] mt-2">$17 USD</span>
           </h1>
           
           <p className="font-roboto text-lg sm:text-xl md:text-2xl mb-8 text-[#B0B0B0] max-w-3xl mx-auto leading-relaxed">
-            Entiendo que tal vez $15 sea mucho ahora. ¿Qué tal una <strong className="text-[#D4821A]">oferta única</strong> solo para ti que llegaste hasta aquí?
+            Entiendo que tal vez $37 sea mucho ahora. ¿Qué tal una <strong className="text-[#D4821A]">oferta única</strong> solo para ti que llegaste hasta aquí?
           </p>
           
           {/* Countdown Timer */}
@@ -111,8 +111,8 @@ const Downsell = () => {
           <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] p-1 rounded-3xl mb-8">
             <div className="bg-[#1E1E1E] p-8 rounded-3xl">
               <div className="text-center mb-8">
-                <div className="text-[#808080] line-through text-xl mb-2 font-roboto">Era: $15 USD</div>
-                <div className="text-6xl font-black text-[#D4821A] mb-4 font-montserrat">$10</div>
+                <div className="text-[#808080] line-through text-xl mb-2 font-roboto">Era: $37 USD</div>
+                <div className="text-6xl font-black text-[#D4821A] mb-4 font-montserrat">$17</div>
                 <div className="text-[#B0B0B0] font-roboto">Por tiempo limitado</div>
               </div>
               
@@ -165,10 +165,9 @@ const Downsell = () => {
               </div>
               
               <div className="text-center">
-                <button className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white px-8 py-4 rounded-full font-montserrat font-bold text-lg hover:opacity-90 transition-opacity duration-300 mb-4">
-                  🔥 QUIERO APROVECHAR POR $10 USD
-                </button>
-                <p className="text-xs text-[#B0B0B0] font-roboto">
+                {/* HOTMART - Sales Funnel Widget */}
+                <div id="hotmart-sales-funnel"></div>
+                <p className="text-xs text-[#B0B0B0] font-roboto mt-4">
                   ✅ Pago seguro | ✅ Garantía 7 días | ✅ Acceso instantáneo
                 </p>
               </div>
@@ -254,16 +253,15 @@ const Downsell = () => {
               ⚠️ ÚLTIMA ADVERTENCIA
             </h2>
             <p className="font-roboto text-lg text-[#E0E0E0] mb-6">
-              Si sales de esta página, esta oferta de $10 USD <strong className="text-[#D4821A]">nunca más será ofrecida</strong>. El precio vuelve a $15 USD y no habrá segunda oportunidad.
+              Si sales de esta página, esta oferta de $17 USD <strong className="text-[#D4821A]">nunca más será ofrecida</strong>. El precio vuelve a $37 USD y no habrá segunda oportunidad.
             </p>
             <div className="text-[#D4821A] font-montserrat font-bold text-xl">
               ¡Solo {timeLeft.minutes}:{timeLeft.seconds.toString().padStart(2, '0')} restantes!
             </div>
           </div>
           
-          <button className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white px-12 py-6 rounded-full font-montserrat font-bold text-xl hover:opacity-90 transition-opacity duration-300 mb-4">
-            🚀 SÍ, QUIERO APROVECHAR POR $10 USD
-          </button>
+          {/* HOTMART - Sales Funnel Widget */}
+          <div id="hotmart-sales-funnel-footer"></div>
           
           <p className="font-roboto text-[#808080] text-sm">
             Pago seguro | Garantía 7 días | Acceso instantáneo
@@ -278,6 +276,17 @@ const Downsell = () => {
           <p className="font-roboto text-[#666] text-sm">© 2024 Typebot Pro - Oferta Especial. Todos los derechos reservados.</p>
         </div>
       </footer>
+
+      {/* HOTMART Scripts */}
+      <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+      <script>
+        {`
+          if (typeof checkoutElements !== 'undefined') {
+            checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+            checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-footer');
+          }
+        `}
+      </script>
 
       {/* Custom CSS for animations */}
       <style>
