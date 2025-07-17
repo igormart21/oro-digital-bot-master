@@ -13,9 +13,9 @@ declare global {
 }
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
-    hours: 23,
-    minutes: 47,
-    seconds: 32
+    hours: 0,
+    minutes: 20,
+    seconds: 0
   });
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [openBonusFlows, setOpenBonusFlows] = useState(false);
@@ -121,7 +121,7 @@ const Index = () => {
           
           
           
-          <p className="font-roboto text-xs sm:text-sm text-[#808080] px-2">Por 15 dólares... menos que una hamburguesa, pero esto paga todos los días</p>
+          <p className="font-roboto text-xs sm:text-sm text-[#808080] px-2">Por 37 dólares... menos que un tanque de gasolina, pero esto paga todos los días</p>
         </div>
         
         <div className="absolute bottom-4 sm:bottom-8 animate-bounce">
@@ -232,38 +232,232 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Mini Testimonials */}
+      {/* Real Testimonials from WhatsApp */}
       <section className="py-12 sm:py-20 px-4 sm:px-6 bg-[#1A1A1A]">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="font-montserrat font-black text-3xl sm:text-4xl text-center mb-12 sm:mb-16 text-white">
-            Resultados <span className="text-[#7E57C2]">reales</span>
+          <h2 className="font-montserrat font-black text-3xl sm:text-4xl text-center mb-8 sm:mb-12 text-white">
+            ¿Qué dicen los <span className="text-[#7E57C2]">clientes?</span>
           </h2>
+          <p className="text-center text-[#B0B0B0] mb-12 sm:mb-16 font-roboto text-lg">
+            Resultados reales de estudiantes que ya están ganando con Typebot Pro
+          </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            {[{
-            name: "Carlos M.",
-            niche: "Marketing Digital",
-            quote: "En 2 semanas ya recuperé la inversión. El bot cierra solo."
-          }, {
-            name: "Ana L.",
-            niche: "E-commerce",
-            quote: "Facturé $1,200 el primer mes sin tocar nada manualmente."
-          }, {
-            name: "Diego R.",
-            niche: "Consultoría",
-            quote: "La licencia de reventa me generó $3,000 adicionales."
-          }].map((testimonial, index) => <div key={index} className="bg-[#1E1E1E] p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300 hover:transform hover:scale-105">
-                <p className="font-roboto text-[#E0E0E0] mb-4 sm:mb-6 italic text-sm sm:text-base">"{testimonial.quote}"</p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#7E57C2] to-[#D4821A] rounded-full flex items-center justify-center font-montserrat font-bold text-white mr-3 sm:mr-4">
-                    {testimonial.name.charAt(0)}
+          {/* Real WhatsApp conversations */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+            
+            {/* Testimonial 1 - Ca. - $3,123 USD */}
+            <div className="bg-[#1E1E1E] p-6 rounded-2xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300 relative">
+              <div className="absolute -top-3 left-4">
+                <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] px-4 py-1 rounded-full">
+                  <span className="text-white font-montserrat font-bold text-xs">💰 $3,123 USD</span>
+                </div>
+              </div>
+              <div className="pt-4">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-bold text-sm">Ca.</span>
                   </div>
                   <div>
-                    <div className="font-montserrat font-semibold text-white text-sm sm:text-base">{testimonial.name}</div>
-                    <div className="font-roboto text-xs sm:text-sm text-[#B0B0B0]">{testimonial.niche}</div>
+                    <div className="text-white font-semibold">Ca.</div>
+                    <div className="text-[#B0B0B0] text-xs">Estudiante</div>
                   </div>
                 </div>
-              </div>)}
+                <div className="space-y-3">
+                  <div className="bg-[#25D366] text-white p-3 rounded-lg rounded-bl-none">
+                    <p className="text-sm">"Hermano quiero agradecerte por cambiar mi vida la Mentoría en el yate fue inolvidable"</p>
+                  </div>
+                  <div className="bg-[#25D366] text-white p-3 rounded-lg rounded-bl-none">
+                    <p className="text-sm">"Este mes cerré con 3 mil usd"</p>
+                    <div className="text-xs opacity-75 mt-1">7:48 p. m.</div>
+                  </div>
+                  <div className="text-white text-sm bg-[#2A2A2A] p-3 rounded-lg">
+                    <p>"Eternamente agradecido con la Mentoría I10k 🔥🚀😁"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 2 - La. - Multiple earnings */}
+            <div className="bg-[#1E1E1E] p-6 rounded-2xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300 relative">
+              <div className="absolute -top-3 left-4">
+                <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] px-4 py-1 rounded-full">
+                  <span className="text-white font-montserrat font-bold text-xs">📈 Múltiples ventas</span>
+                </div>
+              </div>
+              <div className="pt-4">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-bold text-sm">La.</span>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">La.</div>
+                    <div className="text-[#B0B0B0] text-xs">Estudiante</div>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="bg-[#25D366] text-white p-3 rounded-lg rounded-bl-none">
+                    <p className="text-sm">"😱😱😱😱 ayer cumplí 3 semanas en la mentoría y ya llevo casi 4 mil dólares"</p>
+                  </div>
+                  <div className="text-white text-sm bg-[#2A2A2A] p-3 rounded-lg">
+                    <p>"Mis campañas van muy bien Diego, pasaré a la escala el día de mañana ✅"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 3 - Guille - $105 USD */}
+            <div className="bg-[#1E1E1E] p-6 rounded-2xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300 relative">
+              <div className="absolute -top-3 left-4">
+                <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] px-4 py-1 rounded-full">
+                  <span className="text-white font-montserrat font-bold text-xs">🚀 $105 USD</span>
+                </div>
+              </div>
+              <div className="pt-4">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-bold text-sm">G</span>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Guille Alumno</div>
+                    <div className="text-[#B0B0B0] text-xs">Estudiante</div>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="text-white text-sm bg-[#2A2A2A] p-3 rounded-lg">
+                    <p>"Realmente Sebas no tengo palabras"</p>
+                  </div>
+                  <div className="text-white text-sm bg-[#2A2A2A] p-3 rounded-lg">
+                    <p>"Te agradezco inmensamente"</p>
+                  </div>
+                  <div className="text-white text-sm bg-[#2A2A2A] p-3 rounded-lg">
+                    <p>"En 10 días que empezamos la mentoría ya estoy teniendo mis primeras ventas"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 4 - Angel S. - $6.44 commission */}
+            <div className="bg-[#1E1E1E] p-6 rounded-2xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300 relative">
+              <div className="absolute -top-3 left-4">
+                <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] px-4 py-1 rounded-full">
+                  <span className="text-white font-montserrat font-bold text-xs">💸 Primeras comisiones</span>
+                </div>
+              </div>
+              <div className="pt-4">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-bold text-sm">A</span>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Angel S. Alumno</div>
+                    <div className="text-[#B0B0B0] text-xs">Afiliado</div>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="bg-[#25D366] text-white p-3 rounded-lg rounded-bl-none">
+                    <p className="text-sm">"🤑 Cuál sería la comisión de esas 2?? Espero que no sea la de abajo 😅"</p>
+                  </div>
+                  <div className="bg-[#25D366] text-white p-3 rounded-lg rounded-bl-none">
+                    <p className="text-sm">"Tu comisión es de 6.44usd"</p>
+                  </div>
+                  <div className="text-white text-sm bg-[#2A2A2A] p-3 rounded-lg">
+                    <p>"A que bien, ya me había asustado😅😅😅😅😅😅😅"</p>
+                  </div>
+                  <div className="text-white text-sm bg-[#2A2A2A] p-3 rounded-lg">
+                    <p>"NO LO PUEDO CREEEEER 😅😅😅😅😅😅😅"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 5 - Success message */}
+            <div className="bg-[#1E1E1E] p-6 rounded-2xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300 relative">
+              <div className="absolute -top-3 left-4">
+                <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] px-4 py-1 rounded-full">
+                  <span className="text-white font-montserrat font-bold text-xs">✅ Estrategias probadas</span>
+                </div>
+              </div>
+              <div className="pt-4">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-bold text-sm">📱</span>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Estudiante</div>
+                    <div className="text-[#B0B0B0] text-xs">WhatsApp</div>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="bg-[#25D366] text-white p-3 rounded-lg rounded-bl-none">
+                    <p className="text-sm">"...creativo así mis esos que te pase"</p>
+                  </div>
+                  <div className="bg-[#25D366] text-white p-3 rounded-lg rounded-bl-none">
+                    <p className="text-sm">"Ya que están testeados, entonces, nomas usaré otros"</p>
+                  </div>
+                  <div className="bg-[#25D366] text-white p-3 rounded-lg rounded-bl-none">
+                    <p className="text-sm">"voy a apagar mi campaña y voy probar otros creativos"</p>
+                  </div>
+                  <div className="text-white text-sm bg-[#2A2A2A] p-3 rounded-lg">
+                    <p>"perfecto bro muchas gracias"</p>
+                  </div>
+                  <div className="text-white text-sm bg-[#2A2A2A] p-3 rounded-lg">
+                    <p>"ya monté la campaña"</p>
+                  </div>
+                  <div className="text-white text-sm bg-[#2A2A2A] p-3 rounded-lg">
+                    <p>"Bien ahí broo! 🙌"</p>
+                  </div>
+                  <div className="text-white text-sm bg-[#2A2A2A] p-3 rounded-lg">
+                    <p>"Exitos! 🙌"</p>
+                  </div>
+                  <div className="text-white text-sm bg-[#2A2A2A] p-3 rounded-lg">
+                    <p>"A esperar nomas ya 🙌"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 6 - Revenue dashboard */}
+            <div className="bg-[#1E1E1E] p-6 rounded-2xl border border-[#333] hover:border-[#7E57C2]/30 transition-all duration-300 relative">
+              <div className="absolute -top-3 left-4">
+                <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] px-4 py-1 rounded-full">
+                  <span className="text-white font-montserrat font-bold text-xs">🏆 $1,096 USD</span>
+                </div>
+              </div>
+              <div className="pt-4">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-bold text-sm">📊</span>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Dashboard Real</div>
+                    <div className="text-[#B0B0B0] text-xs">Hotmart Analytics</div>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="bg-white p-4 rounded-lg">
+                    <div className="text-gray-800 text-center">
+                      <div className="text-2xl font-bold text-green-600 mb-2">1096,31 US$</div>
+                      <div className="text-sm text-gray-600">Ingresos Totales</div>
+                      <div className="mt-3 text-xs text-gray-500">Resultados verificados</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to action after testimonials */}
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] p-1 rounded-2xl inline-block">
+              <div className="bg-[#1E1E1E] px-8 py-4 rounded-2xl">
+                <p className="text-white font-montserrat font-bold mb-2">
+                  ¿Quieres ser el próximo caso de éxito?
+                </p>
+                <p className="text-[#B0B0B0] text-sm">
+                  Únete ahora y comienza a generar ingresos como ellos
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -283,7 +477,7 @@ const Index = () => {
           <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] p-1 rounded-2xl sm:rounded-3xl mb-8 sm:mb-12 max-w-lg mx-auto">
             <div className="bg-[#1E1E1E] p-6 sm:p-10 rounded-2xl sm:rounded-3xl">
               <div className="text-[#808080] line-through text-lg sm:text-xl mb-3 sm:mb-4 font-roboto">Precio normal: $97 USD</div>
-              <div className="text-5xl sm:text-7xl font-black text-[#D4821A] mb-4 sm:mb-6 font-montserrat">$15</div>
+              <div className="text-5xl sm:text-7xl font-black text-[#D4821A] mb-4 sm:mb-6 font-montserrat">$37</div>
               
               <div className="bg-[#7E57C2]/20 border-2 border-[#7E57C2] rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8">
                 <div className="text-[#7E57C2] font-montserrat font-bold mb-3 sm:mb-4 text-sm sm:text-base">⏰ El precio sube en minutos:</div>
