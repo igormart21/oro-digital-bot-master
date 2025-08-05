@@ -111,7 +111,7 @@ const Index = () => {
           
           
           
-          <p className="font-roboto text-xs sm:text-sm text-[#808080] px-2">Por 37 dólares... menos que un tanque de gasolina, pero esto paga todos los días</p>
+          <p className="font-roboto text-xs sm:text-sm text-[#808080] px-2">Por 29 dólares... menos que un tanque de gasolina, pero esto paga todos los días</p>
         </div>
         
         <div className="absolute bottom-4 sm:bottom-8 animate-bounce">
@@ -240,7 +240,7 @@ const Index = () => {
           <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] p-1 rounded-2xl sm:rounded-3xl mb-8 sm:mb-12 max-w-lg mx-auto">
             <div className="bg-[#1E1E1E] p-6 sm:p-10 rounded-2xl sm:rounded-3xl">
               <div className="text-[#808080] line-through text-lg sm:text-xl mb-3 sm:mb-4 font-roboto">Precio normal: $97 USD</div>
-              <div className="text-5xl sm:text-7xl font-black text-[#D4821A] mb-4 sm:mb-6 font-montserrat">$37</div>
+              <div className="text-5xl sm:text-7xl font-black text-[#D4821A] mb-4 sm:mb-6 font-montserrat">$29</div>
               
               <div className="bg-[#7E57C2]/20 border-2 border-[#7E57C2] rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8">
                 <div className="text-[#7E57C2] font-montserrat font-bold mb-3 sm:mb-4 text-sm sm:text-base">⏰ El precio sube en minutos:</div>

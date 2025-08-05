@@ -95,7 +95,7 @@ const Downsell = () => {
           </h1>
           
           <p className="font-roboto text-lg sm:text-xl md:text-2xl mb-8 text-[#B0B0B0] max-w-3xl mx-auto leading-relaxed">
-            Entiendo que tal vez $37 sea mucho ahora. ¿Qué tal una <strong className="text-[#D4821A]">oferta única</strong> solo para ti que llegaste hasta aquí?
+            Entiendo que tal vez $29 sea mucho ahora. ¿Qué tal una <strong className="text-[#D4821A]">oferta única</strong> solo para ti que llegaste hasta aquí?
           </p>
           
           {/* Countdown Timer */}
@@ -134,7 +134,7 @@ const Downsell = () => {
           <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] p-1 rounded-3xl mb-8">
             <div className="bg-[#1E1E1E] p-8 rounded-3xl">
               <div className="text-center mb-8">
-                <div className="text-[#808080] line-through text-xl mb-2 font-roboto">Era: $37 USD</div>
+                <div className="text-[#808080] line-through text-xl mb-2 font-roboto">Era: $29 USD</div>
                 <div className="text-6xl font-black text-[#D4821A] mb-4 font-montserrat">$17</div>
                 <div className="text-[#B0B0B0] font-roboto">Por tiempo limitado</div>
               </div>
@@ -276,7 +276,7 @@ const Downsell = () => {
               ⚠️ ÚLTIMA ADVERTENCIA
             </h2>
             <p className="font-roboto text-lg text-[#E0E0E0] mb-6">
-              Si sales de esta página, esta oferta de $17 USD <strong className="text-[#D4821A]">nunca más será ofrecida</strong>. El precio vuelve a $37 USD y no habrá segunda oportunidad.
+              Si sales de esta página, esta oferta de $17 USD <strong className="text-[#D4821A]">nunca más será ofrecida</strong>. El precio vuelve a $29 USD y no habrá segunda oportunidad.
             </p>
             <div className="text-[#D4821A] font-montserrat font-bold text-xl">
               ¡Solo {timeLeft.minutes}:{timeLeft.seconds.toString().padStart(2, '0')} restantes!
