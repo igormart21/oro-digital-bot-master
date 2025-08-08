@@ -94,7 +94,7 @@ const Index = () => {
           {/* Vimeo Video */}
           <div className="mb-6 sm:mb-8 max-w-4xl mx-auto px-2">
             <div className="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl">
-              <iframe src="https://player.vimeo.com/video/1101531216?h=0&badge=0&autopause=0&player_id=0&app_id=58479" className="w-full h-full" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Typebot Pro Video"></iframe>
+              <iframe src="https://player.vimeo.com/video/1100617640?h=0&badge=0&autopause=0&player_id=0&app_id=58479" className="w-full h-full" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Typebot Pro Video"></iframe>
             </div>
           </div>
           
