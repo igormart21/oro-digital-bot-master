@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Clock, CheckCircle, AlertTriangle, Star, Zap, Download, Shield, Users, Gift, ArrowRight, Target, DollarSign, Bot } from 'lucide-react';
 import '../types/hotmart.d.ts';
-
 const Upsell = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 0,
     minutes: 7,
     seconds: 32
   });
-
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
@@ -33,7 +31,6 @@ const Upsell = () => {
         return prev;
       });
     }, 1000);
-
     return () => clearInterval(timer);
   }, []);
 
@@ -43,7 +40,6 @@ const Upsell = () => {
       if (document.getElementById('hotmart-checkout-script')) {
         return; // Script already loaded
       }
-
       const script = document.createElement('script');
       script.id = 'hotmart-checkout-script';
       script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
@@ -55,12 +51,9 @@ const Upsell = () => {
       };
       document.head.appendChild(script);
     };
-
     loadHotmartScript();
   }, []);
-
-  return (
-    <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light overflow-x-hidden">
+  return <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light overflow-x-hidden">
       {/* Google Fonts */}
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
       
@@ -121,11 +114,7 @@ const Upsell = () => {
           
           {/* Product Visual */}
           <div className="mb-8 max-w-md mx-auto">
-            <img 
-              src="/lovable-uploads/7582d2f3-d396-4988-81c8-4226ae16afa6.png" 
-              alt="Digital Domination Bundle - El Pack Definitivo"
-              className="w-full h-auto rounded-xl shadow-2xl hover:scale-105 transition-transform duration-300"
-            />
+            
           </div>
         </div>
       </section>
@@ -143,11 +132,7 @@ const Upsell = () => {
             
             {/* Product Hero Image */}
             <div className="mb-8 max-w-lg mx-auto">
-              <img 
-                src="/lovable-uploads/7582d2f3-d396-4988-81c8-4226ae16afa6.png" 
-                alt="Digital Domination Bundle"
-                className="w-full h-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500"
-              />
+              <img src="/lovable-uploads/7582d2f3-d396-4988-81c8-4226ae16afa6.png" alt="Digital Domination Bundle" className="w-full h-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500" />
             </div>
             
             <p className="font-roboto text-lg sm:text-xl text-[#B0B0B0] max-w-3xl mx-auto">
@@ -156,61 +141,49 @@ const Upsell = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {[
-              {
-                icon: <Bot className="w-8 h-8 text-[#7E57C2]" />,
-                title: "+2000 Automation Templates for n8n (With AI)",
-                description: "Automatización pesada para cualquier nicho"
-              },
-              {
-                icon: <Zap className="w-8 h-8 text-[#D4821A]" />,
-                title: "+1000 Flujos Premium Listos y Editables",
-                description: "Workflows listos para usar y facturar"
-              },
-              {
-                icon: <Target className="w-8 h-8 text-[#7E57C2]" />,
-                title: "Curso: Método Typebot Pro",
-                description: "Crea embudos conversacionales que venden 24/7"
-              },
-              {
-                icon: <Shield className="w-8 h-8 text-[#D4821A]" />,
-                title: "Typebot Ilimitado",
-                description: "Uso sin límites y sin pagar mensualidades"
-              },
-              {
-                icon: <DollarSign className="w-8 h-8 text-[#7E57C2]" />,
-                title: "Pack de Páginas de Ventas de Alta Conversión",
-                description: "Modelos listos para vender cualquier cosa"
-              },
-              {
-                icon: <Star className="w-8 h-8 text-[#D4821A]" />,
-                title: "Copy para Anuncios que Convierten",
-                description: "Textos que convierten clics en ventas"
-              },
-              {
-                icon: <ArrowRight className="w-8 h-8 text-[#7E57C2]" />,
-                title: "Automatización y Recuperación de Ventas",
-                description: "Secuencias para facturar en automático"
-              },
-              {
-                icon: <Gift className="w-8 h-8 text-[#D4821A]" />,
-                title: "Super Pack Canva",
-                description: "Creativos listos para anuncios irresistibles"
-              },
-              {
-                icon: <Download className="w-8 h-8 text-[#7E57C2]" />,
-                title: "¡Súper Pack PLR!",
-                description: "Productos listos para revender y monetizar al instante"
-              }
-            ].map((item, index) => (
-              <div key={index} className="bg-[#1E1E1E] p-6 rounded-xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-300 hover:transform hover:scale-105">
+            {[{
+            icon: <Bot className="w-8 h-8 text-[#7E57C2]" />,
+            title: "+2000 Automation Templates for n8n (With AI)",
+            description: "Automatización pesada para cualquier nicho"
+          }, {
+            icon: <Zap className="w-8 h-8 text-[#D4821A]" />,
+            title: "+1000 Flujos Premium Listos y Editables",
+            description: "Workflows listos para usar y facturar"
+          }, {
+            icon: <Target className="w-8 h-8 text-[#7E57C2]" />,
+            title: "Curso: Método Typebot Pro",
+            description: "Crea embudos conversacionales que venden 24/7"
+          }, {
+            icon: <Shield className="w-8 h-8 text-[#D4821A]" />,
+            title: "Typebot Ilimitado",
+            description: "Uso sin límites y sin pagar mensualidades"
+          }, {
+            icon: <DollarSign className="w-8 h-8 text-[#7E57C2]" />,
+            title: "Pack de Páginas de Ventas de Alta Conversión",
+            description: "Modelos listos para vender cualquier cosa"
+          }, {
+            icon: <Star className="w-8 h-8 text-[#D4821A]" />,
+            title: "Copy para Anuncios que Convierten",
+            description: "Textos que convierten clics en ventas"
+          }, {
+            icon: <ArrowRight className="w-8 h-8 text-[#7E57C2]" />,
+            title: "Automatización y Recuperación de Ventas",
+            description: "Secuencias para facturar en automático"
+          }, {
+            icon: <Gift className="w-8 h-8 text-[#D4821A]" />,
+            title: "Super Pack Canva",
+            description: "Creativos listos para anuncios irresistibles"
+          }, {
+            icon: <Download className="w-8 h-8 text-[#7E57C2]" />,
+            title: "¡Súper Pack PLR!",
+            description: "Productos listos para revender y monetizar al instante"
+          }].map((item, index) => <div key={index} className="bg-[#1E1E1E] p-6 rounded-xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="mb-4">
                   {item.icon}
                 </div>
                 <h3 className="font-montserrat font-bold text-lg mb-3 text-white">{item.title}</h3>
                 <p className="font-roboto text-[#B0B0B0] text-sm">{item.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -223,31 +196,25 @@ const Upsell = () => {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Shield className="w-12 h-12 text-[#7E57C2]" />,
-                title: "Todo ilimitado, cero mensualidades",
-                description: "Olvídate de pagos recurrentes para siempre"
-              },
-              {
-                icon: <Zap className="w-12 h-12 text-[#D4821A]" />,
-                title: "Plug & Play – instala y empieza a vender hoy mismo",
-                description: "Configuración en minutos, ventas inmediatas"
-              },
-              {
-                icon: <Star className="w-12 h-12 text-[#7E57C2]" />,
-                title: "Herramientas de élite por una fracción de su valor real",
-                description: "Más de $2000 en valor por solo $49"
-              }
-            ].map((benefit, index) => (
-              <div key={index} className="text-center bg-[#1E1E1E] p-8 rounded-xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-300">
+            {[{
+            icon: <Shield className="w-12 h-12 text-[#7E57C2]" />,
+            title: "Todo ilimitado, cero mensualidades",
+            description: "Olvídate de pagos recurrentes para siempre"
+          }, {
+            icon: <Zap className="w-12 h-12 text-[#D4821A]" />,
+            title: "Plug & Play – instala y empieza a vender hoy mismo",
+            description: "Configuración en minutos, ventas inmediatas"
+          }, {
+            icon: <Star className="w-12 h-12 text-[#7E57C2]" />,
+            title: "Herramientas de élite por una fracción de su valor real",
+            description: "Más de $2000 en valor por solo $49"
+          }].map((benefit, index) => <div key={index} className="text-center bg-[#1E1E1E] p-8 rounded-xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-300">
                 <div className="mb-6 flex justify-center">
                   {benefit.icon}
                 </div>
                 <h3 className="font-montserrat font-bold text-xl mb-4 text-white">{benefit.title}</h3>
                 <p className="font-roboto text-[#B0B0B0]">{benefit.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -275,11 +242,7 @@ const Upsell = () => {
               
               {/* Product Image in Offer */}
               <div className="mb-6 max-w-xs mx-auto">
-                <img 
-                  src="/lovable-uploads/7582d2f3-d396-4988-81c8-4226ae16afa6.png" 
-                  alt="Digital Domination Bundle"
-                  className="w-full h-auto rounded-xl shadow-xl"
-                />
+                <img src="/lovable-uploads/7582d2f3-d396-4988-81c8-4226ae16afa6.png" alt="Digital Domination Bundle" className="w-full h-auto rounded-xl shadow-xl" />
               </div>
               
               <div className="mb-8">
@@ -401,8 +364,6 @@ const Upsell = () => {
           }
         `}
       </style>
-    </div>
-  );
+    </div>;
 };
-
 export default Upsell;
