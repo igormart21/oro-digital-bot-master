@@ -118,6 +118,15 @@ const Upsell = () => {
               Si cierras esta ventana, el precio volverá a $199
             </p>
           </div>
+          
+          {/* Product Visual */}
+          <div className="mb-8 max-w-md mx-auto">
+            <img 
+              src="/lovable-uploads/7582d2f3-d396-4988-81c8-4226ae16afa6.png" 
+              alt="Digital Domination Bundle - El Pack Definitivo"
+              className="w-full h-auto rounded-xl shadow-2xl hover:scale-105 transition-transform duration-300"
+            />
+          </div>
         </div>
       </section>
 
@@ -131,6 +140,16 @@ const Upsell = () => {
                 El Pack Definitivo para Automatizar, Vender y Escalar
               </span>
             </h2>
+            
+            {/* Product Hero Image */}
+            <div className="mb-8 max-w-lg mx-auto">
+              <img 
+                src="/lovable-uploads/7582d2f3-d396-4988-81c8-4226ae16afa6.png" 
+                alt="Digital Domination Bundle"
+                className="w-full h-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            
             <p className="font-roboto text-lg sm:text-xl text-[#B0B0B0] max-w-3xl mx-auto">
               Todo ilimitado, cero mensualidades. Herramientas de élite por una fracción de su valor real.
             </p>
@@ -253,6 +272,16 @@ const Upsell = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] p-1 rounded-3xl mb-8">
             <div className="bg-[#1E1E1E] p-8 rounded-3xl">
+              
+              {/* Product Image in Offer */}
+              <div className="mb-6 max-w-xs mx-auto">
+                <img 
+                  src="/lovable-uploads/7582d2f3-d396-4988-81c8-4226ae16afa6.png" 
+                  alt="Digital Domination Bundle"
+                  className="w-full h-auto rounded-xl shadow-xl"
+                />
+              </div>
+              
               <div className="mb-8">
                 <div className="text-[#808080] line-through text-2xl mb-2 font-roboto">Valor real: $500+ USD</div>
                 <div className="text-7xl font-black text-[#D4821A] mb-4 font-montserrat">$49</div>
