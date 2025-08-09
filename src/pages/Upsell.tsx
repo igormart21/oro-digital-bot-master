@@ -143,8 +143,8 @@ const Upsell = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[{
             icon: <Bot className="w-8 h-8 text-[#7E57C2]" />,
-            title: "+2000 Automation Templates for n8n (With AI)",
-            description: "Automatización pesada para cualquier nicho"
+            title: "⚡ +2000 Plantillas de Automatizaciones para n8n (Con IA)",
+            description: "Desbloquea el verdadero poder de la automatización con este megapack exclusivo de más de 2000 workflows listos para usar en n8n. Integraciones inteligentes, agentes autónomos, conexiones con GPT, scraping, CRM, redes sociales, e-commerce y mucho más — todo organizado, editable y preparado para que empieces a ahorrar horas de trabajo desde el primer día."
           }, {
             icon: <Zap className="w-8 h-8 text-[#D4821A]" />,
             title: "+1000 Flujos Premium Listos y Editables",
@@ -160,7 +160,7 @@ const Upsell = () => {
           }, {
             icon: <DollarSign className="w-8 h-8 text-[#7E57C2]" />,
             title: "Pack de Páginas de Ventas de Alta Conversión",
-            description: "Modelos listos para vender cualquier cosa"
+            description: "¿Quieres aumentar tus ventas y convertir más clientes? Con el \"Pack Páginas de Ventas de Alta Conversión\", tendrás acceso a plantillas diseñadas estratégicamente para maximizar tus resultados. Ideal para emprendedores digitales, marketers y dueños de negocios que buscan destacar en un mercado competitivo. 🚀 Diseños listos para usar: Páginas profesionales, modernas y enfocadas en la persuasión. Estructura comprobada: Elementos clave para captar la atención."
           }, {
             icon: <Star className="w-8 h-8 text-[#D4821A]" />,
             title: "Copy para Anuncios que Convierten",
@@ -168,15 +168,15 @@ const Upsell = () => {
           }, {
             icon: <ArrowRight className="w-8 h-8 text-[#7E57C2]" />,
             title: "Automatización y Recuperación de Ventas",
-            description: "Secuencias para facturar en automático"
+            description: "Tene acceso a mis Modelos de Copy para Automatización que utilizo para recuperar y vender mucho."
           }, {
             icon: <Gift className="w-8 h-8 text-[#D4821A]" />,
             title: "Super Pack Canva",
-            description: "Creativos listos para anuncios irresistibles"
+            description: "Obtén más de 10.000 artes exclusivas para editar en Canva y transformar tus anuncios!"
           }, {
             icon: <Download className="w-8 h-8 text-[#7E57C2]" />,
             title: "¡Súper Pack PLR!",
-            description: "Productos listos para revender y monetizar al instante"
+            description: "Millones de archivos, productos y recursos digitales. Listos. A tu nombre. ⚡ PLRs de alta conversión: ebooks, cursos, creativos, plantillas, embudos y más. ⚡ No pierdas meses creando. Solo personaliza, lanza y empieza a facturar. 🚀 Ideal para infoproductores, agencias, afiliados, freelancers y expertos en tráfico. 🧠 Acceso inmediato a un arsenal que te ahorra tiempo y multiplica tu lucro."
           }].map((item, index) => <div key={index} className="bg-[#1E1E1E] p-6 rounded-xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="mb-4">
                   {item.icon}
