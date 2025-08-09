@@ -142,7 +142,7 @@ const Upsell = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[{
-            icon: <Bot className="w-8 h-8 text-[#7E57C2]" />,
+            image: "/lovable-uploads/72fd2fa0-fcf7-4fc3-a0a9-b4bdcd7fb65c.png",
             title: "⚡ +2000 Plantillas de Automatizaciones para n8n (Con IA)",
             description: "Desbloquea el verdadero poder de la automatización con este megapack exclusivo de más de 2000 workflows listos para usar en n8n. Integraciones inteligentes, agentes autónomos, conexiones con GPT, scraping, CRM, redes sociales, e-commerce y mucho más — todo organizado, editable y preparado para que empieces a ahorrar horas de trabajo desde el primer día."
           }, {
@@ -158,7 +158,7 @@ const Upsell = () => {
             title: "Typebot Ilimitado",
             description: "Uso sin límites y sin pagar mensualidades"
           }, {
-            icon: <DollarSign className="w-8 h-8 text-[#7E57C2]" />,
+            image: "/lovable-uploads/a24fe8e0-854e-407e-b8af-5130c68b326a.png",
             title: "Pack de Páginas de Ventas de Alta Conversión",
             description: "¿Quieres aumentar tus ventas y convertir más clientes? Con el \"Pack Páginas de Ventas de Alta Conversión\", tendrás acceso a plantillas diseñadas estratégicamente para maximizar tus resultados. Ideal para emprendedores digitales, marketers y dueños de negocios que buscan destacar en un mercado competitivo. 🚀 Diseños listos para usar: Páginas profesionales, modernas y enfocadas en la persuasión. Estructura comprobada: Elementos clave para captar la atención."
           }, {
@@ -166,20 +166,24 @@ const Upsell = () => {
             title: "Copy para Anuncios que Convierten",
             description: "Textos que convierten clics en ventas"
           }, {
-            icon: <ArrowRight className="w-8 h-8 text-[#7E57C2]" />,
+            image: "/lovable-uploads/2cdc6d6f-f8b7-4e47-8b7f-3f355388d1fa.png",
             title: "Automatización y Recuperación de Ventas",
             description: "Tene acceso a mis Modelos de Copy para Automatización que utilizo para recuperar y vender mucho."
           }, {
-            icon: <Gift className="w-8 h-8 text-[#D4821A]" />,
+            image: "/lovable-uploads/b5b69456-dd2d-40e8-9db9-e96ed91159a4.png",
             title: "Super Pack Canva",
             description: "Obtén más de 10.000 artes exclusivas para editar en Canva y transformar tus anuncios!"
           }, {
-            icon: <Download className="w-8 h-8 text-[#7E57C2]" />,
+            image: "/lovable-uploads/c90672e4-0b4e-45b4-8e96-2ea6f974da03.png",
             title: "¡Súper Pack PLR!",
             description: "Millones de archivos, productos y recursos digitales. Listos. A tu nombre. ⚡ PLRs de alta conversión: ebooks, cursos, creativos, plantillas, embudos y más. ⚡ No pierdas meses creando. Solo personaliza, lanza y empieza a facturar. 🚀 Ideal para infoproductores, agencias, afiliados, freelancers y expertos en tráfico. 🧠 Acceso inmediato a un arsenal que te ahorra tiempo y multiplica tu lucro."
           }].map((item, index) => <div key={index} className="bg-[#1E1E1E] p-6 rounded-xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="mb-4">
-                  {item.icon}
+                  {item.image ? (
+                    <img src={item.image} alt={item.title} className="w-full h-32 object-cover rounded-lg mb-2" />
+                  ) : (
+                    item.icon
+                  )}
                 </div>
                 <h3 className="font-montserrat font-bold text-lg mb-3 text-white">{item.title}</h3>
                 <p className="font-roboto text-[#B0B0B0] text-sm">{item.description}</p>
