@@ -146,17 +146,9 @@ const Upsell = () => {
             title: "⚡ +2000 Plantillas de Automatizaciones para n8n (Con IA)",
             description: "Desbloquea el verdadero poder de la automatización con este megapack exclusivo de más de 2000 workflows listos para usar en n8n. Integraciones inteligentes, agentes autónomos, conexiones con GPT, scraping, CRM, redes sociales, e-commerce y mucho más — todo organizado, editable y preparado para que empieces a ahorrar horas de trabajo desde el primer día. ✅ Sin necesidad de programar ✅ Acceso de por vida ✅ Actualizaciones mensuales incluidas ✅ Compatible con n8n cloud y self-hosted ✅ Ideal para freelancers, agencias, creadores, marketers y developers. Una inversión mínima para automatizar tareas que antes te quitaban días"
           }, {
-            icon: <Zap className="w-8 h-8 text-[#D4821A]" />,
-            title: "+1000 Flujos Premium Listos y Editables",
-            description: "Workflows listos para usar y facturar"
-          }, {
-            icon: <Target className="w-8 h-8 text-[#7E57C2]" />,
+            image: "/lovable-uploads/7f9dc260-1f5e-4f90-a695-6a842a2f2859.png",
             title: "Curso: Método Typebot Pro",
             description: "🧠 No es un curso. Es un arma. El Método Typebot Pro es para quienes están listos para dejar de rogar por ventas y empezar a dominar un ejército de bots que venden solos, 24/7, sin descanso y sin piedad. Aquí no vas a \"aprender teoría\". Vas a construir bots que: * Capturan leads como trampas psicológicas * Calientan al prospecto con mensajes diseñados para romper objeciones * Cierres automáticos que facturan mientras tú duermes. Desde el primer módulo, vas a entender cómo manipular cada clique, cada paso y cada palabra que el usuario ve... hasta que no le quede otra opción que comprar. ⚠️ Advertencia: Esto no es para tibios. Es para los que quieren convertir tráfico frío en dinero caliente, usando inteligencia, estrategia y un toque de malicia."
-          }, {
-            icon: <Shield className="w-8 h-8 text-[#D4821A]" />,
-            title: "Typebot Ilimitado",
-            description: "Uso sin límites y sin pagar mensualidades"
           }, {
             image: "/lovable-uploads/a24fe8e0-854e-407e-b8af-5130c68b326a.png",
             title: "Pack de Páginas de Ventas de Alta Conversión",
@@ -179,11 +171,7 @@ const Upsell = () => {
             description: "Millones de archivos, productos y recursos digitales. Listos. A tu nombre. ⚡ PLRs de alta conversión: ebooks, cursos, creativos, plantillas, embudos y más. ⚡ No pierdas meses creando. Solo personaliza, lanza y empieza a facturar. 🚀 Ideal para infoproductores, agencias, afiliados, freelancers y expertos en tráfico. 🧠 Acceso inmediato a un arsenal que te ahorra tiempo y multiplica tu lucro. 👉 Agrega el Super Pack PLR ahora y acelera tu imperio digital."
           }].map((item, index) => <div key={index} className="bg-[#1E1E1E] p-6 rounded-xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="mb-4">
-                  {item.image ? (
-                    <img src={item.image} alt={item.title} className="w-full h-48 object-contain rounded-lg mb-2 bg-gradient-to-br from-[#1A1A1A] to-[#2A2A2A]" />
-                  ) : (
-                    item.icon
-                  )}
+                  <img src={item.image} alt={item.title} className="w-full h-48 object-contain rounded-lg mb-2 bg-gradient-to-br from-[#1A1A1A] to-[#2A2A2A]" />
                 </div>
                 <h3 className="font-montserrat font-bold text-lg mb-3 text-white">{item.title}</h3>
                 <p className="font-roboto text-[#B0B0B0] text-sm">{item.description}</p>
