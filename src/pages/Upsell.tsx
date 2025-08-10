@@ -144,31 +144,95 @@ const Upsell = () => {
             {[{
             image: "/lovable-uploads/72fd2fa0-fcf7-4fc3-a0a9-b4bdcd7fb65c.png",
             title: "⚡ +2000 Plantillas de Automatizaciones para n8n (Con IA)",
-            description: "Desbloquea el verdadero poder de la automatización con este megapack exclusivo de más de 2000 workflows listos para usar en n8n. Integraciones inteligentes, agentes autónomos, conexiones con GPT, scraping, CRM, redes sociales, e-commerce y mucho más — todo organizado, editable y preparado para que empieces a ahorrar horas de trabajo desde el primer día. ✅ Sin necesidad de programar ✅ Acceso de por vida ✅ Actualizaciones mensuales incluidas ✅ Compatible con n8n cloud y self-hosted ✅ Ideal para freelancers, agencias, creadores, marketers y developers. Una inversión mínima para automatizar tareas que antes te quitaban días"
+            description: (
+              <div>
+                <p className="mb-3">Desbloquea el verdadero poder de la automatización con este megapack exclusivo de más de 2000 workflows listos para usar en n8n.</p>
+                <p className="mb-3">Integraciones inteligentes, agentes autónomos, conexiones con GPT, scraping, CRM, redes sociales, e-commerce y mucho más — todo organizado, editable y preparado para que empieces a ahorrar horas de trabajo desde el primer día.</p>
+                <div className="space-y-1">
+                  <p>✅ Sin necesidad de programar</p>
+                  <p>✅ Acceso de por vida</p>
+                  <p>✅ Actualizaciones mensuales incluidas</p>
+                  <p>✅ Compatible con n8n cloud y self-hosted</p>
+                  <p>✅ Ideal para freelancers, agencias, creadores, marketers y developers</p>
+                </div>
+                <p className="mt-3 font-semibold">Una inversión mínima para automatizar tareas que antes te quitaban días</p>
+              </div>
+            )
           }, {
             image: "/lovable-uploads/7f9dc260-1f5e-4f90-a695-6a842a2f2859.png",
             title: "Curso: Método Typebot Pro",
-            description: "🧠 No es un curso. Es un arma. El Método Typebot Pro es para quienes están listos para dejar de rogar por ventas y empezar a dominar un ejército de bots que venden solos, 24/7, sin descanso y sin piedad. Aquí no vas a \"aprender teoría\". Vas a construir bots que: * Capturan leads como trampas psicológicas * Calientan al prospecto con mensajes diseñados para romper objeciones * Cierres automáticos que facturan mientras tú duermes. Desde el primer módulo, vas a entender cómo manipular cada clique, cada paso y cada palabra que el usuario ve... hasta que no le quede otra opción que comprar. ⚠️ Advertencia: Esto no es para tibios. Es para los que quieren convertir tráfico frío en dinero caliente, usando inteligencia, estrategia y un toque de malicia."
+            description: (
+              <div>
+                <p className="mb-3">🧠 <strong>No es un curso. Es un arma.</strong></p>
+                <p className="mb-3">El Método Typebot Pro es para quienes están listos para dejar de rogar por ventas y empezar a dominar un ejército de bots que venden solos, 24/7, sin descanso y sin piedad.</p>
+                <p className="mb-3">Aquí no vas a "aprender teoría". Vas a construir bots que:</p>
+                <div className="space-y-1 mb-3">
+                  <p>• Capturan leads como trampas psicológicas</p>
+                  <p>• Calientan al prospecto con mensajes diseñados para romper objeciones</p>
+                  <p>• Cierres automáticos que facturan mientras tú duermes</p>
+                </div>
+                <p className="mb-3">Desde el primer módulo, vas a entender cómo manipular cada clique, cada paso y cada palabra que el usuario ve... hasta que no le quede otra opción que comprar.</p>
+                <p className="text-red-400 font-semibold">⚠️ Advertencia: Esto no es para tibios.</p>
+                <p>Es para los que quieren convertir tráfico frío en dinero caliente, usando inteligencia, estrategia y un toque de malicia.</p>
+              </div>
+            )
           }, {
             image: "/lovable-uploads/a24fe8e0-854e-407e-b8af-5130c68b326a.png",
             title: "Pack de Páginas de Ventas de Alta Conversión",
-            description: "¿Quieres aumentar tus ventas y convertir más clientes? Con el \"Pack Páginas de Ventas de Alta Conversión\", tendrás acceso a plantillas diseñadas estratégicamente para maximizar tus resultados. Ideal para emprendedores digitales, marketers y dueños de negocios que buscan destacar en un mercado competitivo. 🚀 ¿Qué incluye este pack? - Diseños listos para usar: Páginas profesionales, modernas y enfocadas en la persuasión. - Estructura comprobada: Elementos clave para captar la atención, gene"
+            description: (
+              <div>
+                <p className="mb-3">¿Quieres aumentar tus ventas y convertir más clientes? Con el "Pack Páginas de Ventas de Alta Conversión", tendrás acceso a plantillas diseñadas estratégicamente para maximizar tus resultados.</p>
+                <p className="mb-3">Ideal para emprendedores digitales, marketers y dueños de negocios que buscan destacar en un mercado competitivo.</p>
+                <p className="mb-2 font-semibold">🚀 ¿Qué incluye este pack?</p>
+                <div className="space-y-1">
+                  <p>• Diseños listos para usar: Páginas profesionales, modernas y enfocadas en la persuasión</p>
+                  <p>• Estructura comprobada: Elementos clave para captar la atención</p>
+                </div>
+              </div>
+            )
           }, {
             image: "/lovable-uploads/effc0a9f-ef6c-443c-ac0b-f761f837fc06.png",
             title: "Copy para Anuncios que Convierten",
-            description: "🔥 ¿Quieres multiplicar el poder de tu copy hasta 3 veces? Agrega AHORA el \"Arsenal de Anuncios Asesinos\" – 37 textos listos que ya han vendido millones, adaptables a tu nicho en menos de 5 minutos. ⚡ Solo copiar, pegar y ver cómo el clic se convierte en venta. 💀 Oferta ÚNICA: solo aquí, solo ahora. ⏳ Si cierras sin esto, estás dejando dinero sobre la mesa."
+            description: (
+              <div>
+                <p className="mb-3">🔥 <strong>¿Quieres multiplicar el poder de tu copy hasta 3 veces?</strong></p>
+                <p className="mb-3">Agrega AHORA el "Arsenal de Anuncios Asesinos" – 37 textos listos que ya han vendido millones, adaptables a tu nicho en menos de 5 minutos.</p>
+                <p className="mb-3">⚡ Solo copiar, pegar y ver cómo el clic se convierte en venta.</p>
+                <p className="mb-2 text-red-400 font-semibold">💀 Oferta ÚNICA: solo aquí, solo ahora.</p>
+                <p className="text-yellow-400 font-semibold">⏳ Si cierras sin esto, estás dejando dinero sobre la mesa.</p>
+              </div>
+            )
           }, {
             image: "/lovable-uploads/2cdc6d6f-f8b7-4e47-8b7f-3f355388d1fa.png",
             title: "Automatización y Recuperación de Ventas",
-            description: "Tene acceso a mis Modelos de Copy para Automatización que utilizo para recuperar y vender mucho."
+            description: (
+              <div>
+                <p>Tene acceso a mis <strong>Modelos de Copy para Automatización</strong> que utilizo para recuperar y vender mucho.</p>
+              </div>
+            )
           }, {
             image: "/lovable-uploads/b5b69456-dd2d-40e8-9db9-e96ed91159a4.png",
             title: "Super Pack Canva",
-            description: "Obtén más de 10.000 artes exclusivas para editar en Canva y transformar tus anuncios!"
+            description: (
+              <div>
+                <p>Obtén <strong>más de 10.000 artes exclusivas</strong> para editar en Canva y transformar tus anuncios!</p>
+              </div>
+            )
           }, {
             image: "/lovable-uploads/c90672e4-0b4e-45b4-8e96-2ea6f974da03.png",
             title: "¡Súper Pack PLR!",
-            description: "Millones de archivos, productos y recursos digitales. Listos. A tu nombre. ⚡ PLRs de alta conversión: ebooks, cursos, creativos, plantillas, embudos y más. ⚡ No pierdas meses creando. Solo personaliza, lanza y empieza a facturar. 🚀 Ideal para infoproductores, agencias, afiliados, freelancers y expertos en tráfico. 🧠 Acceso inmediato a un arsenal que te ahorra tiempo y multiplica tu lucro. 👉 Agrega el Super Pack PLR ahora y acelera tu imperio digital."
+            description: (
+              <div>
+                <p className="mb-3"><strong>Millones de archivos, productos y recursos digitales. Listos. A tu nombre.</strong></p>
+                <div className="space-y-2 mb-3">
+                  <p>⚡ PLRs de alta conversión: ebooks, cursos, creativos, plantillas, embudos y más</p>
+                  <p>⚡ No pierdas meses creando. Solo personaliza, lanza y empieza a facturar</p>
+                  <p>🚀 Ideal para infoproductores, agencias, afiliados, freelancers y expertos en tráfico</p>
+                  <p>🧠 Acceso inmediato a un arsenal que te ahorra tiempo y multiplica tu lucro</p>
+                </div>
+                <p className="font-semibold text-yellow-400">👉 Agrega el Super Pack PLR ahora y acelera tu imperio digital.</p>
+              </div>
+            )
           }].map((item, index) => <div key={index} className="bg-[#1E1E1E] p-6 rounded-xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="mb-4">
                   <img src={item.image} alt={item.title} className="w-full h-48 object-contain rounded-lg mb-2 bg-gradient-to-br from-[#1A1A1A] to-[#2A2A2A]" />
