@@ -144,7 +144,7 @@ const Upsell = () => {
             {[{
             image: "/lovable-uploads/72fd2fa0-fcf7-4fc3-a0a9-b4bdcd7fb65c.png",
             title: "⚡ +2000 Plantillas de Automatizaciones para n8n (Con IA)",
-            description: "Desbloquea el verdadero poder de la automatización con este megapack exclusivo de más de 2000 workflows listos para usar en n8n. Integraciones inteligentes, agentes autónomos, conexiones con GPT, scraping, CRM, redes sociales, e-commerce y mucho más — todo organizado, editable y preparado para que empieces a ahorrar horas de trabajo desde el primer día."
+            description: "Desbloquea el verdadero poder de la automatización con este megapack exclusivo de más de 2000 workflows listos para usar en n8n. Integraciones inteligentes, agentes autónomos, conexiones con GPT, scraping, CRM, redes sociales, e-commerce y mucho más — todo organizado, editable y preparado para que empieces a ahorrar horas de trabajo desde el primer día. ✅ Sin necesidad de programar ✅ Acceso de por vida ✅ Actualizaciones mensuales incluidas ✅ Compatible con n8n cloud y self-hosted ✅ Ideal para freelancers, agencias, creadores, marketers y developers. Una inversión mínima para automatizar tareas que antes te quitaban días"
           }, {
             icon: <Zap className="w-8 h-8 text-[#D4821A]" />,
             title: "+1000 Flujos Premium Listos y Editables",
@@ -152,7 +152,7 @@ const Upsell = () => {
           }, {
             icon: <Target className="w-8 h-8 text-[#7E57C2]" />,
             title: "Curso: Método Typebot Pro",
-            description: "Crea embudos conversacionales que venden 24/7"
+            description: "🧠 No es un curso. Es un arma. El Método Typebot Pro es para quienes están listos para dejar de rogar por ventas y empezar a dominar un ejército de bots que venden solos, 24/7, sin descanso y sin piedad. Aquí no vas a \"aprender teoría\". Vas a construir bots que: * Capturan leads como trampas psicológicas * Calientan al prospecto con mensajes diseñados para romper objeciones * Cierres automáticos que facturan mientras tú duermes. Desde el primer módulo, vas a entender cómo manipular cada clique, cada paso y cada palabra que el usuario ve... hasta que no le quede otra opción que comprar. ⚠️ Advertencia: Esto no es para tibios. Es para los que quieren convertir tráfico frío en dinero caliente, usando inteligencia, estrategia y un toque de malicia."
           }, {
             icon: <Shield className="w-8 h-8 text-[#D4821A]" />,
             title: "Typebot Ilimitado",
@@ -160,11 +160,11 @@ const Upsell = () => {
           }, {
             image: "/lovable-uploads/a24fe8e0-854e-407e-b8af-5130c68b326a.png",
             title: "Pack de Páginas de Ventas de Alta Conversión",
-            description: "¿Quieres aumentar tus ventas y convertir más clientes? Con el \"Pack Páginas de Ventas de Alta Conversión\", tendrás acceso a plantillas diseñadas estratégicamente para maximizar tus resultados. Ideal para emprendedores digitales, marketers y dueños de negocios que buscan destacar en un mercado competitivo. 🚀 Diseños listos para usar: Páginas profesionales, modernas y enfocadas en la persuasión. Estructura comprobada: Elementos clave para captar la atención."
+            description: "¿Quieres aumentar tus ventas y convertir más clientes? Con el \"Pack Páginas de Ventas de Alta Conversión\", tendrás acceso a plantillas diseñadas estratégicamente para maximizar tus resultados. Ideal para emprendedores digitales, marketers y dueños de negocios que buscan destacar en un mercado competitivo. 🚀 ¿Qué incluye este pack? - Diseños listos para usar: Páginas profesionales, modernas y enfocadas en la persuasión. - Estructura comprobada: Elementos clave para captar la atención, gene"
           }, {
-            icon: <Star className="w-8 h-8 text-[#D4821A]" />,
+            image: "/lovable-uploads/effc0a9f-ef6c-443c-ac0b-f761f837fc06.png",
             title: "Copy para Anuncios que Convierten",
-            description: "Textos que convierten clics en ventas"
+            description: "🔥 ¿Quieres multiplicar el poder de tu copy hasta 3 veces? Agrega AHORA el \"Arsenal de Anuncios Asesinos\" – 37 textos listos que ya han vendido millones, adaptables a tu nicho en menos de 5 minutos. ⚡ Solo copiar, pegar y ver cómo el clic se convierte en venta. 💀 Oferta ÚNICA: solo aquí, solo ahora. ⏳ Si cierras sin esto, estás dejando dinero sobre la mesa."
           }, {
             image: "/lovable-uploads/2cdc6d6f-f8b7-4e47-8b7f-3f355388d1fa.png",
             title: "Automatización y Recuperación de Ventas",
@@ -176,11 +176,11 @@ const Upsell = () => {
           }, {
             image: "/lovable-uploads/c90672e4-0b4e-45b4-8e96-2ea6f974da03.png",
             title: "¡Súper Pack PLR!",
-            description: "Millones de archivos, productos y recursos digitales. Listos. A tu nombre. ⚡ PLRs de alta conversión: ebooks, cursos, creativos, plantillas, embudos y más. ⚡ No pierdas meses creando. Solo personaliza, lanza y empieza a facturar. 🚀 Ideal para infoproductores, agencias, afiliados, freelancers y expertos en tráfico. 🧠 Acceso inmediato a un arsenal que te ahorra tiempo y multiplica tu lucro."
+            description: "Millones de archivos, productos y recursos digitales. Listos. A tu nombre. ⚡ PLRs de alta conversión: ebooks, cursos, creativos, plantillas, embudos y más. ⚡ No pierdas meses creando. Solo personaliza, lanza y empieza a facturar. 🚀 Ideal para infoproductores, agencias, afiliados, freelancers y expertos en tráfico. 🧠 Acceso inmediato a un arsenal que te ahorra tiempo y multiplica tu lucro. 👉 Agrega el Super Pack PLR ahora y acelera tu imperio digital."
           }].map((item, index) => <div key={index} className="bg-[#1E1E1E] p-6 rounded-xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="mb-4">
                   {item.image ? (
-                    <img src={item.image} alt={item.title} className="w-full h-32 object-cover rounded-lg mb-2" />
+                    <img src={item.image} alt={item.title} className="w-full h-48 object-contain rounded-lg mb-2 bg-gradient-to-br from-[#1A1A1A] to-[#2A2A2A]" />
                   ) : (
                     item.icon
                   )}
