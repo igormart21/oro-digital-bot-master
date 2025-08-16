@@ -50,8 +50,7 @@ const Downsell = () => {
       script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
       script.onload = () => {
         if (window.checkoutElements) {
-          window.checkoutElements.init('salesFunnel').mount('#hotmart-downsell-funnel');
-          window.checkoutElements.init('salesFunnel').mount('#hotmart-downsell-footer');
+          window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
         }
       };
       document.head.appendChild(script);
@@ -360,8 +359,8 @@ const Downsell = () => {
                 </div>
               </div>
               
-              {/* HOTMART - Downsell Widget */}
-              <div id="hotmart-downsell-funnel" className="mb-6"></div>
+              {/* HOTMART - Sales Funnel Widget */}
+              <div id="hotmart-sales-funnel" className="mb-6"></div>
               
               <div className="grid md:grid-cols-3 gap-4 mt-8 text-sm font-roboto">
                 <div className="flex items-center justify-center gap-2 text-green-400">
@@ -420,9 +419,6 @@ const Downsell = () => {
           <p className="font-roboto text-[#B0B0B0] mb-6">
             ¿Aún tienes dudas? Recuerda: <span className="text-[#D4821A] font-bold">Garantía de 7 días o tu dinero de vuelta</span>
           </p>
-          
-          {/* HOTMART - Footer Widget */}
-          <div id="hotmart-downsell-footer" className="mb-4"></div>
           
           <p className="font-roboto text-xs text-[#808080]">
             Esta oferta es válida solo en esta página y por tiempo limitado.
