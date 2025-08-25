@@ -139,6 +139,35 @@ const Downsell = () => {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-16 px-4 sm:px-6">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-8">
+            <h2 className="font-montserrat font-black text-3xl sm:text-4xl mb-4 text-white">
+              🎥 Mira cómo funciona
+              <span className="block text-[#D4821A] text-2xl sm:text-3xl mt-2">
+                Typebot Ilimitado en acción
+              </span>
+            </h2>
+            <p className="font-roboto text-lg text-[#B0B0B0]">
+              Ve con tus propios ojos la facilidad y potencia de esta herramienta
+            </p>
+          </div>
+          
+          <div className="relative bg-[#1E1E1E] rounded-xl overflow-hidden border-2 border-[#D4821A]/30 hover:border-[#D4821A]/60 transition-all duration-300">
+            <div className="aspect-video">
+              <iframe 
+                src="https://player.vimeo.com/video/1112779182?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                className="w-full h-full"
+                frameBorder="0" 
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                title="Typebot Ilimitado Demo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Problema y Solución */}
       <section className="py-16 px-4 sm:px-6 bg-[#1A1A1A]">
         <div className="container mx-auto max-w-4xl">
