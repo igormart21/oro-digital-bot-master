@@ -1,15 +1,12 @@
-
 import React, { useState, useEffect } from 'react';
 import { Clock, CheckCircle, AlertTriangle, Star, Zap, Download, Shield, Users, Gift, ArrowRight, Target, DollarSign, Bot, Infinity, Server, Calendar, CreditCard } from 'lucide-react';
 import '../types/hotmart.d.ts';
-
 const Downsell = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 0,
     minutes: 4,
     seconds: 59
   });
-
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
@@ -34,7 +31,6 @@ const Downsell = () => {
         return prev;
       });
     }, 1000);
-
     return () => clearInterval(timer);
   }, []);
 
@@ -44,7 +40,6 @@ const Downsell = () => {
       if (document.getElementById('hotmart-checkout-script')) {
         return; // Script already loaded
       }
-
       const script = document.createElement('script');
       script.id = 'hotmart-checkout-script';
       script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
@@ -55,12 +50,9 @@ const Downsell = () => {
       };
       document.head.appendChild(script);
     };
-
     loadHotmartScript();
   }, []);
-
-  return (
-    <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light overflow-x-hidden">
+  return <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light overflow-x-hidden">
       {/* Google Fonts */}
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
       
@@ -143,26 +135,13 @@ const Downsell = () => {
       <section className="py-16 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-8">
-            <h2 className="font-montserrat font-black text-3xl sm:text-4xl mb-4 text-white">
-              🎥 Mira cómo funciona
-              <span className="block text-[#D4821A] text-2xl sm:text-3xl mt-2">
-                Typebot Ilimitado en acción
-              </span>
-            </h2>
-            <p className="font-roboto text-lg text-[#B0B0B0]">
-              Ve con tus propios ojos la facilidad y potencia de esta herramienta
-            </p>
+            
+            
           </div>
           
           <div className="relative bg-[#1E1E1E] rounded-xl overflow-hidden border-2 border-[#D4821A]/30 hover:border-[#D4821A]/60 transition-all duration-300">
             <div className="aspect-video">
-              <iframe 
-                src="https://player.vimeo.com/video/1112779182?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                className="w-full h-full"
-                frameBorder="0" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                title="Typebot Ilimitado Demo"
-              />
+              <iframe src="https://player.vimeo.com/video/1112779182?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" className="w-full h-full" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Typebot Ilimitado Demo" />
             </div>
           </div>
         </div>
@@ -227,7 +206,7 @@ const Downsell = () => {
                 <strong className="text-[#D4821A]">MATEMÁTICA SIMPLE:</strong>
               </p>
               <p className="font-montserrat text-2xl font-bold">
-                Otras plataformas: $588+ al año 📈<br/>
+                Otras plataformas: $588+ al año 📈<br />
                 <span className="text-[#D4821A]">Typebot Ilimitado: $29 PARA SIEMPRE 💪</span>
               </p>
             </div>
@@ -251,46 +230,37 @@ const Downsell = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {[
-              {
-                icon: <Bot className="w-12 h-12 text-[#7E57C2]" />,
-                title: "Bots Ilimitados",
-                description: "Crea tantos bots como necesites. Sin restricciones, sin límites artificiales. Tu creatividad es el único límite."
-              },
-              {
-                icon: <Infinity className="w-12 h-12 text-[#D4821A]" />,
-                title: "Conversaciones Sin Fin", 
-                description: "Millones de chats simultáneos. Cada conversación es una oportunidad de venta que nunca se pierde."
-              },
-              {
-                icon: <Server className="w-12 h-12 text-[#7E57C2]" />,
-                title: "Zero Configuración",
-                description: "Olvídate de servidores, hosting y configuraciones técnicas. Instala en 2 clics y empieza a vender."
-              },
-              {
-                icon: <Shield className="w-12 h-12 text-[#D4821A]" />,
-                title: "Acceso Vitalicio",
-                description: "Paga una vez, úsalo para siempre. Sin trucos, sin renovaciones, sin sorpresas en tu tarjeta."
-              },
-              {
-                icon: <Zap className="w-12 h-12 text-[#7E57C2]" />,
-                title: "Instalación Instantánea",
-                description: "De la compra a tu primer bot funcionando en menos de 5 minutos. Plug & play real."
-              },
-              {
-                icon: <Target className="w-12 h-12 text-[#D4821A]" />,
-                title: "Conversiones Brutales",
-                description: "Cada bot está diseñado para una cosa: convertir visitantes en clientes que pagan."
-              }
-            ].map((feature, index) => (
-              <div key={index} className="bg-[#1E1E1E] p-6 rounded-xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-300 hover:transform hover:scale-105">
+            {[{
+            icon: <Bot className="w-12 h-12 text-[#7E57C2]" />,
+            title: "Bots Ilimitados",
+            description: "Crea tantos bots como necesites. Sin restricciones, sin límites artificiales. Tu creatividad es el único límite."
+          }, {
+            icon: <Infinity className="w-12 h-12 text-[#D4821A]" />,
+            title: "Conversaciones Sin Fin",
+            description: "Millones de chats simultáneos. Cada conversación es una oportunidad de venta que nunca se pierde."
+          }, {
+            icon: <Server className="w-12 h-12 text-[#7E57C2]" />,
+            title: "Zero Configuración",
+            description: "Olvídate de servidores, hosting y configuraciones técnicas. Instala en 2 clics y empieza a vender."
+          }, {
+            icon: <Shield className="w-12 h-12 text-[#D4821A]" />,
+            title: "Acceso Vitalicio",
+            description: "Paga una vez, úsalo para siempre. Sin trucos, sin renovaciones, sin sorpresas en tu tarjeta."
+          }, {
+            icon: <Zap className="w-12 h-12 text-[#7E57C2]" />,
+            title: "Instalación Instantánea",
+            description: "De la compra a tu primer bot funcionando en menos de 5 minutos. Plug & play real."
+          }, {
+            icon: <Target className="w-12 h-12 text-[#D4821A]" />,
+            title: "Conversiones Brutales",
+            description: "Cada bot está diseñado para una cosa: convertir visitantes en clientes que pagan."
+          }].map((feature, index) => <div key={index} className="bg-[#1E1E1E] p-6 rounded-xl border border-[#333] hover:border-[#7E57C2]/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="mb-4 flex justify-center">
                   {feature.icon}
                 </div>
                 <h3 className="font-montserrat font-bold text-lg mb-3 text-white text-center">{feature.title}</h3>
                 <p className="font-roboto text-[#B0B0B0] text-sm text-center">{feature.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -303,30 +273,22 @@ const Downsell = () => {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                text: "\"En 2 semanas recuperé la inversión. Ya van 3 meses facturando con mis bots.\"",
-                author: "Miguel R. - Dropshipper"
-              },
-              {
-                text: "\"Dejé de pagar $79/mes. Ahora tengo 47 bots funcionando sin parar.\"", 
-                author: "Laura S. - Coach Online"
-              },
-              {
-                text: "\"Mi mejor inversión. Los bots venden mientras duermo.\"",
-                author: "Carlos M. - Infoproductor"
-              }
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-[#1E1E1E] border border-[#333] rounded-xl p-6">
+            {[{
+            text: "\"En 2 semanas recuperé la inversión. Ya van 3 meses facturando con mis bots.\"",
+            author: "Miguel R. - Dropshipper"
+          }, {
+            text: "\"Dejé de pagar $79/mes. Ahora tengo 47 bots funcionando sin parar.\"",
+            author: "Laura S. - Coach Online"
+          }, {
+            text: "\"Mi mejor inversión. Los bots venden mientras duermo.\"",
+            author: "Carlos M. - Infoproductor"
+          }].map((testimonial, index) => <div key={index} className="bg-[#1E1E1E] border border-[#333] rounded-xl p-6">
                 <p className="font-roboto text-[#B0B0B0] mb-4 italic">{testimonial.text}</p>
                 <p className="font-montserrat font-bold text-[#D4821A]">{testimonial.author}</p>
                 <div className="flex justify-center mt-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />)}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -482,8 +444,6 @@ const Downsell = () => {
           }
         `}
       </style>
-    </div>
-  );
+    </div>;
 };
-
 export default Downsell;
