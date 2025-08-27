@@ -36,31 +36,14 @@ const Index = () => {
     return () => clearInterval(timer);
   }, []);
   useEffect(() => {
-    // Load Hotmart checkout elements script
-    const script = document.createElement('script');
-    script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
-    script.onload = () => {
-      // Initialize the sales funnel widgets after script loads
-      if (window.checkoutElements) {
-        window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
-        window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-final');
-      }
-    };
-    document.head.appendChild(script);
-    return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector('script[src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"]');
-      if (existingScript) {
-        document.head.removeChild(existingScript);
-      }
-    };
+    // No longer using Hotmart widgets
   }, []);
   const scrollToOffer = () => {
     document.getElementById('offer')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
-  const checkoutUrl = "https://pay.hotmart.com/X95603477Q?off=yz1gz1p6&checkoutMode=10";
+  const checkoutUrl = "https://pay.hotmart.com/C101183936X?off=jfkg7xvw&checkoutMode=10";
   return <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light overflow-x-hidden">
       {/* Google Fonts */}
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -94,7 +77,7 @@ const Index = () => {
           {/* Vimeo Video */}
           <div className="mb-6 sm:mb-8 max-w-4xl mx-auto px-2">
             <div className="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl">
-              <iframe src="https://player.vimeo.com/video/1100617640?h=0&badge=0&autopause=0&player_id=0&app_id=58479" className="w-full h-full" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Typebot Pro Video"></iframe>
+              <iframe src="https://player.vimeo.com/video/1113437964?h=0&badge=0&autopause=0&player_id=0&app_id=58479" className="w-full h-full" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Typebot Pro Video"></iframe>
             </div>
           </div>
           
@@ -111,7 +94,7 @@ const Index = () => {
           
           
           
-          <p className="font-roboto text-xs sm:text-sm text-[#808080] px-2">Por 29 dólares... menos que un tanque de gasolina, pero esto paga todos los días</p>
+          <p className="font-roboto text-xs sm:text-sm text-[#808080] px-2">Por 15 dólares... menos que un tanque de gasolina, pero esto paga todos los días</p>
         </div>
         
         <div className="absolute bottom-4 sm:bottom-8 animate-bounce">
@@ -240,7 +223,7 @@ const Index = () => {
           <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] p-1 rounded-2xl sm:rounded-3xl mb-8 sm:mb-12 max-w-lg mx-auto">
             <div className="bg-[#1E1E1E] p-6 sm:p-10 rounded-2xl sm:rounded-3xl">
               <div className="text-[#808080] line-through text-lg sm:text-xl mb-3 sm:mb-4 font-roboto">Precio normal: $97 USD</div>
-              <div className="text-5xl sm:text-7xl font-black text-[#D4821A] mb-4 sm:mb-6 font-montserrat">$29</div>
+              <div className="text-5xl sm:text-7xl font-black text-[#D4821A] mb-4 sm:mb-6 font-montserrat">$15</div>
               
               <div className="bg-[#7E57C2]/20 border-2 border-[#7E57C2] rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8">
                 <div className="text-[#7E57C2] font-montserrat font-bold mb-3 sm:mb-4 text-sm sm:text-base">⏰ El precio sube en minutos:</div>
@@ -260,8 +243,10 @@ const Index = () => {
                 </div>
               </div>
               
-              {/* Hotmart Sales Funnel Widget */}
-              <div id="hotmart-sales-funnel" className="mb-6 w-full max-w-full overflow-hidden"></div>
+              {/* CTA Button */}
+              <a href="https://pay.hotmart.com/C101183936X?off=jfkg7xvw&checkoutMode=10" target="_blank" rel="noopener noreferrer" className="block w-full bg-gradient-to-r from-[#D4821A] to-[#7E57C2] text-white font-montserrat font-bold text-lg sm:text-xl py-4 sm:py-6 px-6 sm:px-8 rounded-xl sm:rounded-2xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl mb-6">
+                🚀 QUIERO ACCESO AHORA
+              </a>
               
               <div className="text-xs sm:text-sm text-[#B0B0B0] font-roboto">
                 ✅ Acceso instantáneo | ✅ Garantía 7 días | ✅ Soporte incluido
@@ -390,13 +375,15 @@ const Index = () => {
             <div className="text-[#7E57C2] font-montserrat font-bold mb-2 text-sm sm:text-base">⚠️ ÚLTIMA ADVERTENCIA</div>
             <div className="text-white font-roboto text-sm sm:text-base">Solo quedan <span className="font-bold text-[#D4821A]">87 accesos</span> disponibles</div>
             
-            {/* Hotmart Sales Funnel Widget - Final CTA */}
-            <div id="hotmart-sales-funnel-final" className="mt-4 w-full max-w-full overflow-hidden"></div>
+            {/* Final CTA Button */}
+            <a href="https://pay.hotmart.com/C101183936X?off=jfkg7xvw&checkoutMode=10" target="_blank" rel="noopener noreferrer" className="block w-full bg-gradient-to-r from-[#D4821A] to-[#7E57C2] text-white font-montserrat font-bold text-lg sm:text-xl py-4 sm:py-6 px-6 sm:px-8 rounded-xl sm:rounded-2xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl mt-4">
+              🚀 QUIERO ACCESO AHORA
+            </a>
           </div>
           
           
           
-          <p className="font-roboto text-[#808080] text-sm sm:text-base">Inversión: $37 USD | Garantía 7 días | Acceso instantáneo</p>
+          <p className="font-roboto text-[#808080] text-sm sm:text-base">Inversión: $15 USD | Garantía 7 días | Acceso instantáneo</p>
         </div>
       </section>
 
