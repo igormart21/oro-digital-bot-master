@@ -34,24 +34,6 @@ const Downsell = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Hotmart widget initialization
-  useEffect(() => {
-    const loadHotmartScript = () => {
-      if (document.getElementById('hotmart-checkout-script')) {
-        return; // Script already loaded
-      }
-      const script = document.createElement('script');
-      script.id = 'hotmart-checkout-script';
-      script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
-      script.onload = () => {
-        if (window.checkoutElements) {
-          window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
-        }
-      };
-      document.head.appendChild(script);
-    };
-    loadHotmartScript();
-  }, []);
   return <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light overflow-x-hidden">
       {/* Google Fonts */}
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -61,7 +43,7 @@ const Downsell = () => {
         <div className="container mx-auto flex justify-center items-center py-2 px-4">
           <div className="flex items-center gap-2 text-[#121212] font-montserrat font-bold text-sm">
             <AlertTriangle className="w-4 h-4" />
-            🚨 ÚLTIMA OPORTUNIDAD: Solo $29 dólares - ¡Nunca más pagarás mensualidades!
+            🚨 ÚLTIMA OPORTUNIDAD: Solo $15 dólares - ¡Nunca más pagarás mensualidades!
           </div>
         </div>
       </div>
@@ -78,14 +60,20 @@ const Downsell = () => {
           </div>
           
           <h1 className="font-montserrat font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
-            🔥 ¡Espera! No te vayas sin
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#7E57C2] to-[#D4821A] mt-2">
+            🔥 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#7E57C2] to-[#D4821A] mt-2">
               TYPEBOT ILIMITADO
             </span>
             <span className="block text-2xl sm:text-3xl md:text-4xl text-white mt-4">
-              Por solo <span className="text-[#D4821A]">$29 dólares</span> - ¡DE POR VIDA!
+              Por solo <span className="text-[#D4821A]">$15 dólares</span> - ¡DE POR VIDA!
             </span>
           </h1>
+          
+          {/* Video Section - moved here */}
+          <div className="relative bg-[#1E1E1E] rounded-xl overflow-hidden border-2 border-[#D4821A]/30 hover:border-[#D4821A]/60 transition-all duration-300 mb-8">
+            <div className="aspect-video">
+              <iframe src="https://player.vimeo.com/video/1056373518?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" className="w-full h-full" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Typebot Ilimitado Demo" />
+            </div>
+          </div>
           
           <div className="bg-[#1E1E1E] border-2 border-[#D4821A] rounded-xl p-6 mb-8 max-w-4xl mx-auto">
             <p className="font-roboto text-lg sm:text-xl md:text-2xl mb-4 text-white leading-relaxed">
@@ -131,18 +119,57 @@ const Downsell = () => {
         </div>
       </section>
 
-      {/* Video Section */}
+      {/* Integrations Copy Section */}
       <section className="py-16 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-8">
-            
-            
-          </div>
-          
-          <div className="relative bg-[#1E1E1E] rounded-xl overflow-hidden border-2 border-[#D4821A]/30 hover:border-[#D4821A]/60 transition-all duration-300">
-            <div className="aspect-video">
-              <iframe src="https://player.vimeo.com/video/1112779182?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" className="w-full h-full" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Typebot Ilimitado Demo" />
+          <div className="bg-gradient-to-r from-[#7E57C2]/20 to-[#D4821A]/20 border border-[#D4821A] rounded-xl p-8 text-center">
+            <h2 className="font-montserrat font-black text-3xl sm:text-4xl mb-6 text-white">
+              🔗 Integra con <span className="text-[#D4821A]">TODO lo que necesitas</span>
+            </h2>
+            <p className="font-roboto text-lg sm:text-xl text-[#B0B0B0] mb-6 leading-relaxed">
+              Conecta tu Typebot con las plataformas que ya usas y potencia tu negocio al máximo
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
+              <div className="flex items-center gap-3 bg-[#1E1E1E] p-4 rounded-lg">
+                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                <span className="font-roboto text-white">WhatsApp Business</span>
+              </div>
+              <div className="flex items-center gap-3 bg-[#1E1E1E] p-4 rounded-lg">
+                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                <span className="font-roboto text-white">Instagram Direct</span>
+              </div>
+              <div className="flex items-center gap-3 bg-[#1E1E1E] p-4 rounded-lg">
+                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                <span className="font-roboto text-white">Facebook Messenger</span>
+              </div>
+              <div className="flex items-center gap-3 bg-[#1E1E1E] p-4 rounded-lg">
+                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                <span className="font-roboto text-white">Telegram</span>
+              </div>
+              <div className="flex items-center gap-3 bg-[#1E1E1E] p-4 rounded-lg">
+                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                <span className="font-roboto text-white">Shopify</span>
+              </div>
+              <div className="flex items-center gap-3 bg-[#1E1E1E] p-4 rounded-lg">
+                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                <span className="font-roboto text-white">WooCommerce</span>
+              </div>
+              <div className="flex items-center gap-3 bg-[#1E1E1E] p-4 rounded-lg">
+                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                <span className="font-roboto text-white">Zapier</span>
+              </div>
+              <div className="flex items-center gap-3 bg-[#1E1E1E] p-4 rounded-lg">
+                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                <span className="font-roboto text-white">Google Sheets</span>
+              </div>
+              <div className="flex items-center gap-3 bg-[#1E1E1E] p-4 rounded-lg">
+                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                <span className="font-roboto text-white">Mailchimp</span>
+              </div>
             </div>
+            <p className="font-roboto text-sm text-[#B0B0B0] mt-6">
+              Y muchas más... Sin límites de integraciones, sin costos adicionales
+            </p>
           </div>
         </div>
       </section>
@@ -183,7 +210,7 @@ const Downsell = () => {
                 <ul className="space-y-3 text-left font-roboto">
                   <li className="flex items-start gap-2">
                     <DollarSign className="w-5 h-5 text-green-400 mt-0.5" />
-                    <span><strong>$29 dólares UNA SOLA VEZ</strong></span>
+                    <span><strong>$15 dólares UNA SOLA VEZ</strong></span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Infinity className="w-5 h-5 text-green-400 mt-0.5" />
@@ -207,7 +234,7 @@ const Downsell = () => {
               </p>
               <p className="font-montserrat text-2xl font-bold">
                 Otras plataformas: $588+ al año 📈<br />
-                <span className="text-[#D4821A]">Typebot Ilimitado: $29 PARA SIEMPRE 💪</span>
+                <span className="text-[#D4821A]">Typebot Ilimitado: $15 PARA SIEMPRE 💪</span>
               </p>
             </div>
           </div>
@@ -303,7 +330,7 @@ const Downsell = () => {
             </h2>
             <div className="space-y-4 font-roboto text-lg">
               <p className="text-white">
-                <strong className="text-red-400">Esta página se cierra en minutos</strong> y esta oferta de $29 dólares 
+                <strong className="text-red-400">Esta página se cierra en minutos</strong> y esta oferta de $15 dólares 
                 <strong className="text-red-400"> NUNCA MÁS volverá a estar disponible.</strong>
               </p>
               <p className="text-[#B0B0B0]">
@@ -327,7 +354,7 @@ const Downsell = () => {
               
               <div className="mb-8">
                 <div className="text-[#808080] line-through text-2xl mb-2 font-roboto">Precio normal: $197 USD</div>
-                <div className="text-7xl font-black text-[#D4821A] mb-4 font-montserrat">$29</div>
+                <div className="text-7xl font-black text-[#D4821A] mb-4 font-montserrat">$15</div>
                 <div className="text-[#B0B0B0] font-roboto text-lg mb-2">Pago único - Acceso vitalicio</div>
                 <div className="text-green-400 font-montserrat font-bold text-xl">¡Ahorras $168 dólares!</div>
               </div>
@@ -350,8 +377,15 @@ const Downsell = () => {
                 </div>
               </div>
               
-              {/* HOTMART - Sales Funnel Widget */}
-              <div id="hotmart-sales-funnel" className="mb-6"></div>
+              {/* CTA Button */}
+              <a 
+                href="https://pay.hotmart.com/I101182851S?off=1wg01ej9&checkoutMode=10" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white font-montserrat font-bold text-xl px-12 py-6 rounded-2xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl mb-6 w-full max-w-md mx-auto"
+              >
+                🚀 QUIERO TYPEBOT ILIMITADO POR $15
+              </a>
               
               <div className="grid md:grid-cols-3 gap-4 mt-8 text-sm font-roboto">
                 <div className="flex items-center justify-center gap-2 text-green-400">
