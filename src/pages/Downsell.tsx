@@ -174,69 +174,106 @@ const Downsell = () => {
         </div>
       </section>
 
-      {/* Problema y Solución */}
+      {/* Price Comparison Section */}
       <section className="py-16 px-4 sm:px-6 bg-[#1A1A1A]">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="font-montserrat font-black text-3xl sm:text-4xl mb-8 text-white">
-              💸 ¿Cansado de <span className="text-red-400">SANGRAR DINERO</span> cada mes?
+            <h2 className="font-montserrat font-black text-3xl sm:text-4xl md:text-5xl mb-4 text-white">
+              💸 ¿Sigues pagando <span className="text-red-400">$89/mes</span> por algo que puedes tener <span className="text-[#D4821A]">GRATIS para siempre?</span>
             </h2>
-            
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-red-900/20 border border-red-500 rounded-xl p-6">
-                <h3 className="font-montserrat font-bold text-xl mb-4 text-red-400">❌ Con otras plataformas:</h3>
-                <ul className="space-y-3 text-left font-roboto">
-                  <li className="flex items-start gap-2">
-                    <CreditCard className="w-5 h-5 text-red-400 mt-0.5" />
-                    <span>$49/mes mínimo por funciones básicas</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <AlertTriangle className="w-5 h-5 text-red-400 mt-0.5" />
-                    <span>Límites absurdos de bots y conversaciones</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Server className="w-5 h-5 text-red-400 mt-0.5" />
-                    <span>Necesitas configurar servidores complejos</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Calendar className="w-5 h-5 text-red-400 mt-0.5" />
-                    <span>Pagas $588+ al año sin parar</span>
-                  </li>
-                </ul>
+            <p className="font-roboto text-lg sm:text-xl text-[#B0B0B0] max-w-3xl mx-auto">
+              Mira lo que otros cobran VS lo que tú pagas HOY
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Typebot Original Plan */}
+            <div className="relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-red-500 text-white px-4 py-2 rounded-full font-montserrat font-bold text-sm">
+                  ❌ PLAN MENSUAL CARO
+                </span>
               </div>
-              
-              <div className="bg-green-900/20 border border-green-500 rounded-xl p-6">
-                <h3 className="font-montserrat font-bold text-xl mb-4 text-green-400">✅ Con Typebot Ilimitado:</h3>
-                <ul className="space-y-3 text-left font-roboto">
-                  <li className="flex items-start gap-2">
-                    <DollarSign className="w-5 h-5 text-green-400 mt-0.5" />
-                    <span><strong>$15 dólares UNA SOLA VEZ</strong></span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Infinity className="w-5 h-5 text-green-400 mt-0.5" />
-                    <span>Bots y chats 100% ILIMITADOS</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Zap className="w-5 h-5 text-green-400 mt-0.5" />
-                    <span>Instalación en 2 clics, SIN servidores</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Gift className="w-5 h-5 text-green-400 mt-0.5" />
-                    <span>VITALÍCIO - nunca más pagas</span>
-                  </li>
-                </ul>
+              <div className="bg-[#1E1E1E] border-2 border-red-500 rounded-xl p-6 pt-8">
+                <img 
+                  src="/lovable-uploads/9028539f-2d43-4e91-9b11-663838a59530.png" 
+                  alt="Typebot PRO Plan $89/month" 
+                  className="w-full max-w-sm mx-auto mb-6 rounded-lg border border-[#333]"
+                />
+                <div className="text-center">
+                  <div className="text-red-400 font-montserrat font-bold text-lg mb-2">
+                    📊 COSTO ANUAL: $1,068 dólares
+                  </div>
+                  <div className="text-red-400 font-roboto text-sm">
+                    + Configuración de servidor<br />
+                    + Mantenimiento técnico<br />
+                    + Límites de chats<br />
+                    + Renovación obligatoria
+                  </div>
+                </div>
               </div>
             </div>
-            
-            <div className="bg-gradient-to-r from-[#7E57C2]/20 to-[#D4821A]/20 border border-[#D4821A] rounded-xl p-6">
-              <p className="font-roboto text-xl text-white mb-4">
-                <strong className="text-[#D4821A]">MATEMÁTICA SIMPLE:</strong>
-              </p>
-              <p className="font-montserrat text-2xl font-bold">
-                Otras plataformas: $588+ al año 📈<br />
-                <span className="text-[#D4821A]">Typebot Ilimitado: $15 PARA SIEMPRE 💪</span>
-              </p>
+
+            {/* Your Lifetime Offer */}
+            <div className="relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white px-4 py-2 rounded-full font-montserrat font-bold text-sm">
+                  ✅ TU OFERTA VITALICIA
+                </span>
+              </div>
+              <div className="bg-[#1E1E1E] border-2 border-[#D4821A] rounded-xl p-6 pt-8">
+                <div className="text-center mb-6">
+                  <div className="text-7xl font-black text-[#D4821A] mb-2 font-montserrat">$15</div>
+                  <div className="text-white font-montserrat font-bold text-xl mb-4">PAGO ÚNICO - VITALICIO</div>
+                </div>
+                
+                <div className="space-y-3 text-left">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="font-roboto text-white">Bots y chats ILIMITADOS</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="font-roboto text-white">Integración WhatsApp incluida</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="font-roboto text-white">Dominios personalizados</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="font-roboto text-white">Analíticas profundas</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="font-roboto text-white"><strong>SIN servidor necesario</strong></span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span className="font-roboto text-white"><strong>Listo para usar en 2 clics</strong></span>
+                  </div>
+                </div>
+                
+                <div className="bg-green-900/20 border border-green-500 rounded-lg p-4 mt-6 text-center">
+                  <div className="text-green-400 font-montserrat font-bold text-lg">
+                    💰 AHORRAS $1,053 dólares
+                  </div>
+                  <div className="text-green-300 font-roboto text-sm">
+                    (vs plan anual de $89/mes)
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+          
+          <div className="bg-gradient-to-r from-[#7E57C2]/20 to-[#D4821A]/20 border border-[#D4821A] rounded-xl p-6 text-center">
+            <p className="font-roboto text-xl text-white mb-4">
+              <strong className="text-[#D4821A]">MATEMÁTICA SIMPLE:</strong>
+            </p>
+            <p className="font-montserrat text-2xl font-bold">
+              Plan mensual: $1,068+ al año 📈<br />
+              <span className="text-[#D4821A]">Typebot Ilimitado: $15 PARA SIEMPRE 💪</span>
+            </p>
           </div>
         </div>
       </section>
