@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Clock, CheckCircle, AlertTriangle, Star, Zap, Download, Shield, Users, Gift, ArrowRight, Target, DollarSign, Bot, Infinity, Server, Calendar, CreditCard } from 'lucide-react';
+import '../types/hotmart.d.ts';
 const Downsell = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 0,
