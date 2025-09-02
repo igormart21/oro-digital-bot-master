@@ -366,8 +366,7 @@ const Downsell = () => {
           <div className="bg-gradient-to-r from-red-900/50 to-orange-900/50 border-2 border-red-500 rounded-xl p-8 text-center">
             <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
             <h2 className="font-montserrat font-black text-3xl sm:text-4xl mb-6 text-white">
-              ⚠️ ADVERTENCIA SERIA
-            </h2>
+          </h2>
             <div className="space-y-4 font-roboto text-lg">
               <p className="text-white">
                 <strong className="text-red-400">Esta página se cierra en minutos</strong> y esta oferta de $15 dólares 
