@@ -118,10 +118,51 @@ const Downsell = () => {
         </div>
       </section>
 
-      {/* Integrations Copy Section */}
+      {/* Automation Sales Copy Section */}
       <section className="py-16 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="bg-gradient-to-r from-[#7E57C2]/20 to-[#D4821A]/20 border border-[#D4821A] rounded-xl p-8 text-center">
+            <h2 className="font-montserrat font-black text-3xl sm:text-4xl mb-6 text-white">
+              🚀 Automatiza tu <span className="text-[#D4821A]">IMPERIO DIGITAL</span>
+            </h2>
+            <p className="font-roboto text-lg sm:text-xl text-[#B0B0B0] mb-8 leading-relaxed">
+              Convierte cada visitante en cliente mientras duermes. Tu negocio funcionando 24/7 sin que muevas un dedo.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-[#1E1E1E] p-6 rounded-xl border border-[#333]">
+                <Bot className="w-12 h-12 text-[#D4821A] mx-auto mb-4" />
+                <h3 className="font-montserrat font-bold text-xl mb-3 text-white">Ventas Automáticas</h3>
+                <p className="font-roboto text-[#B0B0B0] text-sm">
+                  Tus bots cualifican leads, presentan ofertas irresistibles y cierran ventas mientras tú disfrutas tu tiempo libre
+                </p>
+              </div>
+              
+              <div className="bg-[#1E1E1E] p-6 rounded-xl border border-[#333]">
+                <Users className="w-12 h-12 text-[#7E57C2] mx-auto mb-4" />
+                <h3 className="font-montserrat font-bold text-xl mb-3 text-white">Atención al Cliente</h3>
+                <p className="font-roboto text-[#B0B0B0] text-sm">
+                  Respuestas instantáneas, soporte técnico perfecto y clientes satisfechos sin contratar personal adicional
+                </p>
+              </div>
+              
+              <div className="bg-[#1E1E1E] p-6 rounded-xl border border-[#333]">
+                <Target className="w-12 h-12 text-[#D4821A] mx-auto mb-4" />
+                <h3 className="font-montserrat font-bold text-xl mb-3 text-white">Lead Generation</h3>
+                <p className="font-roboto text-[#B0B0B0] text-sm">
+                  Captura emails, números de teléfono y datos valiosos de cada visitante de forma natural y efectiva
+                </p>
+              </div>
+              
+              <div className="bg-[#1E1E1E] p-6 rounded-xl border border-[#333]">
+                <Zap className="w-12 h-12 text-[#7E57C2] mx-auto mb-4" />
+                <h3 className="font-montserrat font-bold text-xl mb-3 text-white">Follow-up Inteligente</h3>
+                <p className="font-roboto text-[#B0B0B0] text-sm">
+                  Secuencias de seguimiento que nutren prospectos hasta convertirlos en clientes recurrentes
+                </p>
+              </div>
+            </div>
+
             <h2 className="font-montserrat font-black text-3xl sm:text-4xl mb-6 text-white">
               🔗 Integra con <span className="text-[#D4821A]">TODO lo que necesitas</span>
             </h2>
