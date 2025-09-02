@@ -121,7 +121,7 @@ const Downsell = () => {
       {/* Automation Sales Copy Section */}
       <section className="py-16 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <div className="bg-gradient-to-r from-[#7E57C2]/20 to-[#D4821A]/20 border border-[#D4821A] rounded-xl p-4 sm:p-6 md:p-8 text-center">
+          <div className="bg-gradient-to-r from-[#7E57C2]/20 to-[#D4821A]/20 border border-[#D4821A] rounded-xl p-8 text-center">
             <h2 className="font-montserrat font-black text-3xl sm:text-4xl mb-6 text-white">
               🚀 Automatiza tu <span className="text-[#D4821A]">IMPERIO DIGITAL</span>
             </h2>
@@ -397,7 +397,8 @@ const Downsell = () => {
                 <div className="text-7xl font-black text-[#D4821A] mb-4 font-montserrat">$15</div>
                 <div className="text-[#B0B0B0] font-roboto text-lg mb-2">
               </div>
-                <div className="text-green-400 font-montserrat font-bold text-xl">¡Ahorras $168 dólares!</div>
+                <div className="text-green-400 font-montserrat font-bold text-xl">
+              </div>
               </div>
               
               
