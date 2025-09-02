@@ -281,6 +281,137 @@ const Downsell = () => {
         </div>
       </section>
 
+      {/* Price Comparison Section */}
+      <section className="py-16 px-4 sm:px-6 bg-[#0D0D0D]">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="font-montserrat font-black text-3xl sm:text-4xl md:text-5xl mb-6 text-white">
+              💰 <span className="text-[#D4821A]">COMPARACIÓN DE PRECIOS</span>
+            </h2>
+            <p className="font-roboto text-lg sm:text-xl text-[#B0B0B0] mb-8">
+              Mira la diferencia... ¡Es BRUTAL! 🤯
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* Typebot Original Pricing */}
+            <div className="text-center">
+              <h3 className="font-montserrat font-bold text-2xl mb-6 text-red-400">
+                ❌ Typebot Original
+              </h3>
+              <div className="relative bg-[#1E1E1E] rounded-xl p-6 border-2 border-red-500">
+                <img 
+                  src="/lovable-uploads/6329612c-1fc3-4384-acb4-e9ca6f2fab50.png" 
+                  alt="Typebot Pro Pricing - $89/month" 
+                  className="w-full max-w-md mx-auto rounded-lg mb-4"
+                />
+                <div className="bg-red-900/30 p-4 rounded-lg border border-red-500">
+                  <p className="font-montserrat font-bold text-xl text-red-400 mb-2">
+                    $89 dólares CADA MES 💸
+                  </p>
+                  <p className="font-roboto text-sm text-[#B0B0B0]">
+                    = $1,068 dólares al año<br />
+                    = $5,340 dólares en 5 años
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Our Offer */}
+            <div className="text-center">
+              <h3 className="font-montserrat font-bold text-2xl mb-6 text-green-400">
+                ✅ NUESTRA OFERTA VITALICIA
+              </h3>
+              <div className="relative bg-gradient-to-br from-[#7E57C2]/20 to-[#D4821A]/20 rounded-xl p-6 border-2 border-[#D4821A] animate-pulse">
+                <div className="bg-[#D4821A] text-[#121212] font-montserrat font-black text-center py-2 px-4 rounded-lg mb-6">
+                  🔥 OFERTA ESPECIAL
+                </div>
+                
+                <div className="text-center mb-6">
+                  <div className="font-montserrat font-black text-6xl text-[#D4821A] mb-2">
+                    $15
+                  </div>
+                  <div className="font-roboto text-lg text-white">
+                    PAGO ÚNICO - DE POR VIDA
+                  </div>
+                </div>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-3 text-left">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span className="font-roboto text-[#E0E0E0]">Todas las funciones PRO incluidas</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-left">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span className="font-roboto text-[#E0E0E0]">Bots y chats ILIMITADOS</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-left">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span className="font-roboto text-[#E0E0E0]">SIN necesidad de servidor</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-left">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span className="font-roboto text-[#E0E0E0]">Instalación en 2 clics</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-left">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span className="font-roboto text-[#E0E0E0]">Listo para usar INMEDIATAMENTE</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-left">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span className="font-roboto text-[#E0E0E0]">NUNCA más pagas mensualidades</span>
+                  </div>
+                </div>
+                
+                <div className="bg-green-900/30 p-4 rounded-lg border border-green-500">
+                  <p className="font-montserrat font-bold text-xl text-green-400 mb-2">
+                    AHORRAS $5,325 dólares 🤑
+                  </p>
+                  <p className="font-roboto text-sm text-[#B0B0B0]">
+                    Vs. pagar $89/mes durante 5 años
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <div className="bg-gradient-to-r from-[#7E57C2]/20 to-[#D4821A]/20 border border-[#D4821A] rounded-xl p-8 max-w-4xl mx-auto">
+              <h3 className="font-montserrat font-black text-2xl sm:text-3xl mb-6 text-white">
+                🧮 <span className="text-[#D4821A]">MATEMÁTICA SIMPLE</span>
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6 text-center">
+                <div className="bg-red-900/20 p-6 rounded-lg border border-red-500">
+                  <p className="font-montserrat font-bold text-xl text-red-400 mb-2">
+                    Typebot Original
+                  </p>
+                  <p className="font-roboto text-3xl font-black text-white">
+                    $1,068<span className="text-lg">/año</span>
+                  </p>
+                  <p className="font-roboto text-sm text-[#B0B0B0] mt-2">
+                    Y sigue subiendo cada año...
+                  </p>
+                </div>
+                <div className="bg-green-900/20 p-6 rounded-lg border border-green-500">
+                  <p className="font-montserrat font-bold text-xl text-green-400 mb-2">
+                    Nuestra Oferta
+                  </p>
+                  <p className="font-roboto text-3xl font-black text-[#D4821A]">
+                    $15<span className="text-lg text-white">/PARA SIEMPRE</span>
+                  </p>
+                  <p className="font-roboto text-sm text-[#B0B0B0] mt-2">
+                    Una sola vez. Nunca más pagas.
+                  </p>
+                </div>
+              </div>
+              <p className="font-montserrat font-bold text-xl text-white mt-6">
+                🎯 <span className="text-[#D4821A]">¡Mismas funciones, 99.86% menos costo!</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Características Explosivas */}
       <section className="py-16 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
