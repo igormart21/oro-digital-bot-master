@@ -354,31 +354,12 @@ const Downsell = () => {
               <div className="mb-8">
                 <div className="text-[#808080] line-through text-2xl mb-2 font-roboto">Precio normal: $197 USD</div>
                 <div className="text-7xl font-black text-[#D4821A] mb-4 font-montserrat">$15</div>
-                <div className="text-[#B0B0B0] font-roboto text-lg mb-2">Pago único - Acceso vitalicio</div>
+                <div className="text-[#B0B0B0] font-roboto text-lg mb-2">
+              </div>
                 <div className="text-green-400 font-montserrat font-bold text-xl">¡Ahorras $168 dólares!</div>
               </div>
               
-              <div className="bg-[#D4821A]/20 border-2 border-[#D4821A] rounded-xl p-6 mb-8">
-                <div className="text-[#D4821A] font-montserrat font-bold mb-4 text-lg">
-Esta página se cierra en minutos y esta oferta de $15 dólares NUNCA MÁS volverá a estar disponible.
-El precio normal de Typebot Ilimitado es $197 dólares. Esta es una oferta de última oportunidad SOLO para quienes llegaron hasta aquí.
-Si cierras esta página, perderás $168 dólares de descuento y tendrás que conformarte con herramientas limitadas que te sangran dinero cada mes.
-              </div>
-                <div className="flex justify-center gap-4 text-2xl font-bold font-montserrat">
-                  <div className="text-center">
-                    <div className="bg-[#D4821A] px-4 py-3 rounded-xl text-[#121212]">{timeLeft.hours.toString().padStart(2, '0')}</div>
-                    <div className="text-xs text-[#808080] mt-2 font-roboto">HORAS</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-[#D4821A] px-4 py-3 rounded-xl text-[#121212]">{timeLeft.minutes.toString().padStart(2, '0')}</div>
-                    <div className="text-xs text-[#808080] mt-2 font-roboto">MIN</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-[#D4821A] px-4 py-3 rounded-xl text-[#121212]">{timeLeft.seconds.toString().padStart(2, '0')}</div>
-                    <div className="text-xs text-[#808080] mt-2 font-roboto">SEG</div>
-                  </div>
-                </div>
-              </div>
+              
               
               {/* CTA Button */}
               <a href="https://pay.hotmart.com/I101182851S?off=1wg01ej9&checkoutMode=10" target="_blank" rel="noopener noreferrer" className="inline-block bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white font-montserrat font-bold text-xl px-12 py-6 rounded-2xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl mb-6 w-full max-w-md mx-auto">
