@@ -113,7 +113,7 @@ const Downsell = () => {
               </div>
             </div>
             <p className="text-sm text-[#B0B0B0] mt-4 font-roboto">
-              Si cierras esta página, perderás esta oportunidad para siempre
+              Esta es tu última oportunidad de conseguir Typebot Ilimitado a este precio especial
             </p>
           </div>
         </div>
