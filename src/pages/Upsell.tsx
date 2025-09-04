@@ -158,25 +158,7 @@ const Upsell = () => {
                 <p className="mt-3 font-semibold">Una inversión mínima para automatizar tareas que antes te quitaban días</p>
               </div>
             )
-          }, {
-            image: "/lovable-uploads/7f9dc260-1f5e-4f90-a695-6a842a2f2859.png",
-            title: "Curso: Método Typebot Pro",
-            description: (
-              <div>
-                <p className="mb-3">🧠 <strong>No es un curso. Es un arma.</strong></p>
-                <p className="mb-3">El Método Typebot Pro es para quienes están listos para dejar de rogar por ventas y empezar a dominar un ejército de bots que venden solos, 24/7, sin descanso y sin piedad.</p>
-                <p className="mb-3">Aquí no vas a "aprender teoría". Vas a construir bots que:</p>
-                <div className="space-y-1 mb-3">
-                  <p>• Capturan leads como trampas psicológicas</p>
-                  <p>• Calientan al prospecto con mensajes diseñados para romper objeciones</p>
-                  <p>• Cierres automáticos que facturan mientras tú duermes</p>
-                </div>
-                <p className="mb-3">Desde el primer módulo, vas a entender cómo manipular cada clique, cada paso y cada palabra que el usuario ve... hasta que no le quede otra opción que comprar.</p>
-                <p className="text-red-400 font-semibold">⚠️ Advertencia: Esto no es para tibios.</p>
-                <p>Es para los que quieren convertir tráfico frío en dinero caliente, usando inteligencia, estrategia y un toque de malicia.</p>
-              </div>
-            )
-          }, {
+            }, {
             image: "/lovable-uploads/a24fe8e0-854e-407e-b8af-5130c68b326a.png",
             title: "Pack de Páginas de Ventas de Alta Conversión",
             description: (
