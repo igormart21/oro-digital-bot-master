@@ -42,7 +42,7 @@ const Downsell = () => {
         <div className="container mx-auto flex justify-center items-center py-2 px-4">
           <div className="flex items-center gap-2 text-[#121212] font-montserrat font-bold text-sm">
             <AlertTriangle className="w-4 h-4" />
-            🚨 ÚLTIMA OPORTUNIDAD: Solo $15 dólares - ¡Nunca más pagarás mensualidades!
+            🚨 ÚLTIMA OPORTUNIDAD: Solo $29 dólares - ¡Nunca más pagarás mensualidades!
           </div>
         </div>
       </div>
@@ -58,12 +58,21 @@ const Downsell = () => {
             </span>
           </div>
           
+          <div className="mb-4">
+            <h2 className="font-montserrat font-bold text-xl sm:text-2xl md:text-3xl text-[#D4821A] mb-2">
+              🚨 Te voy a dar acceso VITALÍCIO solo en esta página
+            </h2>
+            <p className="font-roboto text-base sm:text-lg text-[#B0B0B0]">
+              Esta oportunidad NUNCA más aparecerá - Es tu última chance
+            </p>
+          </div>
+          
           <h1 className="font-montserrat font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
             🔥 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#7E57C2] to-[#D4821A] mt-2">
               TYPEBOT ILIMITADO
             </span>
             <span className="block text-2xl sm:text-3xl md:text-4xl text-white mt-4">
-              Por solo <span className="text-[#D4821A]">$15 dólares</span> - ¡DE POR VIDA!
+              Por solo <span className="text-[#D4821A]">$29 dólares</span> - ¡DE POR VIDA!
             </span>
           </h1>
           
@@ -250,7 +259,7 @@ const Downsell = () => {
                 <ul className="space-y-3 text-left font-roboto">
                   <li className="flex items-start gap-2">
                     <DollarSign className="w-5 h-5 text-green-400 mt-0.5" />
-                    <span><strong>$15 dólares UNA SOLA VEZ</strong></span>
+                    <span><strong>$29 dólares UNA SOLA VEZ</strong></span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Infinity className="w-5 h-5 text-green-400 mt-0.5" />
@@ -274,7 +283,7 @@ const Downsell = () => {
               </p>
               <p className="font-montserrat text-2xl font-bold">
                 Otras plataformas: $588+ al año 📈<br />
-                <span className="text-[#D4821A]">Typebot Ilimitado: $15 PARA SIEMPRE 💪</span>
+                <span className="text-[#D4821A]">Typebot Ilimitado: $29 PARA SIEMPRE 💪</span>
               </p>
             </div>
           </div>
@@ -329,7 +338,7 @@ const Downsell = () => {
                 
                 <div className="text-center mb-6">
                   <div className="font-montserrat font-black text-6xl text-[#D4821A] mb-2">
-                    $15
+                    $29
                   </div>
                   <div className="font-roboto text-lg text-white">
                     PAGO ÚNICO - DE POR VIDA
@@ -364,12 +373,12 @@ const Downsell = () => {
                 </div>
                 
                 <div className="bg-green-900/30 p-4 rounded-lg border border-green-500">
-                  <p className="font-montserrat font-bold text-xl text-green-400 mb-2">
-                    AHORRAS $5,325 dólares 🤑
-                  </p>
-                  <p className="font-roboto text-sm text-[#B0B0B0]">
-                    Vs. pagar $89/mes durante 5 años
-                  </p>
+                   <p className="font-montserrat font-bold text-xl text-green-400 mb-2">
+                     AHORRAS $5,311 dólares 🤑
+                   </p>
+                   <p className="font-roboto text-sm text-[#B0B0B0]">
+                     Vs. pagar $89/mes durante 5 años
+                   </p>
                 </div>
               </div>
             </div>
@@ -396,9 +405,9 @@ const Downsell = () => {
                   <p className="font-montserrat font-bold text-xl text-green-400 mb-2">
                     Nuestra Oferta
                   </p>
-                  <p className="font-roboto text-3xl font-black text-[#D4821A]">
-                    $15<span className="text-lg text-white">/PARA SIEMPRE</span>
-                  </p>
+                   <p className="font-roboto text-3xl font-black text-[#D4821A]">
+                     $29<span className="text-lg text-white">/PARA SIEMPRE</span>
+                   </p>
                   <p className="font-roboto text-sm text-[#B0B0B0] mt-2">
                     Una sola vez. Nunca más pagas.
                   </p>
@@ -499,18 +508,18 @@ const Downsell = () => {
             <h2 className="font-montserrat font-black text-3xl sm:text-4xl mb-6 text-white">
           </h2>
             <div className="space-y-4 font-roboto text-lg">
-              <p className="text-white">
-                <strong className="text-red-400">Esta página se cierra en minutos</strong> y esta oferta de $15 dólares 
-                <strong className="text-red-400"> NUNCA MÁS volverá a estar disponible.</strong>
-              </p>
+               <p className="text-white">
+                 <strong className="text-red-400">Esta página se cierra en minutos</strong> y esta oferta de $29 dólares 
+                 <strong className="text-red-400"> NUNCA MÁS volverá a estar disponible.</strong>
+               </p>
               <p className="text-[#B0B0B0]">
                 El precio normal de Typebot Ilimitado es <span className="line-through text-red-400">$197 dólares</span>. 
                 Esta es una oferta de última oportunidad SOLO para quienes llegaron hasta aquí.
               </p>
-              <p className="text-white font-bold">
-                Si cierras esta página, <span className="text-red-400">perderás $168 dólares de descuento</span> y tendrás que conformarte 
-                con herramientas limitadas que te sangran dinero cada mes.
-              </p>
+               <p className="text-white font-bold">
+                 Si cierras esta página, <span className="text-red-400">perderás $168 dólares de descuento</span> y tendrás que conformarte 
+                 con herramientas limitadas que te sangran dinero cada mes.
+               </p>
             </div>
           </div>
         </div>
@@ -524,7 +533,7 @@ const Downsell = () => {
               
               <div className="mb-8">
                 <div className="text-[#808080] line-through text-2xl mb-2 font-roboto">Precio normal: $197 USD</div>
-                <div className="text-7xl font-black text-[#D4821A] mb-4 font-montserrat">$15</div>
+                <div className="text-7xl font-black text-[#D4821A] mb-4 font-montserrat">$29</div>
                 <div className="text-[#B0B0B0] font-roboto text-lg mb-2">
               </div>
                 <div className="text-green-400 font-montserrat font-bold text-xl">
@@ -533,10 +542,8 @@ const Downsell = () => {
               
               
               
-              {/* CTA Button */}
-              <a href="https://pay.hotmart.com/I101182851S?off=1wg01ej9&checkoutMode=10" target="_blank" rel="noopener noreferrer" className="inline-block bg-gradient-to-r from-[#7E57C2] to-[#D4821A] text-white font-montserrat font-bold text-xl px-12 py-6 rounded-2xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl mb-6 w-full max-w-md mx-auto">
-                🚀 QUIERO TYPEBOT ILIMITADO POR $15
-              </a>
+              {/* Hotmart Widget */}
+              <div id="hotmart-sales-funnel" className="mb-6"></div>
               
               <div className="grid md:grid-cols-3 gap-4 mt-8 text-sm font-roboto">
                 <div className="flex items-center justify-center gap-2 text-green-400">
@@ -602,33 +609,43 @@ const Downsell = () => {
         </div>
       </section>
 
-      {/* Custom CSS for animations */}
-      <style>
-        {`
-          @keyframes fade-in {
-            from {
-              opacity: 0;
-              transform: translateY(20px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          
-          .animate-fade-in {
-            animation: fade-in 0.8s ease-out;
-          }
-          
-          .font-montserrat {
-            font-family: 'Montserrat', sans-serif;
-          }
-          
-          .font-roboto {
-            font-family: 'Roboto', sans-serif;
-          }
-        `}
-      </style>
+       {/* Hotmart Scripts */}
+       <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+       <script>
+         {`
+           if (typeof window !== 'undefined' && window.checkoutElements) {
+             window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+           }
+         `}
+       </script>
+
+       {/* Custom CSS for animations */}
+       <style>
+         {`
+           @keyframes fade-in {
+             from {
+               opacity: 0;
+               transform: translateY(20px);
+             }
+             to {
+               opacity: 1;
+               transform: translateY(0);
+             }
+           }
+           
+           .animate-fade-in {
+             animation: fade-in 0.8s ease-out;
+           }
+           
+           .font-montserrat {
+             font-family: 'Montserrat', sans-serif;
+           }
+           
+           .font-roboto {
+             font-family: 'Roboto', sans-serif;
+           }
+         `}
+       </style>
     </div>;
 };
 export default Downsell;
