@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Clock, CheckCircle, AlertTriangle, Star, Zap, Download, Shield, Users, Gift, ArrowRight, Target, DollarSign, Bot, Infinity, Server, Calendar, CreditCard } from 'lucide-react';
 import '../types/hotmart.d.ts';
+
 const Downsell = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 0,
     minutes: 4,
     seconds: 59
   });
+  
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
@@ -32,6 +34,27 @@ const Downsell = () => {
       });
     }, 1000);
     return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    // Load Hotmart script
+    const script = document.createElement('script');
+    script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
+    script.async = true;
+    script.onload = () => {
+      if (window.checkoutElements) {
+        window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+      }
+    };
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup
+      const existingScript = document.querySelector('script[src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
   }, []);
   return <div className="min-h-screen bg-[#121212] text-[#E0E0E0] font-light overflow-x-hidden">
       {/* Google Fonts */}
@@ -608,16 +631,6 @@ const Downsell = () => {
           </p>
         </div>
       </section>
-
-       {/* Hotmart Scripts */}
-       <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
-       <script>
-         {`
-           if (typeof window !== 'undefined' && window.checkoutElements) {
-             window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
-           }
-         `}
-       </script>
 
        {/* Custom CSS for animations */}
        <style>
