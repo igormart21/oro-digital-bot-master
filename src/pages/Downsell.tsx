@@ -102,7 +102,7 @@ const Downsell = () => {
           {/* Video Section - moved here */}
           <div className="relative bg-[#1E1E1E] rounded-xl overflow-hidden border-2 border-[#D4821A]/30 hover:border-[#D4821A]/60 transition-all duration-300 mb-8">
             <div className="aspect-video">
-              <iframe src="https://player.vimeo.com/video/1056373518?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" className="w-full h-full" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Typebot Ilimitado Demo" />
+              <iframe src="https://player.vimeo.com/video/1124677981?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" className="w-full h-full" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Typebot Ilimitado Demo" />
             </div>
           </div>
           
