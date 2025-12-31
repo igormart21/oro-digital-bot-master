@@ -256,51 +256,235 @@ const UpsellMaestra = () => {
         </div>
       </section>
 
-      {/* Main Offer */}
+      {/* Earnings Projection Section */}
+      <section className="py-16 px-4 sm:px-6 bg-[#0a0a1a]">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="font-montserrat font-black text-3xl sm:text-4xl text-center mb-4 text-white">
+            💰 Mira cuánto puedes ganar con esta licencia
+          </h2>
+          <p className="text-center text-[#B0B0B0] font-roboto text-lg mb-12">
+            Proyección de ganancias vendiendo el sistema a diferentes precios:
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {[
+              { price: 47, sales: 5, total: 235, label: "Conservador", emoji: "📊" },
+              { price: 97, sales: 10, total: 970, label: "Moderado", emoji: "🚀" },
+              { price: 197, sales: 20, total: 3940, label: "Ambicioso", emoji: "💎" }
+            ].map((scenario, index) => (
+              <div key={index} className="bg-gradient-to-br from-[#1a1a3a] to-[#0f0f2a] p-6 rounded-xl border border-[#D4821A]/30 hover:border-[#D4821A] transition-all duration-300">
+                <div className="text-3xl mb-4">{scenario.emoji}</div>
+                <h4 className="font-montserrat font-bold text-lg text-[#D4821A] mb-4">{scenario.label}</h4>
+                <div className="space-y-2 text-left">
+                  <p className="font-roboto text-[#B0B0B0]">Precio de venta: <span className="text-white font-bold">${scenario.price}</span></p>
+                  <p className="font-roboto text-[#B0B0B0]">Ventas/mes: <span className="text-white font-bold">{scenario.sales}</span></p>
+                  <div className="border-t border-[#333] pt-3 mt-3">
+                    <p className="font-montserrat font-black text-2xl text-[#C9A227]">${scenario.total}/mes</p>
+                    <p className="text-xs text-[#808080]">100% para ti</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="bg-gradient-to-r from-green-900/30 to-green-800/20 border-2 border-green-500/50 rounded-xl p-6 text-center">
+            <p className="font-montserrat font-bold text-xl text-green-400 mb-2">
+              🎯 Con solo 2 ventas recuperas tu inversión
+            </p>
+            <p className="font-roboto text-[#B0B0B0]">
+              Todo lo demás es <span className="text-green-400 font-bold">ganancia pura</span> — para siempre.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Savings Comparison */}
       <section className="py-16 px-4 sm:px-6 bg-[#0f0f2a]">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="font-montserrat font-black text-3xl sm:text-4xl text-center mb-12 text-white">
+            📉 Compara y decide: ¿Cuánto ahorras?
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Without License */}
+            <div className="bg-red-900/20 border-2 border-red-500/30 rounded-xl p-6">
+              <h4 className="font-montserrat font-bold text-xl text-red-400 mb-6 flex items-center gap-2">
+                ❌ Sin la Licencia Maestra
+              </h4>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center border-b border-red-500/20 pb-3">
+                  <span className="font-roboto text-[#B0B0B0]">Desarrollo del sistema</span>
+                  <span className="font-montserrat font-bold text-red-400">$5,000+</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-red-500/20 pb-3">
+                  <span className="font-roboto text-[#B0B0B0]">Diseño y UX</span>
+                  <span className="font-montserrat font-bold text-red-400">$1,500+</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-red-500/20 pb-3">
+                  <span className="font-roboto text-[#B0B0B0]">Documentación</span>
+                  <span className="font-montserrat font-bold text-red-400">$500+</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-red-500/20 pb-3">
+                  <span className="font-roboto text-[#B0B0B0]">Página de ventas</span>
+                  <span className="font-montserrat font-bold text-red-400">$800+</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-red-500/20 pb-3">
+                  <span className="font-roboto text-[#B0B0B0]">Tiempo de desarrollo</span>
+                  <span className="font-montserrat font-bold text-red-400">6+ meses</span>
+                </div>
+                <div className="flex justify-between items-center pt-2">
+                  <span className="font-montserrat font-bold text-white">TOTAL</span>
+                  <span className="font-montserrat font-black text-2xl text-red-400">$7,800+</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* With License */}
+            <div className="bg-gradient-to-br from-[#D4821A]/20 to-[#C9A227]/10 border-2 border-[#D4821A] rounded-xl p-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-[#D4821A] text-[#0a0a1a] px-4 py-1 text-xs font-montserrat font-bold rounded-bl-lg">
+                MEJOR OPCIÓN
+              </div>
+              <h4 className="font-montserrat font-bold text-xl text-[#D4821A] mb-6 flex items-center gap-2">
+                ✅ Con la Licencia Maestra
+              </h4>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center border-b border-[#D4821A]/20 pb-3">
+                  <span className="font-roboto text-[#B0B0B0]">Sistema completo</span>
+                  <span className="font-montserrat font-bold text-[#C9A227]">✓ Incluido</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-[#D4821A]/20 pb-3">
+                  <span className="font-roboto text-[#B0B0B0]">Código fuente</span>
+                  <span className="font-montserrat font-bold text-[#C9A227]">✓ Incluido</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-[#D4821A]/20 pb-3">
+                  <span className="font-roboto text-[#B0B0B0]">Marca blanca</span>
+                  <span className="font-montserrat font-bold text-[#C9A227]">✓ Incluido</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-[#D4821A]/20 pb-3">
+                  <span className="font-roboto text-[#B0B0B0]">Plantilla de ventas</span>
+                  <span className="font-montserrat font-bold text-[#C9A227]">✓ Incluido</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-[#D4821A]/20 pb-3">
+                  <span className="font-roboto text-[#B0B0B0]">Tiempo para empezar</span>
+                  <span className="font-montserrat font-bold text-[#C9A227]">Hoy mismo</span>
+                </div>
+                <div className="flex justify-between items-center pt-2">
+                  <span className="font-montserrat font-bold text-white">INVERSIÓN ÚNICA</span>
+                  <span className="font-montserrat font-black text-2xl text-[#C9A227]">$99</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Savings Badge */}
+          <div className="text-center">
+            <div className="inline-block bg-gradient-to-r from-green-900/40 to-green-800/30 border-2 border-green-500 rounded-xl px-8 py-4">
+              <p className="font-montserrat font-black text-3xl text-green-400 mb-1">
+                AHORRAS $7,701
+              </p>
+              <p className="font-roboto text-green-300">
+                + meses de trabajo + dolores de cabeza
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Offer */}
+      <section className="py-16 px-4 sm:px-6 bg-[#0a0a1a]">
         <div className="container mx-auto max-w-4xl text-center">
-          <div className="bg-gradient-to-r from-[#D4821A] to-[#C9A227] p-1 rounded-3xl mb-8 shadow-2xl shadow-[#D4821A]/30">
-            <div className="bg-[#0a0a1a] p-8 rounded-3xl">
+          <div className="bg-gradient-to-r from-[#D4821A] to-[#C9A227] p-1 rounded-3xl mb-8 shadow-2xl shadow-[#D4821A]/30 animate-pulse-slow">
+            <div className="bg-[#0a0a1a] p-8 sm:p-10 rounded-3xl">
               
-              <Crown className="w-16 h-16 text-[#D4821A] mx-auto mb-6" />
-              
-              <h3 className="font-montserrat font-black text-2xl sm:text-3xl text-white mb-6">
-                LICENCIA MAESTRA
-                <span className="block text-[#D4821A] text-xl sm:text-2xl mt-2">
-                  Typebot Ilimitado (Marca Blanca)
+              <div className="mb-6">
+                <span className="inline-block bg-red-600 text-white px-4 py-1 rounded-full font-montserrat font-bold text-sm animate-pulse">
+                  🔥 OFERTA LIMITADA - SOLO ESTA PÁGINA
                 </span>
+              </div>
+              
+              <Crown className="w-20 h-20 text-[#D4821A] mx-auto mb-6" />
+              
+              <h3 className="font-montserrat font-black text-2xl sm:text-4xl text-white mb-2">
+                LICENCIA MAESTRA
               </h3>
+              <p className="text-[#D4821A] font-montserrat font-bold text-xl sm:text-2xl mb-8">
+                Typebot Ilimitado (Marca Blanca)
+              </p>
+              
+              {/* What's Included Summary */}
+              <div className="bg-[#1a1a3a] rounded-xl p-6 mb-8 text-left">
+                <h4 className="font-montserrat font-bold text-lg text-white mb-4 text-center">Todo lo que recibes:</h4>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {[
+                    "Derechos de reventa ilimitados",
+                    "Código fuente completo",
+                    "Personalización marca blanca",
+                    "Plantilla de página de ventas",
+                    "Documentación completa",
+                    "Soporte inicial incluido",
+                    "Actualizaciones futuras",
+                    "Sin comisiones ni royalties"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-[#C9A227] flex-shrink-0" />
+                      <span className="text-sm font-roboto text-[#E0E0E0]">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Price Section */}
+              <div className="mb-8">
+                <div className="flex items-center justify-center gap-4 mb-2">
+                  <span className="text-[#808080] line-through text-2xl font-roboto">$497</span>
+                  <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-montserrat font-bold">-80%</span>
+                </div>
+                <div className="text-7xl sm:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#D4821A] to-[#C9A227] mb-2 font-montserrat">
+                  $99
+                </div>
+                <p className="text-[#C9A227] font-montserrat font-bold text-lg">
+                  Pago ÚNICO — Sin mensualidades, sin renovaciones
+                </p>
+              </div>
+              
+              {/* ROI Highlight */}
+              <div className="bg-green-900/30 border border-green-500/50 rounded-xl p-4 mb-8">
+                <p className="font-roboto text-green-300">
+                  <span className="font-bold text-green-400">💡 Haz las cuentas:</span> Con solo 2 ventas a $50 recuperas tu inversión. 
+                  <br />La tercera venta ya es <span className="font-bold text-green-400">ganancia pura</span>.
+                </p>
+              </div>
               
               {/* Guarantees */}
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <div className="flex items-center gap-2 bg-[#1a1a3a] px-4 py-2 rounded-full">
                   <CheckCircle className="w-5 h-5 text-[#C9A227]" />
-                  <span className="text-sm font-roboto text-white">Garantía de satisfacción</span>
+                  <span className="text-sm font-roboto text-white">Garantía 7 días</span>
                 </div>
                 <div className="flex items-center gap-2 bg-[#1a1a3a] px-4 py-2 rounded-full">
                   <Zap className="w-5 h-5 text-[#C9A227]" />
-                  <span className="text-sm font-roboto text-white">Activación inmediata</span>
+                  <span className="text-sm font-roboto text-white">Acceso inmediato</span>
                 </div>
                 <div className="flex items-center gap-2 bg-[#1a1a3a] px-4 py-2 rounded-full">
                   <Shield className="w-5 h-5 text-[#C9A227]" />
-                  <span className="text-sm font-roboto text-white">Acceso vitalicio</span>
+                  <span className="text-sm font-roboto text-white">Licencia vitalicia</span>
                 </div>
               </div>
               
               {/* Timer in Offer */}
               <div className="bg-[#D4821A]/20 border-2 border-[#D4821A] rounded-xl p-6 mb-8">
-                <div className="text-[#D4821A] font-montserrat font-bold mb-4 text-lg">⚡ Esta oferta expira en:</div>
+                <div className="text-[#D4821A] font-montserrat font-bold mb-4 text-lg">⏰ El precio sube cuando el contador llegue a cero:</div>
                 <div className="flex justify-center gap-4 text-2xl font-bold font-montserrat">
                   <div className="text-center">
-                    <div className="bg-gradient-to-b from-[#D4821A] to-[#C9A227] px-4 py-3 rounded-xl text-[#0a0a1a] shadow-lg">{timeLeft.hours.toString().padStart(2, '0')}</div>
+                    <div className="bg-gradient-to-b from-[#D4821A] to-[#C9A227] px-5 py-4 rounded-xl text-[#0a0a1a] shadow-lg text-3xl">{timeLeft.hours.toString().padStart(2, '0')}</div>
                     <div className="text-xs text-[#808080] mt-2 font-roboto">HORAS</div>
                   </div>
                   <div className="text-center">
-                    <div className="bg-gradient-to-b from-[#D4821A] to-[#C9A227] px-4 py-3 rounded-xl text-[#0a0a1a] shadow-lg">{timeLeft.minutes.toString().padStart(2, '0')}</div>
+                    <div className="bg-gradient-to-b from-[#D4821A] to-[#C9A227] px-5 py-4 rounded-xl text-[#0a0a1a] shadow-lg text-3xl">{timeLeft.minutes.toString().padStart(2, '0')}</div>
                     <div className="text-xs text-[#808080] mt-2 font-roboto">MIN</div>
                   </div>
                   <div className="text-center">
-                    <div className="bg-gradient-to-b from-[#D4821A] to-[#C9A227] px-4 py-3 rounded-xl text-[#0a0a1a] shadow-lg">{timeLeft.seconds.toString().padStart(2, '0')}</div>
+                    <div className="bg-gradient-to-b from-[#D4821A] to-[#C9A227] px-5 py-4 rounded-xl text-[#0a0a1a] shadow-lg text-3xl">{timeLeft.seconds.toString().padStart(2, '0')}</div>
                     <div className="text-xs text-[#808080] mt-2 font-roboto">SEG</div>
                   </div>
                 </div>
@@ -310,19 +494,27 @@ const UpsellMaestra = () => {
               <div id="hotmart-sales-funnel" className="mb-6"></div>
               
               {/* CTA Button */}
-              <button className="w-full max-w-xl mx-auto block bg-gradient-to-r from-[#D4821A] to-[#C9A227] hover:from-[#C9A227] hover:to-[#D4821A] text-[#0a0a1a] font-montserrat font-black text-lg sm:text-xl py-5 px-8 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#D4821A]/40 mb-6">
-                🟡 SÍ, QUIERO REVENDERLO Y TENER MI PROPIO SISTEMA
+              <button className="w-full max-w-xl mx-auto block bg-gradient-to-r from-[#D4821A] to-[#C9A227] hover:from-[#C9A227] hover:to-[#D4821A] text-[#0a0a1a] font-montserrat font-black text-xl sm:text-2xl py-6 px-8 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#D4821A]/40 mb-4 relative overflow-hidden group">
+                <span className="relative z-10">🟡 SÍ, QUIERO MI LICENCIA MAESTRA AHORA</span>
+                <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
               </button>
               
+              <p className="text-sm text-[#C9A227] font-roboto mb-6">
+                👆 Haz clic y comienza a vender tu propio sistema hoy
+              </p>
+              
               <div className="text-center mb-6">
-                <a href="#" className="inline-block bg-[#333] text-[#808080] px-8 py-3 rounded-xl font-montserrat text-sm hover:bg-[#444] transition-colors">
-                  No, prefiero que otros vendan por mí
+                <a href="#" className="inline-block text-[#808080] font-roboto text-sm hover:text-[#B0B0B0] transition-colors underline">
+                  No gracias, prefiero que otros ganen vendiendo esto
                 </a>
               </div>
               
-              <p className="text-xs text-[#B0B0B0] font-roboto">
-                ✅ Pago seguro | ✅ Garantía 7 días | ✅ Acceso instantáneo
-              </p>
+              <div className="flex flex-wrap justify-center gap-4 text-xs text-[#B0B0B0] font-roboto">
+                <span>🔒 Pago 100% seguro</span>
+                <span>✅ Garantía 7 días</span>
+                <span>⚡ Acceso instantáneo</span>
+                <span>🎯 Soporte incluido</span>
+              </div>
             </div>
           </div>
         </div>
