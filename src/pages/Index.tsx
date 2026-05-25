@@ -36,7 +36,18 @@ const Index = () => {
     return () => clearInterval(timer);
   }, []);
   useEffect(() => {
-    // No longer using Hotmart widgets
+    const script = document.createElement('script');
+    script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
+    script.onload = () => {
+      if (window.checkoutElements) {
+        window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+        window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel-final');
+      }
+    };
+    document.body.appendChild(script);
+    return () => {
+      if (document.body.contains(script)) document.body.removeChild(script);
+    };
   }, []);
   const scrollToOffer = () => {
     document.getElementById('offer')?.scrollIntoView({
@@ -94,7 +105,7 @@ const Index = () => {
           
           
           
-          <p className="font-roboto text-xs sm:text-sm text-[#808080] px-2">Por 15 dólares... menos que un tanque de gasolina, pero esto paga todos los días</p>
+          <p className="font-roboto text-xs sm:text-sm text-[#808080] px-2">Por 29 dólares... menos que un tanque de gasolina, pero esto paga todos los días</p>
         </div>
         
         <div className="absolute bottom-4 sm:bottom-8 animate-bounce">
@@ -223,7 +234,7 @@ const Index = () => {
           <div className="bg-gradient-to-r from-[#7E57C2] to-[#D4821A] p-1 rounded-2xl sm:rounded-3xl mb-8 sm:mb-12 max-w-lg mx-auto">
             <div className="bg-[#1E1E1E] p-6 sm:p-10 rounded-2xl sm:rounded-3xl">
               <div className="text-[#808080] line-through text-lg sm:text-xl mb-3 sm:mb-4 font-roboto">Precio normal: $97 USD</div>
-              <div className="text-5xl sm:text-7xl font-black text-[#D4821A] mb-4 sm:mb-6 font-montserrat">$15</div>
+              <div className="text-5xl sm:text-7xl font-black text-[#D4821A] mb-4 sm:mb-6 font-montserrat">$29</div>
               
               <div className="bg-[#7E57C2]/20 border-2 border-[#7E57C2] rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8">
                 <div className="text-[#7E57C2] font-montserrat font-bold mb-3 sm:mb-4 text-sm sm:text-base">⏰ El precio sube en minutos:</div>
@@ -243,10 +254,8 @@ const Index = () => {
                 </div>
               </div>
               
-              {/* CTA Button */}
-              <a href="https://pay.hotmart.com/C101183936X?off=jfkg7xvw&checkoutMode=10" target="_blank" rel="noopener noreferrer" className="block w-full bg-gradient-to-r from-[#D4821A] to-[#7E57C2] text-white font-montserrat font-bold text-lg sm:text-xl py-4 sm:py-6 px-6 sm:px-8 rounded-xl sm:rounded-2xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl mb-6">
-                🚀 QUIERO ACCESO AHORA
-              </a>
+              {/* CTA Widget Hotmart */}
+              <div id="hotmart-sales-funnel" className="mb-6"></div>
               
               <div className="text-xs sm:text-sm text-[#B0B0B0] font-roboto">
                 ✅ Acceso instantáneo | ✅ Garantía 7 días | ✅ Soporte incluido
@@ -375,15 +384,13 @@ const Index = () => {
             <div className="text-[#7E57C2] font-montserrat font-bold mb-2 text-sm sm:text-base">⚠️ ÚLTIMA ADVERTENCIA</div>
             <div className="text-white font-roboto text-sm sm:text-base">Solo quedan <span className="font-bold text-[#D4821A]">87 accesos</span> disponibles</div>
             
-            {/* Final CTA Button */}
-            <a href="https://pay.hotmart.com/C101183936X?off=jfkg7xvw&checkoutMode=10" target="_blank" rel="noopener noreferrer" className="block w-full bg-gradient-to-r from-[#D4821A] to-[#7E57C2] text-white font-montserrat font-bold text-lg sm:text-xl py-4 sm:py-6 px-6 sm:px-8 rounded-xl sm:rounded-2xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl mt-4">
-              🚀 QUIERO ACCESO AHORA
-            </a>
+            {/* Final CTA Widget Hotmart */}
+            <div id="hotmart-sales-funnel-final" className="mt-4"></div>
           </div>
           
           
           
-          <p className="font-roboto text-[#808080] text-sm sm:text-base">Inversión: $15 USD | Garantía 7 días | Acceso instantáneo</p>
+          <p className="font-roboto text-[#808080] text-sm sm:text-base">Inversión: $29 USD | Garantía 7 días | Acceso instantáneo</p>
         </div>
       </section>
 
